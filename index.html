@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nimo</title>
+
+  <style>
+    :root {
+      --bg: #ffdfdf; /* 🎨 Fondo rojizo suave */
+      --nimo-red: #ff4d4d;
+      --nimo-dark: #e63a3a;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg);
+      overflow-x: hidden;
+    }
+
+    /* ====== Barra flotante (igual que antes) ====== */
+    .floating-nav {
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 8px 18px;
+      border-radius: 999px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      z-index: 200;
+      min-width: 420px;
+      max-width: 900px;
+    }
+
+    .floating-nav .logo-area .logo {
+      padding-left: 15px; 
+      height: 35px;
+      width: auto;
+      display: block;
+    }
+
+    .floating-nav .icons-area {
+      margin-left: auto;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .floating-nav .icon {
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+      object-fit: contain;
+    }
+
+    /* ====== Panel lateral rojo ====== */
+    .side-panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 400px;
+      height: 100vh;
+      background: linear-gradient(180deg, var(--nimo-red), var(--nimo-dark));
+      color: white;
+      transform: translateX(-100%);
+      transition: transform 0.4s ease;
+      z-index: 150;
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      box-sizing: border-box;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 8px 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .side-panel.active {
+      transform: translateX(0);
+    }
+
+    .side-panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+
+    .side-panel-header img.logo {
+      width: 100px;
+      height: auto;
+    }
+    .side-panel-header .logo2 {
+      margin-left: 90px; 
+    }
+
+    .side-panel-header button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .side-panel-header img.icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* ====== Caja de búsqueda más grande ====== */
+    .search-box {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      padding: 10px 16px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-box input {
+      border: none;
+      background: transparent;
+      outline: none;
+      flex: 1;
+      font-size: 18px;
+      color: #333;
+      padding-left: 8px;
+    }
+
+    .search-box img {
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+    }
+
+    /* ====== Resultados ====== */
+    .results {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      overflow-y: auto;
+      flex: 1;
+      padding-bottom: 10px;
+    }
+
+    .result-card {
+      width: 80px;
+      height: 80px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: white;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: transform 0.15s;
+    }
+
+    .result-card:hover {
+      transform: scale(1.08);
+    }
+
+    .result-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ====== Juegos ====== */
+    .games-grid {
+      margin-top: 160px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding-bottom: 80px;
+    }
+
+    .game-card {
+      width: 120px;
+      height: 120px;
+      border-radius: 18px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+      transition: transform 0.18s;
+    }
+
+    .game-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .game-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ====== Modal ====== */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      align-items: center;
+      justify-content: center;
+      z-index: 300;
+    }
+
+    .modal-content {
+      width: 92%;
+      max-width: 1100px;
+      height: 86vh;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .modal iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .close-btn {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .close-btn img {
+      width: 28px;
+      height: 28px;
+    }
+  </style>
+</head>
+<body>
+  <!-- ====== Barra superior ====== -->
+  <div class="floating-nav">
+    <div class="logo-area">
+      <img src="assets/Nimo.png" alt="Nimo" class="logo" />
+    </div>
+    <div class="icons-area">
+      <a href="#"><img src="assets/home.png" alt="Start" class="icon" /></a>
+      <img src="assets/search.png" alt="Search" class="icon" id="openMenu" />
+    </div>
+  </div>
+
+  <!-- ====== Panel lateral ====== -->
+  <div class="side-panel" id="sidePanel">
+    <div class="side-panel-header">
+      <img src="assets/logo2.png" alt="Nimo Icon" class="logo2" />
+      <button id="closePanel"><img src="assets/exit2.png" alt="Exit2" class="closePanel" /></button>
+    </div>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="¿Qué jugarás hoy?" />
+      <img src="assets/search.png" alt="Search Game" id="searchBtn" />
+    </div>
+
+    <div class="results" id="searchResults"></div>
+  </div>
+
+  <!-- ====== Juegos ====== -->
+  <section class="games-grid" id="gamesGrid">
+    <div class="game-card" data-name="Level Devil" data-url="https://bitlifeonline.github.io/level-devil/">
+      <img src="assets/games/level-devil.png" alt="Level Devil">
+    </div>
+    <div class="game-card" data-name="Longcat" data-url="https://play.fancade.com/5BFC1C2A246D67DD?mp_assets=https://s2.minijuegosgratis.com/&mp_embed=0&mp_game&mp_game_id=252905&mp_game_uid=longcat">
+      <img src="assets/games/long_cat.png" alt="Longcat">
+    </div>
+    <div class="game-card" data-name="Merge Rot" data-url="https://azgames.io/merge-brainrot.embed">
+      <img src="assets/games/merge-rot.png" alt="Merge Rot">
+    </div>
+    <div class="game-card" data-name="Motox3m" data-url="https://nb-ga.github.io/games-site/projects/moto-x3m/index.html">
+      <img src="assets/games/moto-x3m.png" alt="Motox3m">
+    </div>
+    <div class="game-card" data-name="Stickman Hook" data-url="https://ug17.github.io/play/Stickman-HookUB/">
+      <img src="assets/games/stickman-hook.png" alt="Stickman Hook">
+    </div>
+    <div class="game-card" data-name="Monkey Mart" data-url="https://azgames.io/monkey-mart.embed">
+      <img src="assets/games/monkey-mart.png" alt="Monkey Mart">
+    </div>
+    <div class="game-card" data-name="My perfect hotel" data-url="https://1games.io/game/perfect-hotel/">
+      <img src="assets/games/my-perfect-hotel.jpg" alt="My perfect hotel">
+    </div>
+    <div class="game-card" data-name="Bascket random" data-url="https://games-site.github.io/projects/basket-random/frame.html">
+      <img src="assets/games/bascket_random.png" alt="Bascket random">
+    </div>
+    <div class="game-card" data-name="Boxing random" data-url="https://games-site.github.io/projects/boxing-random/frame.html">
+      <img src="assets/games/boxing_random.png" alt="Boxing random">
+    </div>
+    <div class="game-card" data-name="Soccer random" data-url="https://games-site.github.io/projects/soccer-random/frame.html">
+      <img src="assets/games/soccer_random.png" alt="Soccer random">
+    </div>
+    <div class="game-card" data-name="Volley random" data-url="https://games-site.github.io/projects/volley-random/frame.html">
+      <img src="assets/games/volley-random.jpg" alt="Volley random">
+    </div>
+    <div class="game-card" data-name="Crossy Road" data-url="https://azgames.io/game/crossy-road/">
+      <img src="assets/games/crossy-road.jpg" alt="Crossy Road">
+    </div>
+    <div class="game-card" data-name="Paper.io 2" data-url="https://nb-ga.github.io/games-site/projects/paperio2/index.html">
+      <img src="assets/games/paper.io_2.png" alt="Paper.io 2">
+    </div>
+    <div class="game-card" data-name="Stack" data-url="https://ug17.github.io/play/Stack/">
+      <img src="assets/games/stack.jpeg" alt="Stack">
+    </div>
+    <div class="game-card" data-name="Minecraft Launcher" data-url="https://irv77.github.io/AmplerLauncher/">
+      <img src="assets/games/minecraft-launcher.png" alt="Minecraft Launcher">
+    </div>
+    <div class="game-card" data-name="Flappy Bird" data-url="https://nb-ga.github.io/games-site/projects/flappy-bird/index.html">
+      <img src="assets/games/flappy_bird.png" alt="Flappy bird">
+    </div>
+    <div class="game-card" data-name="2048" data-url="https://nb-ga.github.io/games-site/projects/2048/index.html">
+      <img src="assets/games/2048.png" alt="2048">
+    </div>
+    <div class="game-card" data-name="Motox3m 2" data-url="https://nb-ga.github.io/games-site/projects/moto-x3m-2/index.html">
+      <img src="assets/games/motox3m_2.png" alt="Motox3m 2">
+    </div>
+    <div class="game-card" data-name="Motox3m Winter" data-url="https://games-site.github.io/projects/moto-x3m-winter/index.html">
+      <img src="assets/games/moto-x3m-4-winter.png" alt="Motox3m Winter">
+    </div>
+    <div class="game-card" data-name="Motox3m Spooky Land" data-url="https://games-site.github.io/projects/moto-x3m-spooky-land/index.html">
+      <img src="assets/games/moto-x3m-spooky-land.png" alt="Motox3m Spoky Land">
+    </div>
+    <div class="game-card" data-name="Motox3m Pool Party" data-url="https://games-site.github.io/projects/moto-x3m-pool-party/index.html">
+      <img src="assets/games/moto-x3m-5-pool-party.png" alt="Motox3m Pool Party">
+    </div>
+    <div class="game-card" data-name="Ball Sort" data-url="https://games-site.github.io/projects/ball-sort-puzzle/index.html">
+      <img src="assets/games/ball-sort.png" alt="Ball Sort">
+    </div>
+    <div class="game-card" data-name="Fnaf 1" data-url="https://run3.io/popgame/fnaf/fnaf1/">
+      <img src="assets/games/fnaf1.jpg" alt="Fnaf 1">
+    </div>
+    <div class="game-card" data-name="Fnaf 2" data-url="https://nb-ga.github.io/games-site/projects/fnaf-2/index.html">
+      <img src="assets/games/fnaf2.png" alt="Fnaf 2">
+    </div>
+    <div class="game-card" data-name="Fnaf 3" data-url="https://nb-ga.github.io/games-site/projects/fnaf-3/index.html">
+      <img src="assets/games/fnaf3.png" alt="Fnaf 3">
+    </div>
+    <div class="game-card" data-name="Fnaf 4" data-url="https://games-site.github.io/projects/fnaf-4/index.html">
+      <img src="assets/games/fnaf4.png" alt="Fnaf 4">
+    </div>
+    <div class="game-card" data-name="Fnaf Sister Location" data-url="https://games-site.github.io/projects/fnaf-5/index.html">
+      <img src="assets/games/fnaf5.png" alt="Fnaf Sister Location">
+    </div>
+    <div class="game-card" data-name="Subway Surfers" data-url="https://ug17.github.io/play/Subway-Surfers/">
+      <img src="assets/games/subway-surfers.png" alt="Subway Surfers">
+    </div>
+    <div class="game-card" data-name="Power Pamplona" data-url="https://cdn.todojuegosgratis.es/extreme-pamplona/index.html">
+      <img src="assets/games/power-pamplona.jpeg" alt="Power Pamplona">
+    </div>
+    <div class="game-card" data-name="Boxing Stars" data-url="https://www.friv.com/z/games/boxingstars/game.html">
+      <img src="assets/games/boxing-stars.jpeg" alt="Boxing Stars">
+    </div>
+    <div class="game-card" data-name="Bad Ice cream 2" data-url="https://onegamez.github.io/bad-ice-cream-2/">
+      <img src="assets/games/bad-ice-cream-2.jpeg" alt="bad-ice-cream-2">
+    </div>
+    <div class="game-card" data-name="Bad Ice cream 3" data-url="https://onegamez.github.io/bad-ice-cream-3/">
+      <img src="assets/games/bad-ice-cream-3.jpeg" alt="bad-ice-cream-3">
+    </div>
+    <div class="game-card" data-name="Steal a Brainrot" data-url="https://st.8games.net/9/8g/igra-ukradi-brejnrot-original-3d/">
+      <img src="assets/games/steal-a-brainrot.jpeg" alt="Steal a Brainrot">
+    </div>
+  </section>
+
+  <!-- ====== Modal del juego ====== -->
+  <!-- Modal -->
+  <div class="modal" id="gameModal">
+    <div class="modal-content">
+      <button class="close-btn" id="fullscreenGameBtn" style="right: 48px;">
+        <img src="assets/fullscreen.png" alt="Full Screen" style="width:24px; height:24px;">
+      </button>
+      <button class="close-btn" id="closeModal">
+        <img src="assets/exit.png" alt="Exit" style="width:24px; height:24px;">
+      </button>
+      <iframe src="" id="gameFrame"></iframe>
+    </div>
+  </div>
+
+
+  <script>
+    const sidePanel = document.getElementById("sidePanel");
+    const openMenu = document.getElementById("openMenu");
+    const closePanel = document.getElementById("closePanel");
+    const searchInput = document.getElementById("searchInput");
+    const searchBtn = document.getElementById("searchBtn");
+    const searchResults = document.getElementById("searchResults");
+    const gameCards = document.querySelectorAll(".game-card");
+    const modal = document.getElementById("gameModal");
+    const gameFrame = document.getElementById("gameFrame");
+    const closeModal = document.getElementById("closeModal");
+    const fullscreenGameBtn = document.getElementById("fullscreenGameBtn");
+
+    fullscreenGameBtn.addEventListener("click", () => {
+      const iframe = gameFrame;
+
+      if (!document.fullscreenElement) {
+        if (iframe.requestFullscreen) {
+          iframe.requestFullscreen();
+        } else if (iframe.webkitRequestFullscreen) {
+          iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) {
+          iframe.msRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+      }
+    });
+
+
+    // Abrir / Cerrar panel lateral
+    openMenu.addEventListener("click", () => {
+      sidePanel.classList.add("active");
+      setTimeout(() => searchInput.focus(), 200);
+    });
+
+    closePanel.addEventListener("click", () => {
+      sidePanel.classList.remove("active");
+      searchResults.innerHTML = "";
+      searchInput.value = "";
+    });
+
+    // Buscar juegos
+    function buscar() {
+      const q = searchInput.value.toLowerCase().trim();
+      searchResults.innerHTML = "";
+      if (!q) return;
+
+      const matches = Array.from(gameCards).filter(card =>
+        card.getAttribute("data-name").toLowerCase().includes(q)
+      );
+
+      if (matches.length === 0) {
+        searchResults.innerHTML = "<p>No se encontraron juegos.</p>";
+        return;
+      }
+
+      matches.forEach(card => {
+        const result = document.createElement("div");
+        result.classList.add("result-card");
+        const img = card.querySelector("img").cloneNode(true);
+        result.appendChild(img);
+        result.addEventListener("click", () => {
+          abrirJuego(card.getAttribute("data-url"));
+          sidePanel.classList.remove("active");
+        });
+        searchResults.appendChild(result);
+      });
+    }
+
+    searchBtn.addEventListener("click", buscar);
+    searchInput.addEventListener("input", buscar);
+
+    // Modal del juego
+    function abrirJuego(url) {
+      if (!url) return;
+      gameFrame.src = url;
+      modal.style.display = "flex";
+    }
+
+    gameCards.forEach(c => {
+      c.addEventListener("click", () => abrirJuego(c.getAttribute("data-url")));
+    });
+
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+      gameFrame.src = "";
+    });
+
+
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") {
+        modal.style.display = "none";
+        sidePanel.classList.remove("active");
+      }
+    });
+  </script>
+</body>
+</html>
