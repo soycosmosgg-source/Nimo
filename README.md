@@ -9,9 +9,10 @@ Nuestra misión es ofrecer una experiencia fluida, rápida y libre de distraccio
 
 - 🕹️ **Juega gratis y sin anuncios** — nada de esperas ni banners molestos.  
 - ⚡ **Carga rápida** — los juegos están optimizados para funcionar directamente desde el navegador.  
-- 📱 **Compatible con todos los dispositivos** — juega desde tu computadora, tablet o teléfono.  
-- 👥 **Modo multijugador** — desafía a tus amigos o juega con otros usuarios online.  
-
+- 📱 **Compatible con todos los dispositivos** — juega desde tu computadora, tablet o teléfono (*).
+- 👥 **Modo multijugador** — desafía a tus amigos o juega con otros usuarios online.
+- 
+*(Algunos juegos no pueden ser compatibles en dispositivos android)
 ---
 
 ## 💡 Contribuir
