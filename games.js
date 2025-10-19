@@ -99,8 +99,10 @@ const juegos = [
   { name: "Raft Life", url: "https://freegames78.github.io/raft-life/", img: "assets/games/raft-life.jpg" },
   { name: "Stickman crazy box", url: "https://bitlifeonline.github.io/stickman-crazy-box/", img: "assets/games/stickman-crazy-box.jpg" },
   { name: "Ping Pong Go!", url: "https://g.igroutka.ru/games/606/UhpyYq1QGA0nBfjJ/48aab6e0-54af-4e2f-9379-f76fa99dc59a/index.html", img: "assets/games/ping-pong-go.jpg" },
+  { name: "Super Mario Bros", url: "https://frivez.com/games/super-mario-bros/index.html", img: "assets/games/super-mario-bros.jpg" },
 ];
   
+
 
 
 
