@@ -108,7 +108,7 @@ const juegos = [
   { name: "Traffic rally", url: "https://1games.io/game/traffic-rally/", img: "assets/games/traffic-rally.png" },
   { name: "Brain lines", url: "https://1games.io/game/brain-lines/", img: "assets/games/brain-lines.jpg" },
   { name: "Poor Rabit", url: "https://newgamesdaily.github.io/poor-bunny/", img: "assets/games/poor-rabbit.jpg" },
-  { name: "Basketball Stars", url: "https://basketball-stars.io/game/basketball-stars/", img: "assets/games/basketball-stars.jpg" },
+  { name: "Basketball Stars", url: "https://basketball-stars.io/1.embed", img: "assets/games/basketball-stars.jpg" },
   { name: "Bounce Up", url: "https://bounce-up.1games.io/", img: "assets/games/bounce-up.png" },
   { name: "Stickman Empires", url: "https://stickman-empires.1games.io/", img: "assets/games/stickman-empires.jpg" },
   { name: "Jump Up", url: "https://1games.io/game/jump-up/", img: "assets/games/jump-up.png" },
