@@ -103,6 +103,7 @@ const juegos = [
   { name: "Survival Race", url: "https://st.8games.net/14/igra-bitva-superkarov-3d/", img: "assets/games/survival-race.png" },
   { name: "Traffic rally", url: "https://1games.io/game/traffic-rally/", img: "assets/games/traffic-rally.png" },
   { name: "Brain lines", url: "https://1games.io/game/brain-lines/", img: "assets/games/brain-lines.jpg" },
+  { name: "Poor Rabit", url: "https://newgamesdaily.github.io/poor-bunny/", img: "assets/games/poor-rabbit.jpg" },
 
 ];
   
