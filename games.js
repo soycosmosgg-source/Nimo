@@ -32,6 +32,9 @@ const juegos = [
   { name: "Fnaf 4", url: "https://games-site.github.io/projects/fnaf-4/index.html", img: "assets/games/fnaf4.png" },
   { name: "Fnaf Sister Location", url: "https://games-site.github.io/projects/fnaf-5/index.html", img: "assets/games/fnaf5.png" },
   { name: "Subway Surfers", url: "https://ug17.github.io/play/Subway-Surfers/", img: "assets/games/subway-surfers.png" },
+  { name: "Subway Surfers winter holiday", url: "https://ubg77.github.io/updatefaqs/subway-surfers-winter-holiday/", img: "assets/games/subway-surfers-winter-holiday.png" },
+  { name: "Subway Surfers New York", url: "https://ubg77.github.io/updatefaqs/subway-surfers-nyc/", img: "assets/games/subway-surfers-nyc.png" },
+  { name: "Subway Surfers Bali", url: "https://ubg77.github.io/updatefaqs/subway-surfers-bali/", img: "assets/games/subway-surfers-bali.png" },
   { name: "Temple Run", url: "https://templerun.org/wp-content/uploads/games/html5/T/Temple%20Game%20Jungle/index.html", img: "assets/games/temple-run.jpg" },
   { name: "Friday Night Funkin", url: "https://fnf.kdata1.com/2025/fnf/7500/", img: "assets/games/fnf.jpg" },
   { name: "Power Pamplona", url: "https://www.friv.com/z/games/powerpamplona/game.html", img: "assets/games/power-pamplona.jpeg" },
@@ -108,6 +111,13 @@ const juegos = [
   { name: "Basketball Stars", url: "https://basketball-stars.io/game/basketball-stars/", img: "assets/games/basketball-stars.jpg" },
   { name: "Bounce Up", url: "https://bounce-up.1games.io/", img: "assets/games/bounce-up.png" },
   { name: "Stickman Empires", url: "https://stickman-empires.1games.io/", img: "assets/games/stickman-empires.jpg" },
+  { name: "Jump Up", url: "https://1games.io/game/jump-up/", img: "assets/games/jump-up.png" },
+  { name: "Merge Arena", url: "https://bitlifeonline.github.io/merge-arena/", img: "assets/games/merge-arena.png" },
+  { name: "Penalty Shootout Multi League", url: "https://bitlifeonline.github.io/penalty-shootout-multi-league/", img: "assets/games/penalty-shootout-multi-league.png" },
+  { name: "Gobattle", url: "https://bitlifeonline.github.io/gobattle/", img: "assets/games/gobattle.png" },
+  { name: "Canon Blast", url: "https://bitlifeonline.github.io/cannon-blast/", img: "assets/games/canon-blast.png" },
+  { name: "Dino Bros", url: "https://bitlifeonline.github.io/dino-bros/", img: "assets/games/dino-bros.png" },
+  { name: "Obby parkour ultimate", url: "https://bitlifeonline.github.io/obby-parkour-ultimate/", img: "assets/games/obby-parkour-ultimate.png" },
 
 ];
   
