@@ -80,6 +80,7 @@ const juegos = [
   { name: "Traffic Escape", url: "https://fly.silvergames.com/m/traffic-escape/", img: "assets/games/traffic-escape.jpg" },
   { name: "Last chess standing", url: "https://playgroundfree.github.io/last-chess-standing/", img: "assets/games/last-chess-standing.jpg" },
   { name: "Blood Money!", url: "https://bloodmoney.1games.io/", img: "assets/games/blood-money.jpg" },
+  { name: "Blood Money! 2", url: "https://1games.io/game/bloodmoney-2/", img: "assets/games/blood-money-2.png" },
   { name: "Scary teacher 3D", url: "https://g.igroutka.ru/games/1087/NgleEW1zP8YRpXGI/9d2ca9df-7f2c-4685-8907-e330be4ef190/index.html", img: "assets/games/scary-teacher-3d.jpg" },
   { name: "SchoolBoy Runaway", url: "https://st.8games.net/10/8g/igra-schoolboy-runaway/", img: "assets/games/school-boy-runaway.jpg" },
   { name: "Escape Road City 2", url: "https://1games.io/game/escape-road-city-2/", img: "assets/games/escape-road-city-2.jpg" },
@@ -105,6 +106,8 @@ const juegos = [
   { name: "Brain lines", url: "https://1games.io/game/brain-lines/", img: "assets/games/brain-lines.jpg" },
   { name: "Poor Rabit", url: "https://newgamesdaily.github.io/poor-bunny/", img: "assets/games/poor-rabbit.jpg" },
   { name: "Basketball Stars", url: "https://basketball-stars.io/game/basketball-stars/", img: "assets/games/basketball-stars.jpg" },
+  { name: "Bounce Up", url: "https://bounce-up.1games.io/", img: "assets/games/bounce-up.png" },
+  { name: "Stickman Empires", url: "https://stickman-empires.1games.io/", img: "assets/games/stickman-empires.jpg" },
 
 ];
   
