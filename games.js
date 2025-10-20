@@ -104,6 +104,7 @@ const juegos = [
   { name: "Traffic rally", url: "https://1games.io/game/traffic-rally/", img: "assets/games/traffic-rally.png" },
   { name: "Brain lines", url: "https://1games.io/game/brain-lines/", img: "assets/games/brain-lines.jpg" },
   { name: "Poor Rabit", url: "https://newgamesdaily.github.io/poor-bunny/", img: "assets/games/poor-rabbit.jpg" },
+  { name: "Basketball Stars", url: "https://basketball-stars.io/game/basketball-stars/", img: "assets/games/basketball-stars.jpg" },
 
 ];
   
