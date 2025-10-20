@@ -102,6 +102,7 @@ const juegos = [
   { name: "Super Mario Bros", url: "https://frivez.com/games/super-mario-bros/index.html", img: "assets/games/super-mario-bros.jpg" },
   { name: "Survival Race", url: "https://st.8games.net/14/igra-bitva-superkarov-3d/", img: "assets/games/survival-race.png" },
   { name: "Traffic rally", url: "https://1games.io/game/traffic-rally/", img: "assets/games/traffic-rally.png" },
+  { name: "Brain lines", url: "https://1games.io/game/brain-lines/", img: "assets/games/brain-lines.jpg" },
 
 ];
   
