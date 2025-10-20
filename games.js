@@ -18,7 +18,7 @@ const juegos = [
   { name: "Paper.io 2", url: "https://nb-ga.github.io/games-site/projects/paperio2/index.html", img: "assets/games/paper.io_2.png" },
   { name: "Police Chase", url: "https://trafficrally.io/blacktop-police-chase.embed", img: "assets/games/police-chase.jpg" },
   { name: "Stack", url: "https://ug17.github.io/play/Stack/", img: "assets/games/stack.jpeg" },
-  { name: "Minecraft Launcher", url: "https://astraclientorg.github.io/", img: "assets/games/minecraft-launcher.png" },
+  { name: "Minecraft Launcher", url: "https://yee.pages.dev/", img: "assets/games/minecraft-launcher.png" },
   { name: "Flappy Bird", url: "https://nb-ga.github.io/games-site/projects/flappy-bird/index.html", img: "assets/games/flappy_bird.png" },
   { name: "2048", url: "https://nb-ga.github.io/games-site/projects/2048/index.html", img: "assets/games/2048.png" },
   { name: "Motox3m 2", url: "https://nb-ga.github.io/games-site/projects/moto-x3m-2/index.html", img: "assets/games/motox3m_2.png" },
@@ -102,6 +102,7 @@ const juegos = [
   { name: "Super Mario Bros", url: "https://frivez.com/games/super-mario-bros/index.html", img: "assets/games/super-mario-bros.jpg" },
 ];
   
+
 
 
 
