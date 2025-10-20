@@ -101,6 +101,7 @@ const juegos = [
   { name: "Ping Pong Go!", url: "https://g.igroutka.ru/games/606/UhpyYq1QGA0nBfjJ/48aab6e0-54af-4e2f-9379-f76fa99dc59a/index.html", img: "assets/games/ping-pong-go.jpg" },
   { name: "Super Mario Bros", url: "https://frivez.com/games/super-mario-bros/index.html", img: "assets/games/super-mario-bros.jpg" },
   { name: "Survival Race", url: "https://st.8games.net/14/igra-bitva-superkarov-3d/", img: "assets/games/survival-race.png" },
+  { name: "Traffic rally", url: "https://1games.io/game/traffic-rally/", img: "assets/games/traffic-rally.png" },
 
 ];
   
