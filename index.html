@@ -557,41 +557,63 @@
 
   async function abrirJuego(url) {
     if (!url) return;
+
     currentGameUrlOriginal = url;
+
     modal.style.display = "flex";
     loadingOverlay.style.display = "flex";
+    loadingOverlay.style.opacity = "1";
     errorOverlay.style.display = "none";
     gameFrame.src = "";
 
     try {
-      const response = await fetch(url, { mode: "no-cors" });
-      // Si no se bloquea, se carga normal:
-      gameFrame.src = url;
-    } catch (err) {
-      // Si se bloquea, mostramos overlay al instante:
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 5000);
+      await fetch(url, { method: "HEAD", mode: "no-cors", signal: controller.signal });
+      clearTimeout(timeout);
+
+      setTimeout(() => {
+        gameFrame.src = url;
+      }, 100);
+
+      gameFrame.onload = () => {
+        setTimeout(() => {
+          loadingOverlay.style.opacity = "0";
+          setTimeout(() => {
+            loadingOverlay.style.display = "none";
+          }, 400);
+        }, 300);
+      };
+    } catch (e) {
       mostrarError();
-      return;
     }
 
-    // Fallback por si no carga en 6 s:
-    setTimeout(() => {
-      if (!gameFrame.contentWindow || gameFrame.contentDocument?.readyState !== "complete") {
+    const failTimeout = setTimeout(() => {
+      if (loadingOverlay.style.display === "flex") {
         mostrarError();
       }
-    }, 6000);
-}
+    }, 8000);
 
+    gameFrame.onload = () => {
+      clearTimeout(failTimeout);
+      setTimeout(() => {
+        loadingOverlay.style.opacity = "0";
+        setTimeout(() => {
+          loadingOverlay.style.display = "none";
+        }, 400);
+      }, 300);
+    };
+  }
 
   // Reemplazamos el listener de retryBtn
   retryBtn.addEventListener("click", () => {
     errorOverlay.style.display = "none";
+
     if (!currentGameUrlOriginal) return;
 
-    const proxyUrl = `https://www.croxyproxy.com/service/${btoa(currentGameUrlOriginal)}`;
+    const proxyUrl = `https://hidester.com/proxy/?u=${encodeURIComponent(currentGameUrlOriginal)}&b=4&f=y`;
     window.location.href = proxyUrl;
   });
-
-
 
 
 </script>
