@@ -559,8 +559,10 @@
     const url = gameFrame.src;
     if (!url) return;
 
-    const proxyUrl = `https://www.proxysite.com/index.php?url=${encodeURIComponent(url)}`;
+    // Usamos hidester como proxy web
+    const proxyUrl = `https://hidester.com/proxy/?u=${encodeURIComponent(url)}&b=4&f=y`;
 
+    // Redirigir la pestaña actual
     window.location.href = proxyUrl;
   });
 
