@@ -281,6 +281,57 @@
       width: 28px;
       height: 28px;
     }
+
+    /* ===== Overlay de error ===== */
+    .error-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgb(255, 13, 96);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      z-index: 9999;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      padding: 20px;
+    }
+
+    .error-message {
+      margin-top: 20px;
+      max-width: 600px;
+      line-height: 1.4;
+    }
+
+    .retry-btn {
+      margin-top: 40px;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      padding: 14px 26px;
+      border-radius: 999px;
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .retry-btn:hover {
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    .retry-icon {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+
   </style>
 </head>
 <body>
@@ -331,6 +382,18 @@
         <img src="assets/exit.png" alt="Exit" style="width:24px; height:24px;">
       </button>
       <iframe src="" id="gameFrame"></iframe>
+      <!-- Overlay de error -->
+      <div class="error-overlay" id="errorOverlay" style="display: none;">
+        <img src="assets/loading_logo.png" alt="Logo" class="loading-logo" />
+        <div class="error-message">
+          Se ha interrumpido la conexión en este dispositivo.<br>
+          ¿Quieres volver a intentarlo en un proxy?
+        </div>
+        <button class="retry-btn" id="retryBtn">
+          Aceptar
+          <img src="assets/unblock.png" alt="Unblock" class="retry-icon">
+        </button>
+      </div>
     </div>
   </div>
 
@@ -349,8 +412,10 @@
   const closeModal = document.getElementById("closeModal");
   const fullscreenGameBtn = document.getElementById("fullscreenGameBtn");
   const gamesGrid = document.getElementById("gamesGrid");
+  const loadingOverlay = document.getElementById("loadingOverlay");
+  const errorOverlay = document.getElementById("errorOverlay");
+  const retryBtn = document.getElementById("retryBtn");
 
-  // Crear las tarjetas dinámicamente desde games.js
   juegos.forEach(juego => {
     const card = document.createElement("div");
     card.classList.add("game-card");
@@ -367,19 +432,66 @@
 
   const gameCards = document.querySelectorAll(".game-card");
 
-  // Abrir juego
-  function abrirJuego(url) {
-    if (!url) return;
-    modal.style.display = "flex";
-    gameFrame.src = url;
+  function mostrarError() {
+    loadingOverlay.style.display = "none";
+    errorOverlay.style.display = "flex";
   }
 
-  // Eventos de clic
+  async function abrirJuego(url) {
+    if (!url) return;
+
+    modal.style.display = "flex";
+    loadingOverlay.style.display = "flex";
+    loadingOverlay.style.opacity = "1";
+    errorOverlay.style.display = "none";
+    gameFrame.src = "";
+
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 5000);
+      await fetch(url, { method: "HEAD", mode: "no-cors", signal: controller.signal });
+      clearTimeout(timeout);
+
+      // Cargar el iframe
+      setTimeout(() => {
+        gameFrame.src = url;
+      }, 100);
+
+      gameFrame.onload = () => {
+        setTimeout(() => {
+          loadingOverlay.style.opacity = "0";
+          setTimeout(() => {
+            loadingOverlay.style.display = "none";
+          }, 400);
+        }, 300);
+      };
+    } catch (e) {
+      mostrarError();
+    }
+
+    // Fallback
+    const failTimeout = setTimeout(() => {
+      if (loadingOverlay.style.display === "flex") {
+        mostrarError();
+      }
+    }, 8000);
+
+    gameFrame.onload = () => {
+      clearTimeout(failTimeout);
+      setTimeout(() => {
+        loadingOverlay.style.opacity = "0";
+        setTimeout(() => {
+          loadingOverlay.style.display = "none";
+        }, 400);
+      }, 300);
+    };
+  }
+
+  // === Eventos ===
   gameCards.forEach(c => {
     c.addEventListener("click", () => abrirJuego(c.dataset.url));
   });
 
-  // Fullscreen
   fullscreenGameBtn.addEventListener("click", () => {
     if (!document.fullscreenElement) {
       gameFrame.requestFullscreen?.();
@@ -388,7 +500,6 @@
     }
   });
 
-  // Panel lateral
   openMenu.addEventListener("click", () => {
     sidePanel.classList.add("active");
     setTimeout(() => searchInput.focus(), 200);
@@ -400,7 +511,6 @@
     searchInput.value = "";
   });
 
-  // Búsqueda
   function buscar() {
     const q = searchInput.value.toLowerCase().trim();
     searchResults.innerHTML = "";
@@ -431,7 +541,6 @@
   searchBtn.addEventListener("click", buscar);
   searchInput.addEventListener("input", buscar);
 
-  // Cerrar modal
   closeModal.addEventListener("click", () => {
     modal.style.display = "none";
     gameFrame.src = "";
@@ -444,29 +553,15 @@
     }
   });
 
-  const loadingOverlay = document.getElementById("loadingOverlay");
+  retryBtn.addEventListener("click", () => {
+    errorOverlay.style.display = "none";
 
-  // Mostrar overlay al abrir juego
-  function abrirJuego(url) {
+    const url = gameFrame.src;
     if (!url) return;
 
-    modal.style.display = "flex";
-    loadingOverlay.style.display = "flex";
-    loadingOverlay.style.opacity = "1"; 
-    gameFrame.src = ""; 
-    setTimeout(() => {
-      gameFrame.src = url;
-    }, 100); 
-  }
+    const proxyUrl = `https://www.proxysite.com/index.php?url=${encodeURIComponent(url)}`;
 
-  // Ocultar overlay cuando el juego termine de cargar
-  gameFrame.addEventListener("load", () => {
-    setTimeout(() => {
-      loadingOverlay.style.opacity = "0";
-      setTimeout(() => {
-        loadingOverlay.style.display = "none";
-      }, 400); 
-    }, 300); 
+    window.location.href = proxyUrl;
   });
 
 </script>

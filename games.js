@@ -118,7 +118,11 @@ const juegos = [
   { name: "Canon Blast", url: "https://bitlifeonline.github.io/cannon-blast/", img: "assets/games/canon-blast.png" },
   { name: "Dino Bros", url: "https://bitlifeonline.github.io/dino-bros/", img: "assets/games/dino-bros.png" },
   { name: "Obby parkour ultimate", url: "https://bitlifeonline.github.io/obby-parkour-ultimate/", img: "assets/games/obby-parkour-ultimate.png" },
-
+  {
+    name: "Juego fallido",
+    img: "assets/error_test.png",
+    url: "https://direccion-invalida-que-no-existe.com"
+  }
 ];
   
 
