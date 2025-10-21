@@ -14,7 +14,7 @@ const juegos = [
   { name: "Boxing random", url: "https://games-site.github.io/projects/boxing-random/frame.html", img: "assets/games/boxing_random.png" },
   { name: "Soccer random", url: "https://games-site.github.io/projects/soccer-random/frame.html", img: "assets/games/soccer_random.png" },
   { name: "Volley random", url: "https://games-site.github.io/projects/volley-random/frame.html", img: "assets/games/volley-random.jpg" },
-  { name: "Crossy Road", url: "https://gamecollections.me/game/3kh0-assets-main/crossyroad/", img: "assets/games/crossy-road.jpg" },
+  { name: "Crossy Road", url: "https://crossy-road.gitlab.io/file/", img: "assets/games/crossy-road.jpg" },
   { name: "Paper.io 2", url: "https://nb-ga.github.io/games-site/projects/paperio2/index.html", img: "assets/games/paper.io_2.png" },
   { name: "Police Chase", url: "https://trafficrally.io/blacktop-police-chase.embed", img: "assets/games/police-chase.jpg" },
   { name: "Stack", url: "https://ug17.github.io/play/Stack/", img: "assets/games/stack.jpeg" },
