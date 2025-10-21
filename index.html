@@ -59,6 +59,49 @@
       object-fit: contain;
     }
 
+    /* ===== Overlay de carga ===== */
+    .loading-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgb(255, 13, 96);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      z-index: 9999;             
+      font-size: 36px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: opacity 0.4s ease;
+    }
+
+    .loading-logo {
+      width: 260px;
+      margin-bottom: 50px;
+      object-fit: contain;
+    }
+
+    .loading-text {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .spinner {
+      border: 6px solid rgba(255, 255, 255, 0.3);
+      border-top: 6px solid #fff;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
     /* ====== Panel lateral ====== */
     .side-panel {
       position: fixed;
@@ -272,6 +315,15 @@
   <!-- Modal -->
   <div class="modal" id="gameModal">
     <div class="modal-content">
+      <!-- Overlay de carga -->
+      <div class="loading-overlay" id="loadingOverlay">
+        <img src="assets/loading_logo.png" alt="Logo" class="loading-logo" />
+        <div class="loading-text">
+          Loading
+          <div class="spinner"></div>
+        </div>
+      </div>
+
       <button class="close-btn" id="fullscreenGameBtn" style="right: 48px;">
         <img src="assets/fullscreen.png" alt="Full Screen" style="width:24px; height:24px;">
       </button>
@@ -281,6 +333,7 @@
       <iframe src="" id="gameFrame"></iframe>
     </div>
   </div>
+
 
 
 <script src="games.js"></script>
@@ -390,6 +443,32 @@
       sidePanel.classList.remove("active");
     }
   });
+
+  const loadingOverlay = document.getElementById("loadingOverlay");
+
+  // Mostrar overlay al abrir juego
+  function abrirJuego(url) {
+    if (!url) return;
+
+    modal.style.display = "flex";
+    loadingOverlay.style.display = "flex";
+    loadingOverlay.style.opacity = "1"; 
+    gameFrame.src = ""; 
+    setTimeout(() => {
+      gameFrame.src = url;
+    }, 100); 
+  }
+
+  // Ocultar overlay cuando el juego termine de cargar
+  gameFrame.addEventListener("load", () => {
+    setTimeout(() => {
+      loadingOverlay.style.opacity = "0";
+      setTimeout(() => {
+        loadingOverlay.style.display = "none";
+      }, 400); 
+    }, 300); 
+  });
+
 </script>
 </body>
 </html>
