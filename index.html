@@ -553,18 +553,68 @@
     }
   });
 
+  let currentGameUrlOriginal = "";
+
+  async function abrirJuego(url) {
+    if (!url) return;
+
+    currentGameUrlOriginal = url; // Guardamos la URL original aquí
+
+    modal.style.display = "flex";
+    loadingOverlay.style.display = "flex";
+    loadingOverlay.style.opacity = "1";
+    errorOverlay.style.display = "none";
+    gameFrame.src = "";
+
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 5000);
+      await fetch(url, { method: "HEAD", mode: "no-cors", signal: controller.signal });
+      clearTimeout(timeout);
+
+      setTimeout(() => {
+        gameFrame.src = url;
+      }, 100);
+
+      gameFrame.onload = () => {
+        setTimeout(() => {
+          loadingOverlay.style.opacity = "0";
+          setTimeout(() => {
+            loadingOverlay.style.display = "none";
+          }, 400);
+        }, 300);
+      };
+    } catch (e) {
+      mostrarError();
+    }
+
+    const failTimeout = setTimeout(() => {
+      if (loadingOverlay.style.display === "flex") {
+        mostrarError();
+      }
+    }, 8000);
+
+    gameFrame.onload = () => {
+      clearTimeout(failTimeout);
+      setTimeout(() => {
+        loadingOverlay.style.opacity = "0";
+        setTimeout(() => {
+          loadingOverlay.style.display = "none";
+        }, 400);
+      }, 300);
+    };
+  }
+
+  // Reemplazamos el listener de retryBtn
   retryBtn.addEventListener("click", () => {
     errorOverlay.style.display = "none";
 
-    const url = gameFrame.src;
-    if (!url) return;
+    if (!currentGameUrlOriginal) return;
 
-    // Usamos hidester como proxy web
-    const proxyUrl = `https://hidester.com/proxy/?u=${encodeURIComponent(url)}&b=4&f=y`;
-
-    // Redirigir la pestaña actual
+    const proxyUrl = `https://hidester.com/proxy/?u=${encodeURIComponent(currentGameUrlOriginal)}&b=4&f=y`;
     window.location.href = proxyUrl;
   });
+
 
 </script>
 </body>
