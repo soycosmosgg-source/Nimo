@@ -115,14 +115,15 @@ const juegos = [
   { name: "Penalty Shootout Multi League", url: "https://bitlifeonline.github.io/penalty-shootout-multi-league/", img: "assets/games/penalty-shootout-multi-league.png", tags: ["skill"] },
   { name: "Gobattle", url: "https://bitlifeonline.github.io/gobattle/", img: "assets/games/gobattle.png", tags: ["puzzle", "action", "2players"] },
   { name: "Canon Blast", url: "https://bitlifeonline.github.io/cannon-blast/", img: "assets/games/canon-blast.png", tags: ["arcade", "skill"] },
-  { name: "Dino Bros", url: "https://bitlifeonline.github.io/dino-bros/", img: "assets/games/dino-bros.png", tags: ["arcade", "dinosaur", "action", "fun"] },
+  { name: "Dino Bros", url: "https://bitlifeonline.github.io/dino-bros/", img: "assets/games/dino-bros.png", tags: ["arcade", "action"] },
   { name: "Obby parkour ultimate", url: "https://bitlifeonline.github.io/obby-parkour-ultimate/", img: "assets/games/obby-parkour-ultimate.png", tags: ["platform", "skill"] },
   { name: "Breaking the bank", url: "https://rebemanae.github.io/breaking-the-bank/", img: "assets/games/breaking-the-bank.png", tags: ["puzzle", "skill"] },
-  { name: "Fun Typing IO", url: "https://game.azgame.io/fun-typing-io/", img: "assets/games/fun-typing-io.jpg", tags: ["typing", "educational", "skill", "io"] },
+  { name: "Fun Typing IO", url: "https://game.azgame.io/fun-typing-io/", img: "assets/games/fun-typing-io.jpg", tags: ["skill", "io"] },
   { name: "Blumgi ball", url: "https://bitlifeonline.github.io/class12523/blumgi-ball/", img: "assets/games/blumgi-ball.png", tags: ["arcade", "skill"] }
 
 ];
   
+
 
 
 
