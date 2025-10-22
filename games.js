@@ -54,7 +54,7 @@ const juegos = [
   { name: "Cut the Rope", url: "https://games-site.github.io/projects/ctr-time-travel/index.html", img: "assets/games/cut-the-rope.png", tags: ["puzzle"] },
   { name: "Papery Planes", url: "https://games-site.github.io/projects/papery-planes/index.html", img: "assets/games/papery-planes.png", tags: ["skill", "arcade"] },
   { name: "Chill guy clicker", url: "https://game.azgame.io/chill-guy-clicker/", img: "assets/games/chill-guy-clicker.jpg", tags: ["clicker"] },
-  { name: "Cookie Clicker", url: "https://webglmath.github.io/cookie-clicker/", img: "assets/games/cookie-clicker.jpg", tags: ["clicker"] },
+  { name: "Cookie Clicker", url: "https://azgames.io/cookie-clicker.embed", img: "assets/games/cookie-clicker.jpg", tags: ["clicker"] },
   { name: "Sprunki Clicker", url: "https://sprunkiclicker.io/", img: "assets/games/sprunki-clicker.jpg", tags: ["clicker"] },
   { name: "Sprunki", url: "https://azgames.io/game/sprunki/", img: "assets/games/sprunki.jpg", tags: ["arcade"] },
   { name: "Jetski race", url: "https://1games.io/game/jetski-race/", img: "assets/games/jetski-race.jpg", tags: ["racing", "skill"] },
@@ -123,6 +123,7 @@ const juegos = [
 
 ];
   
+
 
 
 
