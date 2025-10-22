@@ -119,7 +119,7 @@ const juegos = [
   { name: "Dino Bros", url: "https://bitlifeonline.github.io/dino-bros/", img: "assets/games/dino-bros.png" },
   { name: "Obby parkour ultimate", url: "https://bitlifeonline.github.io/obby-parkour-ultimate/", img: "assets/games/obby-parkour-ultimate.png" },
   { name: "Breaking the bank", url: "https://rebemanae.github.io/breaking-the-bank/", img: "assets/games/breaking-the-bank.png" },
-  { name: "Hole.io", url: "https://classroomjq.github.io/holeio/", img: "assets/games/hole.io.jpg" },
+  { name: "Fun Typing IO", url: "https://game.azgame.io/fun-typing-io/", img: "assets/games/fun-typing-io.jpg" },
   { name: "Blumgi ball", url: "https://bitlifeonline.github.io/class12523/blumgi-ball/", img: "assets/games/blumgi-ball.png" },
 
 ];
