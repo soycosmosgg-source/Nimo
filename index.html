@@ -387,11 +387,10 @@
         <img src="assets/loading_logo.png" alt="Logo" class="loading-logo" />
         <div class="error-message">
           Se ha interrumpido la conexión en este dispositivo.<br>
-          ¿Quieres volver a intentarlo en un proxy?
+          ¿Quieres salir al menu?
         </div>
         <button class="retry-btn" id="retryBtn">
-          Aceptar
-          <img src="assets/unblock.png" alt="Unblock" class="retry-icon">
+          Salir al menu
         </button>
       </div>
     </div>
@@ -557,7 +556,6 @@
 
   async function abrirJuego(url) {
     if (!url) return;
-
     currentGameUrlOriginal = url;
 
     modal.style.display = "flex";
@@ -566,54 +564,42 @@
     errorOverlay.style.display = "none";
     gameFrame.src = "";
 
-    try {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 5000);
-      await fetch(url, { method: "HEAD", mode: "no-cors", signal: controller.signal });
-      clearTimeout(timeout);
-
-      setTimeout(() => {
-        gameFrame.src = url;
-      }, 100);
-
-      gameFrame.onload = () => {
-        setTimeout(() => {
-          loadingOverlay.style.opacity = "0";
-          setTimeout(() => {
-            loadingOverlay.style.display = "none";
-          }, 400);
-        }, 300);
-      };
-    } catch (e) {
+    const loadTimeout = setTimeout(() => {
       mostrarError();
-    }
-
-    const failTimeout = setTimeout(() => {
-      if (loadingOverlay.style.display === "flex") {
-        mostrarError();
-      }
     }, 8000);
 
-    gameFrame.onload = () => {
-      clearTimeout(failTimeout);
-      setTimeout(() => {
+    try {
+      const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+      const res = await fetch(proxyUrl);
+
+      if (!res.ok) throw new Error("El proxy no respondió");
+
+      gameFrame.src = url;
+
+      gameFrame.onload = () => {
+        clearTimeout(loadTimeout); 
         loadingOverlay.style.opacity = "0";
         setTimeout(() => {
           loadingOverlay.style.display = "none";
         }, 400);
-      }, 300);
-    };
+      };
+
+    } catch (err) {
+      clearTimeout(loadTimeout);
+      mostrarError();
+    }
   }
 
-  // Reemplazamos el listener de retryBtn
   retryBtn.addEventListener("click", () => {
-    errorOverlay.style.display = "none";
+      errorOverlay.style.display = "none";
 
-    if (!currentGameUrlOriginal) return;
+      modal.style.display = "none";
+      gameFrame.src = "";
 
-    const proxyUrl = `https://hidester.com/proxy/?u=${encodeURIComponent(currentGameUrlOriginal)}&b=4&f=y`;
-    window.location.href = proxyUrl;
+      sidePanel.classList.add("none");
+      setTimeout(() => searchInput.focus(), 200);
   });
+
 
 
 </script>
