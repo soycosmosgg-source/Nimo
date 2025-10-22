@@ -153,7 +153,7 @@
       height: 30px;
     }
 
-    /* ====== Caja de búsqueda más grande ====== */
+    /* ====== Caja de búsqueda ====== */
     .search-box {
       background: rgba(255, 255, 255, 0.95);
       border-radius: 20px;
@@ -179,6 +179,36 @@
       height: 28px;
       cursor: pointer;
     }
+  
+    .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    }
+
+    .filter-buttons button {
+      flex: 1;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      background: white;
+      color: var(--nimo-dark);
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .filter-buttons button:hover {
+      background: var(--nimo-red);
+      color: white;
+    }
+
+    .filter-buttons button.active {
+      background: var(--nimo-red);
+      color: white;
+    }
+
 
     /* ====== Resultados ====== */
     .results {
@@ -358,6 +388,26 @@
       <img src="assets/search.png" alt="Search Game" id="searchBtn" />
     </div>
 
+    <div class="filter-buttons">
+      <button data-filter="all" class="active">Todos</button>
+      <button data-filter="tycoon">Tycoon</button>
+      <button data-filter="2player">2 Player</button>
+      <button data-filter="horror">Horror</button>
+      <button data-filter="clicker">Clicker</button>
+      <button data-filter="action">Action</button>
+      <button data-filter="puzzle">Puzzle</button>
+      <button data-filter="arcade">Arcade</button>
+      <button data-filter="racing">Racing</button>
+      <button data-filter="skill">Skill</button>
+      <button data-filter="plataform">Plataform</button>
+      <button data-filter="sandbox">Sandbox</button>
+      <button data-filter="simulation">Simulation</button>
+      <button data-filter="music">Music</button>
+      <button data-filter="merge">Merge</button>
+      <button data-filter="io">IO</button>
+    </div>
+
+
     <div class="results" id="searchResults"></div>
   </div>
 
@@ -484,6 +534,44 @@
         }, 400);
       }, 300);
     };
+  }
+  // === Sistema de filtros por categoría ===
+  const filterButtons = document.querySelectorAll(".filter-buttons button");
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const filtro = btn.dataset.filter;
+      filtrarPorCategoria(filtro);
+    });
+  });
+
+  function filtrarPorCategoria(categoria) {
+    searchResults.innerHTML = "";
+    const juegosFiltrados = categoria === "all"
+      ? juegos
+      : juegos.filter(j => j.tags.includes(categoria));
+
+    if (juegosFiltrados.length === 0) {
+      searchResults.innerHTML = "<p>No se encontraron juegos en esta categoría.</p>";
+      return;
+    }
+
+    juegosFiltrados.forEach(juego => {
+      const result = document.createElement("div");
+      result.classList.add("result-card");
+      const img = document.createElement("img");
+      img.src = juego.img;
+      img.alt = juego.name;
+      result.appendChild(img);
+      result.addEventListener("click", () => {
+        abrirJuego(juego.url);
+        sidePanel.classList.remove("active");
+      });
+      searchResults.appendChild(result);
+    });
   }
 
   // === Eventos ===
