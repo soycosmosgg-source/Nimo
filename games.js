@@ -120,7 +120,7 @@ const juegos = [
   { name: "Obby parkour ultimate", url: "https://bitlifeonline.github.io/obby-parkour-ultimate/", img: "assets/games/obby-parkour-ultimate.png" },
   { name: "Breaking the bank", url: "https://rebemanae.github.io/breaking-the-bank/", img: "assets/games/breaking-the-bank.png" },
   { name: "Hole.io", url: "https://classroomjq.github.io/holeio/", img: "assets/games/hole.io.jpg" },
-  { name: "Blumgi ball", url: "https://bitlifeonline.github.io/class12523/blumgi-ball/", img: "assets/games/blumbgi-ball.png" },
+  { name: "Blumgi ball", url: "https://bitlifeonline.github.io/class12523/blumgi-ball/", img: "assets/games/blumgi-ball.png" },
 
 ];
   
