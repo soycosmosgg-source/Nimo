@@ -55,7 +55,7 @@ const juegos = [
   { name: "Cut the Rope", url: "https://games-site.github.io/projects/ctr-time-travel/index.html", img: "assets/games/cut-the-rope.png" },
   { name: "Papery Planes", url: "https://games-site.github.io/projects/papery-planes/index.html", img: "assets/games/papery-planes.png" },
   { name: "Chill guy clicker", url: "https://game.azgame.io/chill-guy-clicker/", img: "assets/games/chill-guy-clicker.jpg" },
-  { name: "Cookie Clicker", url: "https://azgames.io/cookie-clicker.embed", img: "assets/games/cookie-clicker.jpg" },
+  { name: "Cookie Clicker", url: "https://webglmath.github.io/cookie-clicker/", img: "assets/games/cookie-clicker.jpg" },
   { name: "Sprunki Clicker", url: "https://sprunkiclicker.io/", img: "assets/games/sprunki-clicker.jpg" },
   { name: "Sprunki", url: "https://azgames.io/game/sprunki/", img: "assets/games/sprunki.jpg" },
   { name: "Jetski race", url: "https://1games.io/game/jetski-race/", img: "assets/games/jetski-race.jpg" },
@@ -119,6 +119,8 @@ const juegos = [
   { name: "Dino Bros", url: "https://bitlifeonline.github.io/dino-bros/", img: "assets/games/dino-bros.png" },
   { name: "Obby parkour ultimate", url: "https://bitlifeonline.github.io/obby-parkour-ultimate/", img: "assets/games/obby-parkour-ultimate.png" },
   { name: "Breaking the bank", url: "https://rebemanae.github.io/breaking-the-bank/", img: "assets/games/breaking-the-bank.png" },
+  { name: "Hole.io", url: "https://classroomjq.github.io/holeio/", img: "assets/games/hole.io.jpg" },
+  { name: "Blumgi ball", url: "https://bitlifeonline.github.io/class12523/blumgi-ball/", img: "assets/games/blumbgi-ball.png" },
 
 ];
   
