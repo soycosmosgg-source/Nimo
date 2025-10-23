@@ -574,7 +574,7 @@
     });
   }
 
-  // === Eventos ===
+  // === Events ===
   gameCards.forEach(c => {
     c.addEventListener("click", () => abrirJuego(c.dataset.url));
   });
@@ -656,27 +656,22 @@
       mostrarError();
     }, 15000);
 
-    try {
-      const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
-      const res = await fetch(proxyUrl);
+    gameFrame.src = url;
 
-      if (!res.ok) throw new Error("El proxy no respondió");
+    gameFrame.onload = () => {
+      clearTimeout(loadTimeout);
+      loadingOverlay.style.opacity = "0";
+      setTimeout(() => {
+        loadingOverlay.style.display = "none";
+      }, 400);
+    };
 
-      gameFrame.src = url;
-
-      gameFrame.onload = () => {
-        clearTimeout(loadTimeout); 
-        loadingOverlay.style.opacity = "0";
-        setTimeout(() => {
-          loadingOverlay.style.display = "none";
-        }, 400);
-      };
-
-    } catch (err) {
+    gameFrame.onerror = () => {
       clearTimeout(loadTimeout);
       mostrarError();
-    }
+    };
   }
+
 
   retryBtn.addEventListener("click", () => {
       errorOverlay.style.display = "none";
