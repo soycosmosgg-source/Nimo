@@ -101,7 +101,7 @@ const juegos = [
   { name: "Kick the buddy", url: "https://st.8games.net/dasha1/igry-novye/igra-kik-ze-badi/", img: "assets/games/kick-the-buddy.jpg", tags: ["skill", "action"] },
   { name: "Raft Life", url: "https://freegames78.github.io/raft-life/", img: "assets/games/raft-life.jpg", tags: ["sandbox", "skill"] },
   { name: "Stickman crazy box", url: "https://bitlifeonline.github.io/stickman-crazy-box/", img: "assets/games/stickman-crazy-box.jpg", tags: ["skill", "action"] },
-  { name: "Ping Pong Go!", url: "https://g.igroutka.ru/games/606/UhpyYq1QGA0nBfjJ/48aab6e0-54af-4e2f-9379-f76fa99dc59a/index.html", img: "assets/games/ping-pong-go.jpg", tags: ["skill"] },
+  { name: "Ping Pong Go!", url: "https://gnhustgames.github.io/ping-pong-go/", img: "assets/games/ping-pong-go.jpg", tags: ["skill"] },
   { name: "Super Mario Bros", url: "https://frivez.com/games/super-mario-bros/index.html", img: "assets/games/super-mario-bros.jpg", tags: ["platform", "arcade", "action"] },
   { name: "Survival Race", url: "https://st.8games.net/14/igra-bitva-superkarov-3d/", img: "assets/games/survival-race.png", tags: ["racing", "action"] },
   { name: "Traffic rally", url: "https://1games.io/game/traffic-rally/", img: "assets/games/traffic-rally.png", tags: ["racing", "simulation", "skill"] },
