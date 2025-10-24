@@ -1,5 +1,5 @@
 const juegos = [
-  { name: "Level Devil", url: "https://level-devil.io/game/level-devil/", img: "assets/games/level-devil.png", tags: ["arcade", "skill"] },
+  { name: "Level Devil", url: "https://leveldevil2.io/devil-level-2.embed", img: "assets/games/level-devil.png", tags: ["arcade", "skill", "2players"] },
   { name: "Drive Mad", url: "https://drive-madgame.github.io/file/", img: "assets/games/drive-mad.jpeg", tags: ["racing", "skill"] },
   { name: "Longcat", url: "https://play.fancade.com/5BFC1C2A246D67DD?mp_assets=https://s2.minijuegosgratis.com/&mp_embed=0&mp_game&mp_game_id=252905&mp_game_uid=longcat", img: "assets/games/long_cat.png", tags: ["arcade", "skill"] },
   { name: "Stick fighter", url: "https://labgstore21.github.io/g2/class-629/", img: "assets/games/stick-fighter.jpeg", tags: ["action", "skill", "2player"] },
