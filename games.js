@@ -6,6 +6,10 @@ const juegos = [
   { name: "Suika Game", url: "https://suikagame.io/game/suika-game/", img: "assets/games/suika-game.jpg", tags: ["puzzle", "skill", "merge"] },
   { name: "Merge Rot", url: "https://game.azgame.io/merge-brainrot/", img: "assets/games/merge-rot.png", tags: ["merge", "puzzle"] },
   { name: "Motox3m", url: "https://nb-ga.github.io/games-site/projects/moto-x3m/index.html", img: "assets/games/moto-x3m.png", tags: ["racing", "skill"] },
+  { name: "Motox3m 2", url: "https://nb-ga.github.io/games-site/projects/moto-x3m-2/index.html", img: "assets/games/motox3m_2.png", tags: ["racing", "skill"] },
+  { name: "Motox3m Winter", url: "https://games-site.github.io/projects/moto-x3m-winter/index.html", img: "assets/games/moto-x3m-4-winter.png", tags: ["racing", "skill"] },
+  { name: "Motox3m Spooky Land", url: "https://games-site.github.io/projects/moto-x3m-spooky-land/index.html", img: "assets/games/moto-x3m-spooky-land.png", tags: ["racing", "skill"] },
+  { name: "Motox3m Pool Party", url: "https://games-site.github.io/projects/moto-x3m-pool-party/index.html", img: "assets/games/moto-x3m-5-pool-party.png", tags: ["racing", "skill"] },
   { name: "Stickman Hook", url: "https://ug17.github.io/play/Stickman-HookUB/", img: "assets/games/stickman-hook.png", tags: ["skill", "arcade"] },
   { name: "Monkey Mart", url: "https://monkey-mart.io/iframe/index.html", img: "assets/games/monkey-mart.png", tags: ["tycoon", "simulation"] },
   { name: "My perfect hotel", url: "https://1games.io/game/perfect-hotel/", img: "assets/games/my-perfect-hotel.jpg", tags: ["tycoon", "simulation"] },
@@ -20,10 +24,6 @@ const juegos = [
   { name: "Minecraft Launcher", url: "https://yee.pages.dev/", img: "assets/games/minecraft-launcher.png", tags: ["sandbox"] },
   { name: "Flappy Bird", url: "https://nb-ga.github.io/games-site/projects/flappy-bird/index.html", img: "assets/games/flappy_bird.png", tags: ["arcade", "skill"] },
   { name: "2048", url: "https://nb-ga.github.io/games-site/projects/2048/index.html", img: "assets/games/2048.png", tags: ["puzzle"] },
-  { name: "Motox3m 2", url: "https://nb-ga.github.io/games-site/projects/moto-x3m-2/index.html", img: "assets/games/motox3m_2.png", tags: ["racing", "skill"] },
-  { name: "Motox3m Winter", url: "https://games-site.github.io/projects/moto-x3m-winter/index.html", img: "assets/games/moto-x3m-4-winter.png", tags: ["racing", "skill"] },
-  { name: "Motox3m Spooky Land", url: "https://games-site.github.io/projects/moto-x3m-spooky-land/index.html", img: "assets/games/moto-x3m-spooky-land.png", tags: ["racing", "skill"] },
-  { name: "Motox3m Pool Party", url: "https://games-site.github.io/projects/moto-x3m-pool-party/index.html", img: "assets/games/moto-x3m-5-pool-party.png", tags: ["racing", "skill"] },
   { name: "Ball Sort", url: "https://games-site.github.io/projects/ball-sort-puzzle/index.html", img: "assets/games/ball-sort.png", tags: ["puzzle"] },
   { name: "Fnaf 1", url: "https://run3.io/popgame/fnaf/fnaf1/", img: "assets/games/fnaf1.jpg", tags: ["horror"] },
   { name: "Fnaf 2", url: "https://nb-ga.github.io/games-site/projects/fnaf-2/index.html", img: "assets/games/fnaf2.png", tags: ["horror"] },
@@ -120,7 +120,12 @@ const juegos = [
   { name: "Obby parkour ultimate", url: "https://bitlifeonline.github.io/obby-parkour-ultimate/", img: "assets/games/obby-parkour-ultimate.png", tags: ["platform", "skill"] },
   { name: "Breaking the bank", url: "https://rebemanae.github.io/breaking-the-bank/", img: "assets/games/breaking-the-bank.png", tags: ["puzzle", "skill"] },
   { name: "Fun Typing IO", url: "https://game.azgame.io/fun-typing-io/", img: "assets/games/fun-typing-io.jpg", tags: ["skill", "io"] },
-  { name: "Blumgi ball", url: "https://bitlifeonline.github.io/class12523/blumgi-ball/", img: "assets/games/blumgi-ball.png", tags: ["arcade", "skill"] }
+  { name: "Swingo", url: "https://bitlifeonline.github.io/class12523/swingo/", img: "assets/games/blumgi-ball.png", tags: ["arcade", "skill"] },
+  { name: "Blumgi ball", url: "https://bitlifeonline.github.io/class12523/blumgi-ball/", img: "assets/games/swingo.png", tags: ["arcade", "skill"] },
+  { name: "Blumgi castle", url: "https://bitlifeonline.github.io/class12523/blumgi-castle/", img: "assets/games/blumgi-castle.png", tags: ["arcade", "skill", "2players"] },
+  { name: "Blumgi slime", url: "https://bitlifeonline.github.io/class12523/blumgi-slime/", img: "assets/games/blumgi-slime.png", tags: ["arcade", "skill", "2players"] },
+  { name: "Hero ball adventures", url: "https://slope-game.github.io/heroball-adventures/", img: "assets/games/heroball-adventures.png", tags: ["arcade"] },
+  { name: "Tomb of The Mask", url: "https://slope-game.github.io/new5923/tomb/", img: "assets/games/tomb-of-the-mask.png", tags: ["arcade"] }
 
 ];
   
