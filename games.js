@@ -74,7 +74,7 @@ const juegos = [
   { name: "Plants vs Zombies", url: "https://kdata1.com/2024/05/pvz2scratch/", img: "assets/games/plants-vs-zombies.jpg", tags: ["skill", "arcade"] },
   { name: "Uno Online", url: "https://kdata1.com/2017/03/four-colors/", img: "assets/games/uno-online.jpg", tags: ["skill"] },
   { name: "Stickman prison escape", url: "https://abinbins.github.io/a7/escaping-the-prison/", img: "assets/games/stickman-prison-escape.jpg", tags: ["action", "skill"] },
-  { name: "Murder", url: "https://f.silvergames.com/ruffle/player.php?id=4462", img: "assets/games/murder.jpg", tags: ["action", "skill"] },
+  { name: "Murder", url: "https://files.silvergames.com/flash/ruffle/player.php?id=4462", img: "assets/games/murder.jpg", tags: ["action", "skill"] },
   { name: "Granny", url: "https://1games.io/game/granny-horror/", img: "assets/games/granny.jpg", tags: ["horror"] },
   { name: "Plonky", url: "https://cdn.vietdp.com/file/vietdp-games/games/t52025/plonky/index.html", img: "assets/games/plonky.jpg", tags: ["arcade", "skill"] },
   { name: "Stickman Climb 2", url: "https://h5.ant.games/game-assets/17266550232074/index.html", img: "assets/games/stickman-climb-2.jpg", tags: ["skill", "plataform"] },
