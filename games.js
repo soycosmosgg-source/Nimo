@@ -38,6 +38,7 @@ const juegos = [
   { name: "Friday Night Funkin", url: "https://fnf.kdata1.com/2025/fnf/7500/", img: "assets/games/fnf.jpg", tags: ["music", "skill"] },
   { name: "Power Pamplona", url: "https://www.friv.com/z/games/powerpamplona/game.html", img: "assets/games/power-pamplona.jpeg", tags: ["skill", "arcade"] },
   { name: "Boxing Stars", url: "https://www.friv.com/z/games/boxingstars/game.html", img: "assets/games/boxing-stars.jpeg", tags: ["action", "skill"] },
+  { name: "Bad Ice cream", url: "https://bitlifeonline.github.io/bad-ice-cream/", img: "assets/games/bad-ice-cream.png", tags: ["arcade", "2player"] },
   { name: "Bad Ice cream 2", url: "https://onegamez.github.io/bad-ice-cream-2/", img: "assets/games/bad-ice-cream-2.jpeg", tags: ["arcade", "2player"] },
   { name: "Bad Ice cream 3", url: "https://onegamez.github.io/bad-ice-cream-3/", img: "assets/games/bad-ice-cream-3.jpeg", tags: ["arcade", "2player"] },
   { name: "Steal a Brainrot", url: "https://st.8games.net/9/8g/igra-ukradi-brejnrot-original-3d/", img: "assets/games/steal-a-brainrot.jpeg", tags: ["puzzle", "tycoon"] },
