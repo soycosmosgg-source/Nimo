@@ -35,6 +35,9 @@ const juegos = [
   { name: "Subway Surfers New York", url: "https://ubg77.github.io/updatefaqs/subway-surfers-nyc/", img: "assets/games/subway-surfers-nyc.png", tags: ["arcade", "skill"] },
   { name: "Subway Surfers Bali", url: "https://ubg77.github.io/updatefaqs/subway-surfers-bali/", img: "assets/games/subway-surfers-bali.png", tags: ["arcade", "skill"] },
   { name: "Temple Run", url: "https://templerun.org/wp-content/uploads/games/html5/T/Temple%20Game%20Jungle/index.html", img: "assets/games/temple-run.jpg", tags: ["arcade", "skill"] },
+  { name: "Temple Run 2 Jungle Fall", url: "https://rebemanae.github.io/temple-run-2-jungle-fall/", img: "assets/games/temple-run-2-jungle-fall.png", tags: ["arcade", "skill"] },
+  { name: "Temple Run 2 Frozen Shadows", url: "https://rebemanae.github.io/temple-run-2-jungle-fall/", img: "assets/games/temple-run-2-frozen-shadows.png", tags: ["arcade", "skill"] },
+  { name: "Temple Run 2 Holi Festival", url: "https://rebemanae.github.io/temple-run-2-holi-festival/", img: "assets/games/temple-run-2-holi-festival.png", tags: ["arcade", "skill"] },
   { name: "Friday Night Funkin", url: "https://fnf.kdata1.com/2025/fnf/7500/", img: "assets/games/fnf.jpg", tags: ["music", "skill"] },
   { name: "Power Pamplona", url: "https://www.friv.com/z/games/powerpamplona/game.html", img: "assets/games/power-pamplona.jpeg", tags: ["skill", "arcade"] },
   { name: "Boxing Stars", url: "https://www.friv.com/z/games/boxingstars/game.html", img: "assets/games/boxing-stars.jpeg", tags: ["action", "skill"] },
@@ -125,7 +128,10 @@ const juegos = [
   { name: "Blumgi castle", url: "https://bitlifeonline.github.io/class12523/blumgi-castle/", img: "assets/games/blumgi-castle.png", tags: ["arcade", "skill", "2players"] },
   { name: "Blumgi slime", url: "https://bitlifeonline.github.io/class12523/blumgi-slime/", img: "assets/games/blumgi-slime.png", tags: ["arcade", "skill", "2players"] },
   { name: "Hero ball adventures", url: "https://slope-game.github.io/heroball-adventures/", img: "assets/games/heroball-adventures.png", tags: ["arcade"] },
-  { name: "Tomb of The Mask", url: "https://slope-game.github.io/new5923/tomb/", img: "assets/games/tomb-of-the-mask.png", tags: ["arcade"] }
+  { name: "Tomb of The Mask", url: "https://slope-game.github.io/new5923/tomb/", img: "assets/games/tomb-of-the-mask.png", tags: ["arcade"] },
+  { name: "JetPack JoyRide", url: "https://slope-game.github.io/rungame/jetpack-joyride/", img: "assets/games/jetpack-joyride.png", tags: ["arcade"] },
+  { name: "Block Post", url: "https://bitlifeonline.github.io/class19523/blockpost/", img: "assets/games/blockpost.png", tags: ["skill"] },
+  { name: "Parkour Jump", url: "https://bitlifeonline.github.io/parkour-jump/", img: "assets/games/parkour-jump.png", tags: ["skill"] }
 
 ];
   
