@@ -642,35 +642,46 @@
 
   let currentGameUrlOriginal = "";
 
-  async function abrirJuego(url) {
-    if (!url) return;
-    currentGameUrlOriginal = url;
+async function abrirJuego(url) {
+  if (!url) return;
 
-    modal.style.display = "flex";
-    loadingOverlay.style.display = "flex";
-    loadingOverlay.style.opacity = "1";
-    errorOverlay.style.display = "none";
-    gameFrame.src = "";
+  currentGameUrlOriginal = url;
+  modal.style.display = "flex";
+  loadingOverlay.style.display = "flex";
+  loadingOverlay.style.opacity = "1";
+  errorOverlay.style.display = "none";
+  gameFrame.src = "";
 
-    const loadTimeout = setTimeout(() => {
-      mostrarError();
-    }, 8000);
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 8000);
 
-    gameFrame.src = url;
-
-    gameFrame.onload = () => {
-      clearTimeout(loadTimeout);
-      loadingOverlay.style.opacity = "0";
-      setTimeout(() => {
-        loadingOverlay.style.display = "none";
-      }, 400);
-    };
-
-    gameFrame.onerror = () => {
-      clearTimeout(loadTimeout);
-      mostrarError();
-    };
+  try {
+    const resp = await fetch(url, { method: "HEAD", mode: "no-cors", signal: controller.signal });
+    clearTimeout(timeout);
+  } catch (e) {
+    clearTimeout(timeout);
+    mostrarError();
+    return;
   }
+
+  gameFrame.src = url;
+
+  const loadTimeout = setTimeout(() => {
+    mostrarError();
+  }, 10000); 
+
+  gameFrame.onload = () => {
+    clearTimeout(loadTimeout);
+    loadingOverlay.style.opacity = "0";
+    setTimeout(() => (loadingOverlay.style.display = "none"), 400);
+  };
+
+  gameFrame.onerror = () => {
+    clearTimeout(loadTimeout);
+    mostrarError();
+  };
+}
+
 
 
   retryBtn.addEventListener("click", () => {
