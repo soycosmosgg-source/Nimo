@@ -36,7 +36,7 @@ const juegos = [
   { name: "Roper", url: "https://hyhygames.com/games/roper-poki-game/", img: "assets/games/roper.png", tags: ["arcade"] },
   { name: "Recoil", url: "https://freetoplayz.github.io/recoil/", img: "assets/games/recoil.jpeg", tags: ["arcade", "action"] },
   { name: "Odd bot", url: "https://play.fancade.com/5D01F70D3373F2DD?key=y8&value=default", img: "assets/games/odd-bot.jpg", tags: ["arcade"] },       
-  { name: "Stick Man Climb", url: "https://szhong.4399.com/4399swf//upload_swf/ftp37/gamehwq/20211221/15/index.html", img: "assets/games/stickman-climb.jpeg", tags: ["arcade", "skill"] },
+  { name: "Stick Man Climb", url: "https://szhong.4399.com/4399swf//upload_swf/ftp37/gamehwq/20211221/15/index.html", img: "assets/games/stickman-climb.jpeg", tags: ["platform", "skill"] },
   { name: "Stickman Climb 2", url: "https://h5.ant.games/game-assets/17266550232074/index.html", img: "assets/games/stickman-climb-2.jpg", tags: ["skill", "plataform"] },
   { name: "Fnaf 1", url: "https://run3.io/popgame/fnaf/fnaf1/", img: "assets/games/fnaf1.jpg", tags: ["horror"] },
   { name: "Fnaf 2", url: "https://nb-ga.github.io/games-site/projects/fnaf-2/index.html", img: "assets/games/fnaf2.png", tags: ["horror"] },
