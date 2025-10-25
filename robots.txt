@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nimogames.pages.dev/sitemap.xml
