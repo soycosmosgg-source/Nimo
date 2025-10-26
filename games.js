@@ -136,7 +136,9 @@ const juegos = [
   { name: "Gobattle", url: "https://bitlifeonline.github.io/gobattle/", img: "assets/games/gobattle.png", tags: ["puzzle", "action", "2players"] },
   { name: "Canon Blast", url: "https://bitlifeonline.github.io/cannon-blast/", img: "assets/games/canon-blast.png", tags: ["arcade", "skill"] },
   { name: "Cubes 2048.io", url: "https://bitlifeonline.github.io/cubes-2048-io/", img: "assets/games/cubes-2048.io.png", tags: ["arcade", "skill"] },
-  { name: "Obby parkour ultimate", url: "https://bitlifeonline.github.io/obby-parkour-ultimate/", img: "assets/games/obby-parkour-ultimate.png", tags: ["platform", "skill"] }
+  { name: "Obby parkour ultimate", url: "https://bitlifeonline.github.io/obby-parkour-ultimate/", img: "assets/games/obby-parkour-ultimate.png", tags: ["platform", "skill"] },
+  { name: "Stickmerge", url: "https://webglmath.github.io/stickmerge/", img: "assets/games/stickmerge.jpeg", tags: ["action", "skill", "merge"] }
+
 
 ];
   
