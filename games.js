@@ -76,6 +76,7 @@ const juegos = [
   { name: "Raft", url: "https://gnhustgames.github.io/class-73/raft/", img: "assets/games/raft.webp", tags: ["simulation"] },
   { name: "Hollow Knight", url: "https://2games.io/embed/hollow-knight", img: "assets/games/hollow-knight.webp", tags: ["platform"] },
   { name: "Cuphead", url: "https://gnhustgames.github.io/cuphead/", img: "assets/games/cuphead.webp", tags: ["platform", "skill", "action"] },
+  { name: "Fears to fathom home alone", url: "https://gnhustgames.github.io/class-69/fearstofathom-homealone/", img: "assets/games/ftp-home-alone.webp", tags: ["horror"] },
   { name: "Gta Chinatown", url: "https://retrogamesonline.io/grand-theft-auto-chinatown-wars-usa-enfrdeesit.embed", img: "assets/games/gta-chinatown.webp", tags: ["action", "skill"] },
   { name: "Head Soccer 2024", url: "https://1games.io/game/head-soccer-2024/", img: "assets/games/head-soccer-2024.webp", tags: ["2player", "skill"] },
   { name: "Rubik", url: "https://rubikscu.be/", img: "assets/games/rubik.webp", tags: ["puzzle"] },
@@ -145,6 +146,7 @@ const juegos = [
 
 ];
   
+
 
 
 
