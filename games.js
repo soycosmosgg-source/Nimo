@@ -143,11 +143,13 @@ const juegos = [
   { name: "Cubes 2048.io", url: "https://bitlifeonline.github.io/cubes-2048-io/", img: "assets/games/cubes-2048.io.webp", tags: ["arcade", "skill"] },
   { name: "Obby parkour ultimate", url: "https://bitlifeonline.github.io/obby-parkour-ultimate/", img: "assets/games/obby-parkour-ultimate.webp", tags: ["platform", "skill"] },
   { name: "Stickmerge", url: "https://webglmath.github.io/stickmerge/", img: "assets/games/stickmerge.webp", tags: ["action", "skill", "merge"] },
+  { name: "Brawl Stars", url: "https://web.cloudmoonapp.com/es/game/com.supercell.brawlstars/?from=list", img: "assets/games/brawl-stars.webp", tags: ["action", "skill"] },
   { name: "Squad busters", url: "https://web.cloudmoonapp.com/es/game/com.supercell.squad/?from=list", img: "assets/games/squad_busters.webp", tags: ["action", "skill", "merge"] }
 
 
 ];
   
+
 
 
 
