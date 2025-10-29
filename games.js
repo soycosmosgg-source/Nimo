@@ -144,11 +144,13 @@ const juegos = [
   { name: "Obby parkour ultimate", url: "https://bitlifeonline.github.io/obby-parkour-ultimate/", img: "assets/games/obby-parkour-ultimate.webp", tags: ["platform", "skill"] },
   { name: "Stickmerge", url: "https://webglmath.github.io/stickmerge/", img: "assets/games/stickmerge.webp", tags: ["action", "skill", "merge"] },
   { name: "Brawl Stars", url: "https://web.cloudmoonapp.com/es/game/com.supercell.brawlstars/?from=list", img: "assets/games/brawl-stars.webp", tags: ["action", "skill"] },
+  { name: "Clash Royale", url: "https://web.cloudmoonapp.com/es/game/com.supercell.clashroyale/", img: "assets/games/clash-royale.webp", tags: ["action", "skill"] },
   { name: "Squad busters", url: "https://web.cloudmoonapp.com/es/game/com.supercell.squad/?from=list", img: "assets/games/squad_busters.webp", tags: ["action", "skill", "merge"] }
 
 
 ];
   
+
 
 
 
