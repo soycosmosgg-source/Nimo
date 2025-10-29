@@ -75,7 +75,7 @@ const juegos = [
   { name: "Harvest Simulator", url: "https://g.igroutka.ru/games/1213/jtFMmdAVoke2w6qL/d8d9f2cc-186e-4695-adce-1ef984e47d59/index.html", img: "assets/games/harvest-simulator.webp", tags: ["simulation", "tycoon"] },
   { name: "That's not my neighbor", url: "https://gnhustgames.github.io/class-73/thats-not-my-neighbor/", img: "assets/games/thats-not-my-neighbor.webp", tags: ["puzzle"] },
   { name: "Raft", url: "https://gnhustgames.github.io/class-73/raft/", img: "assets/games/raft.webp", tags: ["simulation"] },
-  { name: "Hollow Knight", url: "https://hollowknight.io/embed/hollow-knight", img: "assets/games/hollow-knight.webp", tags: ["platform"] },
+  { name: "Hollow Knight", url: "https://2games.io/embed/hollow-knight", img: "assets/games/hollow-knight.webp", tags: ["platform"] },
   { name: "Cuphead", url: "https://gnhustgames.github.io/cuphead/", img: "assets/games/cuphead.webp", tags: ["platform", "skill", "action"] },
   { name: "Fears to fathom home alone", url: "https://gnhustgames.github.io/class-69/fearstofathom-homealone/", img: "assets/games/ftp-home-alone.webp", tags: ["horror"] },
   { name: "Gta Chinatown", url: "https://retrogamesonline.io/grand-theft-auto-chinatown-wars-usa-enfrdeesit.embed", img: "assets/games/gta-chinatown.webp", tags: ["action", "skill"] },
@@ -152,6 +152,7 @@ const juegos = [
 
 ];
   
+
 
 
 
