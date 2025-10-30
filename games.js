@@ -148,11 +148,14 @@ const juegos = [
   { name: "Clash Royale", url: "https://web.cloudmoonapp.com/es/game/com.supercell.clashroyale/", img: "assets/games/clash-royale.webp", tags: ["action", "skill"] },
   { name: "Clash of Clans", url: "https://web.cloudmoonapp.com/es/game/com.supercell.clashofclans/?from=list", img: "assets/games/clash-of-clans.webp", tags: ["action", "skill"] },
   { name: "Squad busters", url: "https://web.cloudmoonapp.com/es/game/com.supercell.squad/?from=list", img: "assets/games/squad_busters.webp", tags: ["action", "skill", "merge"] },
-  { name: "Pacman", url: "https://www.onlinegames.io/games/2024/more/tapman/index.html", img: "assets/games/pacman.webp", tags: ["arcade"] }
+  { name: "Pacman", url: "https://www.onlinegames.io/games/2024/more/tapman/index.html", img: "assets/games/pacman.webp", tags: ["arcade"] },
+  { name: "Mario party n64", url: "https://gam.onl/n64/mario-party.html", img: "assets/games/mario-party.webp", tags: ["arcade"] },
+  
 
 
 ];
   
+
 
 
 
