@@ -433,7 +433,15 @@
       <button class="close-btn" id="closeModal">
         <img src="assets/exit.png" alt="Exit" style="width:24px; height:24px;">
       </button>
-      <iframe src="" id="gameFrame"></iframe>
+      <iframe
+        src=""
+        id="gameFrame"
+        allow="fullscreen; autoplay; keyboard-map; gamepad; pointer-lock"
+        allowfullscreen
+        tabindex="0"
+        style="width:100%; height:100%; border:none;"
+      ></iframe>
+
       <!-- Overlay de error -->
       <div class="error-overlay" id="errorOverlay" style="display: none;">
         <img src="assets/loading_logo.png" alt="Logo" class="loading-logo" />
