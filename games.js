@@ -150,11 +150,13 @@ const juegos = [
   { name: "Squad busters", url: "https://web.cloudmoonapp.com/es/game/com.supercell.squad/?from=list", img: "assets/games/squad_busters.webp", tags: ["action", "skill", "merge"] },
   { name: "Pacman", url: "https://www.onlinegames.io/games/2024/more/tapman/index.html", img: "assets/games/pacman.webp", tags: ["arcade"] },
   { name: "Mario party n64", url: "https://gam.onl/n64/mario-party.html", img: "assets/games/mario-party.webp", tags: ["arcade"] },
+  { name: "Animal crossing wild world", url: "https://retrogamesonline.io/welcome-to-animal-crossing-wild-world-europe-enfrdeesit.embed", img: "assets/games/animal-crossing-wild-world.webp", tags: ["arcade"] },
   
 
 
 ];
   
+
 
 
 
