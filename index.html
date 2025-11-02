@@ -78,7 +78,7 @@
       object-fit: contain;
     }
 
-    /* ===== Botón y panel de información===== */
+    /* ===== Botón y panel de información ===== */
     .info-container {
       position: absolute; 
       top: 10px; 
@@ -120,6 +120,32 @@
 
     .info-panel.active {
       display: block;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      text-decoration: none;
+      color: #333;
+      transition: background 0.2s ease;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      width: 100%;
+      text-align: left;
+      font-size: 15px;
+    }
+
+    .info-item:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .info-item img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
     }
 
     /* ===== Overlay de carga ===== */
@@ -556,7 +582,6 @@
   // Elementos para el panel de información
   const openInfo = document.getElementById("openInfo");
   const infoPanel = document.getElementById("infoPanel");
-
   const infoLinks = {
       terms: "https://nimogames.pages.dev/terms",
       privacy: "https://nimogames.pages.dev/privacy",
