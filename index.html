@@ -78,22 +78,23 @@
       object-fit: contain;
     }
 
-    /* ===== Botón y panel de información FIJOS ===== */
+    /* ===== Botón y panel de información===== */
     .info-container {
-      position: fixed;
-      top: 20px;
-      right: 20px;
+      position: absolute; 
+      top: 10px; 
+      right: 15px; 
       z-index: 200;
+      width: fit-content;
     }
 
     .info-button {
-      width: 40px;
-      height: 40px;
+      width: 30px; 
+      height: 30px; 
       cursor: pointer;
       object-fit: contain;
       background: rgba(255, 255, 255, 0.95);
       border-radius: 50%;
-      padding: 8px;
+      padding: 5px; 
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       transition: transform 0.2s ease;
     }
@@ -106,7 +107,7 @@
       position: absolute;
       top: 100%;
       right: 0;
-      margin-top: 10px;
+      margin-top: 8px; 
       background: white;
       border-radius: 12px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -119,32 +120,6 @@
 
     .info-panel.active {
       display: block;
-    }
-
-    .info-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 12px 16px;
-      text-decoration: none;
-      color: #333;
-      transition: background 0.2s ease;
-      cursor: pointer;
-      border: none;
-      background: transparent;
-      width: 100%;
-      text-align: left;
-      font-size: 15px;
-    }
-
-    .info-item:hover {
-      background: rgba(0, 0, 0, 0.05);
-    }
-
-    .info-item img {
-      width: 20px;
-      height: 20px;
-      object-fit: contain;
     }
 
     /* ===== Overlay de carga ===== */
@@ -453,18 +428,7 @@
   </style>
 </head>
 <body>
-  <!-- ====== Barra superior ====== -->
-  <div class="floating-nav">
-    <div class="logo-area">
-      <img src="assets/Nimo.png" alt="Nimo" class="logo" />
-    </div>
-    <div class="icons-area">
-      <a href="#"><img src="assets/home.png" alt="Start" class="icon" /></a>
-      <img src="assets/search.png" alt="Search" class="icon" id="openMenu" />
-    </div>
-  </div>
-
-  <!-- ====== Botón de información FIJO ====== -->
+  <!-- ====== Botón de información ====== -->
   <div class="info-container">
     <img src="assets/info.png" alt="Info" class="info-button" id="openInfo" />
     <div class="info-panel" id="infoPanel">
@@ -480,6 +444,17 @@
         <img src="assets/github.png" alt="GitHub">
         <span>GitHub</span>
       </a>
+    </div>
+  </div>
+
+  <!-- ====== Barra superior ====== -->
+  <div class="floating-nav">
+    <div class="logo-area">
+      <img src="assets/Nimo.png" alt="Nimo" class="logo" />
+    </div>
+    <div class="icons-area">
+      <a href="#"><img src="assets/home.png" alt="Start" class="icon" /></a>
+      <img src="assets/search.png" alt="Search" class="icon" id="openMenu" />
     </div>
   </div>
 
@@ -582,7 +557,6 @@
   const openInfo = document.getElementById("openInfo");
   const infoPanel = document.getElementById("infoPanel");
 
-  // URLs personalizables para los enlaces
   const infoLinks = {
       terms: "https://nimogames.pages.dev/terms",
       privacy: "https://nimogames.pages.dev/privacy",
