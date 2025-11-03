@@ -17,7 +17,7 @@ Nuestra misión es ofrecer una experiencia fluida, rápida y libre de distraccio
 
 ¿Quieres mejorar Nimo? ¡Toda ayuda es bienvenida!
 
-- https://discord.gg/5CMuQZR3ej
+- https://dsc.gg/nimo
 ---
 
 ## ❤️ Agradecimientos
