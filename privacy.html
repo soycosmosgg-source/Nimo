@@ -13,6 +13,26 @@
             margin: 0;
             padding: 0;
         }
+
+        .exit-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        
+        .exit-button:hover {
+            transform: scale(1.05);
+        }
+        
+        .exit-button img {
+            display: block;
+            width: auto; 
+            height: auto; 
+        }
+        
         .container {
             max-width: 800px;
             margin: 50px auto;
@@ -44,6 +64,10 @@
     </style>
 </head>
 <body>
+    <a href="https://nimogames.pages.dev" class="exit-button">
+        <img src="assets/exit3.png" alt="Exit to Nimo Games">
+    </a>
+
     <div class="container">
         <h1>Privacy Policy</h1>
         <p>At <strong>Nimo</strong>, your privacy is our priority. Our platform provides online games without ads, downloads, interruptions, or tracking. This Privacy Policy explains how we handle any information while you use our platform at <a href="http://nimogames.pages.dev" target="_blank">nimogames.pages.dev</a> or <a href="http://nimo.ddns.net" target="_blank">nimo.ddns.net</a>.</p>

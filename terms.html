@@ -12,7 +12,28 @@
             color: #333;
             margin: 0;
             padding: 0;
+            position: relative; 
         }
+        
+        .exit-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        
+        .exit-button:hover {
+            transform: scale(1.05);
+        }
+        
+        .exit-button img {
+            display: block;
+            width: auto; 
+            height: auto; 
+        }
+        
         .container {
             max-width: 800px;
             margin: 50px auto;
@@ -20,20 +41,27 @@
             padding: 40px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             border-radius: 10px;
+            position: relative; 
+            z-index: 1;
         }
+        
         h1, h2 {
             color: #222;
         }
+        
         a {
             color: #1a73e8;
             text-decoration: none;
         }
+        
         a:hover {
             text-decoration: underline;
         }
+        
         p {
             margin-bottom: 15px;
         }
+        
         .note {
             background-color: #f8f9fa;
             border-left: 4px solid #1a73e8;
@@ -43,6 +71,10 @@
     </style>
 </head>
 <body>
+    <a href="https://nimogames.pages.dev" class="exit-button">
+        <img src="assets/exit3.png" alt="Exit to Nimo Games">
+    </a>
+    
     <div class="container">
         <h1>Terms of Service</h1>
         <p>Welcome to <strong>Nimo</strong>, a web platform offering online games without ads, downloads, or interruptions, providing a seamless gaming experience. By accessing or using our platform at <a href="http://nimogames.pages.dev" target="_blank">nimogames.pages.dev</a> or <a href="http://nimo.ddns.net" target="_blank">nimo.ddns.net</a>, you agree to the following terms and conditions:</p>
