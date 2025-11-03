@@ -466,15 +466,19 @@
   <div class="info-container">
     <img src="assets/info.png" alt="Info" class="info-button" id="openInfo" />
     <div class="info-panel" id="infoPanel">
-      <a href="https://ejemplo.com/terms" class="info-item" target="_blank">
+      <a href="https://nimogames.dev/terms" class="info-item" target="_blank">
         <img src="assets/terms.png" alt="Terms">
         <span>Terms</span>
       </a>
-      <a href="https://ejemplo.com/privacy" class="info-item" target="_blank">
+      <a href="https://nimogames.dev/privacy" class="info-item" target="_blank">
         <img src="assets/privacy.png" alt="Privacy">
         <span>Privacy</span>
       </a>
-      <a href="https://github.com/tu-usuario" class="info-item" target="_blank">
+      <a href="https://nimogames.dev/docs" class="info-item" target="_blank">
+        <img src="assets/docs.png" alt="Documentation">
+        <span>Docs</span>
+      </a>
+      <a href="https://github.com/soycosmosgg/Nimo" class="info-item" target="_blank">
         <img src="assets/github.png" alt="GitHub">
         <span>GitHub</span>
       </a>
@@ -593,6 +597,7 @@
   const infoLinks = {
       terms: "https://nimogames.pages.dev/terms",
       privacy: "https://nimogames.pages.dev/privacy",
+      docs: "https://nimogames.pages.dev/docs",
       github: "https://github.com/soycosmosgg/Nimo"
   };
 
@@ -600,7 +605,8 @@
   const infoItems = document.querySelectorAll('.info-item');
   infoItems[0].href = infoLinks.terms;
   infoItems[1].href = infoLinks.privacy;
-  infoItems[2].href = infoLinks.github;
+  infoItems[2].href = infoLinks.docs;
+  infoItems[3].href = infoLinks.github;
 
   // Cargar juegos
   juegos.forEach(juego => {
