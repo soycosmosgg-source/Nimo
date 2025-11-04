@@ -563,11 +563,10 @@
       <div class="error-overlay" id="errorOverlay" style="display: none;">
         <img src="assets/loading_logo.png" alt="Logo" class="loading-logo" />
         <div class="error-message">
-          Se ha interrumpido la conexión en este dispositivo.<br>
-          ¿Quieres salir al menu?
+          The connection on this device has been interrupted.
         </div>
         <button class="retry-btn" id="retryBtn">
-          Salir al menu
+          Go to menu
         </button>
       </div>
     </div>
@@ -700,7 +699,7 @@
       : juegos.filter(j => j.tags.includes(categoria));
 
     if (juegosFiltrados.length === 0) {
-      searchResults.innerHTML = "<p>No se encontraron juegos en esta categoría.</p>";
+      searchResults.innerHTML = "<p>No games were found in this category.</p>";
       return;
     }
 
@@ -862,3 +861,4 @@
 </body>
 
 </html>
+
