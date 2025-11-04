@@ -152,9 +152,11 @@ const juegos = [
   { name: "Mario party n64", url: "https://gam.onl/n64/mario-party.html", img: "assets/games/mario-party.webp", tags: ["arcade"] },
   { name: "Animal crossing wild world", url: "https://retrogamesonline.io/welcome-to-animal-crossing-wild-world-europe-enfrdeesit.embed", img: "assets/games/animal-crossing-wild-world.webp", tags: ["arcade"] },
   { name: "Rumble rush", url: "https://rumblerush.io", img: "assets/games/rumble-rush.webp", tags: ["racing"] },
-  { name: "Uphill rush 3", url: "https://files.silvergames.com/flash/ruffle/player.php?id=886", img: "assets/games/uphill-rush.webp", tags: ["racing"] }
+  { name: "Uphill rush 3", url: "https://files.silvergames.com/flash/ruffle/player.php?id=886", img: "assets/games/uphill-rush.webp", tags: ["racing"] },
+  { name: "Uphill rush 6", url: "https://evilgames.eu/flashgames/uphill-rush-6.html", img: "assets/games/uphill-rush-6.webp", tags: ["racing"] }
   
 
 
 ];
+
 
