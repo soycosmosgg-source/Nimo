@@ -19,7 +19,7 @@ Nimo es una plataforma web revolucionaria diseñada para disfrutar de **juegos o
 
 ## 🎮 Características destacadas
 
-### 🕹️ Experiencia Premium
+### 🕹️ Experiencia Sin Interrupciones
 - **Cero anuncios** - Juega sin interrupciones publicitarias
 - **Cero descargas** - Acceso instantáneo desde el navegador
 - **Cero registro** - Comienza a jugar inmediatamente
