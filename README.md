@@ -17,7 +17,7 @@ Nuestra misión es ofrecer una experiencia fluida, rápida y libre de distraccio
 
 ¿Quieres mejorar Nimo? ¡Toda ayuda es bienvenida!
 
-- [![Discord](https://img.shields.io/badge/Discord-Join-7289DA?logo=discord)](https://dsc.gg/nimo)
+[![Discord](https://img.shields.io/badge/Discord-Join-7289DA?logo=discord)](https://dsc.gg/nimo)
 ---
 
 ## ❤️ Agradecimientos
