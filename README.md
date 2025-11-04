@@ -25,9 +25,8 @@ Nimo es una plataforma web revolucionaria diseñada para disfrutar de **juegos o
 - **Cero registro** - Comienza a jugar inmediatamente
 
 ### 👥 Comunidad
-- **Modo multijugador** - Desafía a amigos en tiempo real
-- **Sistema de puntuaciones** - Compite por los primeros lugares
-- **Comunidad activa** - Únete a nuestra creciente familia de gamers
+- **Comparte errores** 
+- **Envia sugerencias** 
 
 ## 🚀 Comenzar
 
