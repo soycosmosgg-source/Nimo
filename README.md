@@ -1,25 +1,37 @@
-# 🎮 Nimo
+# 🎮 Nimo Games
 
-**Nimo** es una plataforma web diseñada para disfrutar de **juegos online sin anuncios, sin interrupciones y sin descargas**.  
-Nuestra misión es ofrecer una experiencia fluida, rápida y libre de distracciones, donde solo importa una cosa: **jugar**.
+**Ad-free online gaming platform | Plataforma de juegos online sin anuncios**
 
----
+[![Discord](https://img.shields.io/badge/Discord-Join-7289DA?logo=discord&logoColor=white)](https://dsc.gg/nimo)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Website](https://img.shields.io/badge/Website-Live-green)](https://nimogames.pages.dev)
 
-## 🚀 Características principales
+Nimo es una plataforma web revolucionaria diseñada para disfrutar de **juegos online premium sin anuncios, sin interrupciones y sin descargas**. Ofrecemos una experiencia de gaming pura, rápida y libre de distracciones.
 
-- 🕹️ **Juega gratis y sin anuncios** — nada de esperas ni banners molestos.  
-- ⚡ **Carga rápida** — los juegos están optimizados para funcionar directamente desde el navegador.  
-- 👥 **Modo multijugador** — desafía a tus amigos o juega con otros usuarios online.
+## ✨ ¿Por qué elegir Nimo?
 
----
+| Característica | Beneficio |
+|----------------|-----------|
+| 🚫 **Sin anuncios** | Experiencia de gaming ininterrumpida |
+| ⚡ **Carga instantánea** | Juega directamente desde el navegador |
+| 🎯 **Multijugador** | Conecta con amigos y jugadores worldwide |
 
-## 💡 Contribuir
 
-¿Quieres mejorar Nimo? ¡Toda ayuda es bienvenida!
+## 🎮 Características destacadas
 
-[![Discord](https://img.shields.io/badge/Discord-Join-7289DA?logo=discord)](https://dsc.gg/nimo)
----
+### 🕹️ Experiencia Premium
+- **Cero anuncios** - Juega sin interrupciones publicitarias
+- **Cero descargas** - Acceso instantáneo desde el navegador
+- **Cero registro** - Comienza a jugar inmediatamente
 
-## ❤️ Agradecimientos
+### 👥 Comunidad
+- **Modo multijugador** - Desafía a amigos en tiempo real
+- **Sistema de puntuaciones** - Compite por los primeros lugares
+- **Comunidad activa** - Únete a nuestra creciente familia de gamers
 
-Gracias a la comunidad de desarrolladores y jugadores que inspiran a seguir creando experiencias libres de anuncios y llenas de diversión.
+## 🚀 Comenzar
+
+¡Es muy simple! Solo visita:
+
+```bash
+https://nimogames.pages.dev
