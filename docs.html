@@ -31,7 +31,27 @@
             display: block;
             width: auto; 
             height: auto; 
-        }        
+        }
+
+        .language-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+
+        .language-selector select {
+            border: none;
+            background: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -269,6 +289,10 @@
             margin-top: 1rem;
             font-weight: 500;
         }
+
+        .hidden {
+            display: none;
+        }
         
         @media (max-width: 768px) {
             .feature-list {
@@ -290,104 +314,304 @@
     <a href="https://nimogames.pages.dev" class="exit-button">
         <img src="assets/exit2.png" alt="Exit to Nimo Games">
     </a>
+
+    <div class="language-selector">
+        <select id="languageSelect">
+            <option value="en">English 🇺🇸</option>
+            <option value="es">Español 🇪🇸</option>
+        </select>
+    </div>
+    
     <header>
-        <h1>Nimo Documentation</h1>
-        <p class="tagline">A web platform designed to enjoy online games without ads, without interruptions, and without downloads.</p>
+        <h1 data-i18n="docTitle">Nimo Documentation</h1>
+        <p class="tagline" data-i18n="tagline">A web platform designed to enjoy online games without ads, without interruptions, and without downloads.</p>
     </header>
     
     <main>
-        <section id="what-is-nimo">
-            <h2>What is Nimo?</h2>
-            <p>Nimo is a web platform designed to enjoy online games without ads, without interruptions, and without downloads. Our mission is to offer a smooth, fast, and distraction-free experience where only one thing matters: playing.</p>
-            
-            <div class="feature-list">
-                <div class="feature">
-                    <h4>🎮 Play for Free Without Ads</h4>
-                    <p>No waiting times or annoying banners.</p>
-                </div>
-                <div class="feature">
-                    <h4>⚡ Fast Loading</h4>
-                    <p>Games are optimized to run directly from the browser.</p>
-                </div>
-                <div class="feature">
-                    <h4>👥 Multiplayer Mode</h4>
-                    <p>Challenge your friends or play with other users online.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="how-it-works">
-            <h2>How Nimo Works</h2>
-            <p>Nimo serves as a gateway to games hosted by external providers. All games are hosted and maintained by third-party providers, and we are not responsible for the content, functionality, or availability of external games.</p>
-            
-            <p>Each external game may have its own terms of service and privacy policies. Users are subject to the terms of both Nimo and the respective game providers.</p>
-            
-            <div class="expandable">
-                <button class="toggle-btn" id="toggleGames">
-                    View All Game Sources <i>▼</i>
-                </button>
+        <!-- English Version -->
+        <div data-lang="en">
+            <section id="what-is-nimo">
+                <h2 data-i18n="whatIsTitle">What is Nimo?</h2>
+                <p data-i18n="whatIsText">Nimo is a web platform designed to enjoy online games without ads, without interruptions, and without downloads. Our mission is to offer a smooth, fast, and distraction-free experience where only one thing matters: playing.</p>
                 
-                <div id="gamesTableContainer">
-                    <div class="loading" id="loadingMessage">Loading games...</div>
-                    <div class="error" id="errorMessage" style="display: none;"></div>
+                <div class="feature-list">
+                    <div class="feature">
+                        <h4 data-i18n="feature1Title">🎮 Play for Free Without Ads</h4>
+                        <p data-i18n="feature1Desc">No waiting times or annoying banners.</p>
+                    </div>
+                    <div class="feature">
+                        <h4 data-i18n="feature2Title">⚡ Fast Loading</h4>
+                        <p data-i18n="feature2Desc">Games are optimized to run directly from the browser.</p>
+                    </div>
+                    <div class="feature">
+                        <h4 data-i18n="feature3Title">👥 Multiplayer Mode</h4>
+                        <p data-i18n="feature3Desc">Challenge your friends or play with other users online.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="how-it-works">
+                <h2 data-i18n="howItWorksTitle">How Nimo Works</h2>
+                <p data-i18n="howItWorksText1">Nimo serves as a gateway to games hosted by external providers. All games are hosted and maintained by third-party providers, and we are not responsible for the content, functionality, or availability of external games.</p>
+                
+                <p data-i18n="howItWorksText2">Each external game may have its own terms of service and privacy policies. Users are subject to the terms of both Nimo and the respective game providers.</p>
+                
+                <div class="expandable">
+                    <button class="toggle-btn" id="toggleGames">
+                        <span data-i18n="viewGamesBtn">View All Game Sources</span> <i>▼</i>
+                    </button>
                     
-                    <table class="games-table" id="gamesTable">
-                        <thead>
-                            <tr>
-                                <th>Game Name</th>
-                                <th>Source URL</th>
-                            </tr>
-                        </thead>
-                        <tbody id="gamesTableBody">
+                    <div id="gamesTableContainer">
+                        <div class="loading" id="loadingMessage" data-i18n="loadingGames">Loading games...</div>
+                        <div class="error" id="errorMessage" style="display: none;"></div>
+                        
+                        <table class="games-table" id="gamesTable">
+                            <thead>
+                                <tr>
+                                    <th data-i18n="gameNameHeader">Game Name</th>
+                                    <th data-i18n="sourceUrlHeader">Source URL</th>
+                                </tr>
+                            </thead>
+                            <tbody id="gamesTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="about-us">
+                <h2 data-i18n="aboutTitle">About the Project</h2>
+                <p data-i18n="aboutText1">Nimo was originally created by just two people who share a passion for gaming and a vision for an ad-free gaming experience.</p>
+                
+                <div class="team-section">
+                    <div class="team-member">
+                        <h4>soycosmosgg</h4>
+                        <p data-i18n="roleDeveloper">Developer & Founder</p>
+                    </div>
+                    <div class="team-member">
+                        <h4>Adrix845</h4>
+                        <p data-i18n="roleCoFounder">Developer & Co-founder</p>
+                    </div>
+                </div>
+                
+                <h3 data-i18n="motivationTitle">Our Motivation</h3>
+                <p data-i18n="motivationText">It's important to note that we do not earn absolutely anything from this project. Nimo is a passion project created to provide a better gaming experience for the community, free from the interruptions and distractions that often come with online gaming platforms.</p>
+                
+                <h3 data-i18n="contributingTitle">Contributing</h3>
+                <p data-i18n="contributingText">Want to improve Nimo? All help is welcome! Join our community to share ideas, report bugs, or contribute to the project.</p>
+                <a href="https://discord.gg/5CMuQZR3ej" class="discord-link" target="_blank" data-i18n="discordLink">Join our Discord Community</a>
+            </section>
+        </div>
 
-                        </tbody>
-                    </table>
+        <!-- Spanish Version -->
+        <div data-lang="es" class="hidden">
+            <section id="what-is-nimo">
+                <h2 data-i18n="whatIsTitle">¿Qué es Nimo?</h2>
+                <p data-i18n="whatIsText">Nimo es una plataforma web diseñada para disfrutar de juegos online sin anuncios, sin interrupciones y sin descargas. Nuestra misión es ofrecer una experiencia fluida, rápida y libre de distracciones donde solo importa una cosa: jugar.</p>
+                
+                <div class="feature-list">
+                    <div class="feature">
+                        <h4 data-i18n="feature1Title">🎮 Juega Gratis Sin Anuncios</h4>
+                        <p data-i18n="feature1Desc">Sin tiempos de espera ni banners molestos.</p>
+                    </div>
+                    <div class="feature">
+                        <h4 data-i18n="feature2Title">⚡ Carga Rápida</h4>
+                        <p data-i18n="feature2Desc">Los juegos están optimizados para funcionar directamente desde el navegador.</p>
+                    </div>
+                    <div class="feature">
+                        <h4 data-i18n="feature3Title">👥 Modo Multijugador</h4>
+                        <p data-i18n="feature3Desc">Desafía a tus amigos o juega con otros usuarios online.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-        
-        <section id="about-us">
-            <h2>About the Project</h2>
-            <p>Nimo was originally created by just two people who share a passion for gaming and a vision for an ad-free gaming experience.</p>
+            </section>
             
-            <div class="team-section">
-                <div class="team-member">
-                    <h4>soycosmosgg</h4>
-                    <p>Developer & Founder</p>
+            <section id="how-it-works">
+                <h2 data-i18n="howItWorksTitle">Cómo Funciona Nimo</h2>
+                <p data-i18n="howItWorksText1">Nimo sirve como puerta de entrada a juegos alojados por proveedores externos. Todos los juegos están alojados y mantenidos por proveedores externos, y no somos responsables del contenido, funcionalidad o disponibilidad de los juegos externos.</p>
+                
+                <p data-i18n="howItWorksText2">Cada juego externo puede tener sus propios términos de servicio y políticas de privacidad. Los usuarios están sujetos a los términos tanto de Nimo como de los respectivos proveedores de juegos.</p>
+                
+                <div class="expandable">
+                    <button class="toggle-btn" id="toggleGamesEs">
+                        <span data-i18n="viewGamesBtn">Ver Todas las Fuentes de Juegos</span> <i>▼</i>
+                    </button>
+                    
+                    <div id="gamesTableContainerEs">
+                        <div class="loading" id="loadingMessageEs" data-i18n="loadingGames">Cargando juegos...</div>
+                        <div class="error" id="errorMessageEs" style="display: none;"></div>
+                        
+                        <table class="games-table" id="gamesTableEs">
+                            <thead>
+                                <tr>
+                                    <th data-i18n="gameNameHeader">Nombre del Juego</th>
+                                    <th data-i18n="sourceUrlHeader">URL de Origen</th>
+                                </tr>
+                            </thead>
+                            <tbody id="gamesTableBodyEs">
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div class="team-member">
-                    <h4>Adrix845</h4>
-                    <p>Developer & Co-founder</p>
+            </section>
+            
+            <section id="about-us">
+                <h2 data-i18n="aboutTitle">Acerca del Proyecto</h2>
+                <p data-i18n="aboutText1">Nimo fue creado originalmente por solo dos personas que comparten una pasión por los juegos y una visión para una experiencia de juego sin anuncios.</p>
+                
+                <div class="team-section">
+                    <div class="team-member">
+                        <h4>soycosmosgg</h4>
+                        <p data-i18n="roleDeveloper">Desarrollador & Fundador</p>
+                    </div>
+                    <div class="team-member">
+                        <h4>Adrix845</h4>
+                        <p data-i18n="roleCoFounder">Desarrollador & Co-fundador</p>
+                    </div>
                 </div>
-            </div>
-            
-            <h3>Our Motivation</h3>
-            <p>It's important to note that we do not earn absolutely anything from this project. Nimo is a passion project created to provide a better gaming experience for the community, free from the interruptions and distractions that often come with online gaming platforms.</p>
-            
-            <h3>Contributing</h3>
-            <p>Want to improve Nimo? All help is welcome! Join our community to share ideas, report bugs, or contribute to the project.</p>
-            <a href="https://discord.gg/5CMuQZR3ej" class="discord-link" target="_blank">Join our Discord Community</a>
-        </section>
+                
+                <h3 data-i18n="motivationTitle">Nuestra Motivación</h3>
+                <p data-i18n="motivationText">Es importante señalar que no ganamos absolutamente nada de este proyecto. Nimo es un proyecto de pasión creado para proporcionar una mejor experiencia de juego para la comunidad, libre de las interrupciones y distracciones que a menudo vienen con las plataformas de juego online.</p>
+                
+                <h3 data-i18n="contributingTitle">Contribuir</h3>
+                <p data-i18n="contributingText">¿Quieres mejorar Nimo? ¡Toda ayuda es bienvenida! Únete a nuestra comunidad para compartir ideas, reportar errores o contribuir al proyecto.</p>
+                <a href="https://discord.gg/5CMuQZR3ej" class="discord-link" target="_blank" data-i18n="discordLink">Únete a nuestra Comunidad de Discord</a>
+            </section>
+        </div>
     </main>
     
     <footer>
-        <p>Nimo - Free Online Games Without Ads</p>
-        <p>Contact: soycosmosgg@gmail.com</p>
-        <p>Last updated: October 26, 2025</p>
+        <p data-i18n="footerText1">Nimo - Juegos Online Gratis Sin Anuncios</p>
+        <p data-i18n="footerText2">Contacto: soycosmosgg@gmail.com</p>
+        <p data-i18n="footerText3">Última actualización: 26 de Octubre, 2024</p>
     </footer>
 
     <script src="games.js"></script>
 
     <script>
+        // Sistema de traducción para Documentación
+        const translations = {
+            en: {
+                // Títulos
+                "docTitle": "Nimo Documentation",
+                "whatIsTitle": "What is Nimo?",
+                "howItWorksTitle": "How Nimo Works",
+                "aboutTitle": "About the Project",
+                "motivationTitle": "Our Motivation",
+                "contributingTitle": "Contributing",
 
-        function populateGamesTable() {
-            const loadingMessage = document.getElementById('loadingMessage');
-            const errorMessage = document.getElementById('errorMessage');
-            const gamesTableBody = document.getElementById('gamesTableBody');
-            const gamesTable = document.getElementById('gamesTable');
+                // Textos
+                "tagline": "A web platform designed to enjoy online games without ads, without interruptions, and without downloads.",
+                "whatIsText": "Nimo is a web platform designed to enjoy online games without ads, without interruptions, and without downloads. Our mission is to offer a smooth, fast, and distraction-free experience where only one thing matters: playing.",
+                "feature1Title": "🎮 Play for Free Without Ads",
+                "feature1Desc": "No waiting times or annoying banners.",
+                "feature2Title": "⚡ Fast Loading",
+                "feature2Desc": "Games are optimized to run directly from the browser.",
+                "feature3Title": "👥 Multiplayer Mode",
+                "feature3Desc": "Challenge your friends or play with other users online.",
+                "howItWorksText1": "Nimo serves as a gateway to games hosted by external providers. All games are hosted and maintained by third-party providers, and we are not responsible for the content, functionality, or availability of external games.",
+                "howItWorksText2": "Each external game may have its own terms of service and privacy policies. Users are subject to the terms of both Nimo and the respective game providers.",
+                "viewGamesBtn": "View All Game Sources",
+                "loadingGames": "Loading games...",
+                "gameNameHeader": "Game Name",
+                "sourceUrlHeader": "Source URL",
+                "aboutText1": "Nimo was originally created by just two people who share a passion for gaming and a vision for an ad-free gaming experience.",
+                "roleDeveloper": "Developer & Founder",
+                "roleCoFounder": "Developer & Co-founder",
+                "motivationText": "It's important to note that we do not earn absolutely anything from this project. Nimo is a passion project created to provide a better gaming experience for the community, free from the interruptions and distractions that often come with online gaming platforms.",
+                "contributingText": "Want to improve Nimo? All help is welcome! Join our community to share ideas, report bugs, or contribute to the project.",
+                "discordLink": "Join our Discord Community",
+                "footerText1": "Nimo - Free Online Games Without Ads",
+                "footerText2": "Contact: soycosmosgg@gmail.com",
+                "footerText3": "Last updated: October 26, 2024"
+            },
+            es: {
+                // Títulos
+                "docTitle": "Documentación de Nimo",
+                "whatIsTitle": "¿Qué es Nimo?",
+                "howItWorksTitle": "Cómo Funciona Nimo",
+                "aboutTitle": "Acerca del Proyecto",
+                "motivationTitle": "Nuestra Motivación",
+                "contributingTitle": "Contribuir",
+
+                // Textos
+                "tagline": "Una plataforma web diseñada para disfrutar de juegos online sin anuncios, sin interrupciones y sin descargas.",
+                "whatIsText": "Nimo es una plataforma web diseñada para disfrutar de juegos online sin anuncios, sin interrupciones y sin descargas. Nuestra misión es ofrecer una experiencia fluida, rápida y libre de distracciones donde solo importa una cosa: jugar.",
+                "feature1Title": "🎮 Juega Gratis Sin Anuncios",
+                "feature1Desc": "Sin tiempos de espera ni banners molestos.",
+                "feature2Title": "⚡ Carga Rápida",
+                "feature2Desc": "Los juegos están optimizados para funcionar directamente desde el navegador.",
+                "feature3Title": "👥 Modo Multijugador",
+                "feature3Desc": "Desafía a tus amigos o juega con otros usuarios online.",
+                "howItWorksText1": "Nimo sirve como puerta de entrada a juegos alojados por proveedores externos. Todos los juegos están alojados y mantenidos por proveedores externos, y no somos responsables del contenido, funcionalidad o disponibilidad de los juegos externos.",
+                "howItWorksText2": "Cada juego externo puede tener sus propios términos de servicio y políticas de privacidad. Los usuarios están sujetos a los términos tanto de Nimo como de los respectivos proveedores de juegos.",
+                "viewGamesBtn": "Ver Todas las Fuentes de Juegos",
+                "loadingGames": "Cargando juegos...",
+                "gameNameHeader": "Nombre del Juego",
+                "sourceUrlHeader": "URL de Origen",
+                "aboutText1": "Nimo fue creado originalmente por solo dos personas que comparten una pasión por los juegos y una visión para una experiencia de juego sin anuncios.",
+                "roleDeveloper": "Desarrollador & Fundador",
+                "roleCoFounder": "Desarrollador & Co-fundador",
+                "motivationText": "Es importante señalar que no ganamos absolutamente nada de este proyecto. Nimo es un proyecto de pasión creado para proporcionar una mejor experiencia de juego para la comunidad, libre de las interrupciones y distracciones que a menudo vienen con las plataformas de juego online.",
+                "contributingText": "¿Quieres mejorar Nimo? ¡Toda ayuda es bienvenida! Únete a nuestra comunidad para compartir ideas, reportar errores o contribuir al proyecto.",
+                "discordLink": "Únete a nuestra Comunidad de Discord",
+                "footerText1": "Nimo - Juegos Online Gratis Sin Anuncios",
+                "footerText2": "Contacto: soycosmosgg@gmail.com",
+                "footerText3": "Última actualización: 26 de Octubre, 2024"
+            }
+        };
+
+        // Detectar idioma del navegador
+        function detectLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            return browserLang.split('-')[0];
+        }
+
+        // Cambiar idioma
+        function changeLanguage(lang) {
+            // Ocultar todos los contenidos
+            document.querySelectorAll('[data-lang]').forEach(element => {
+                element.classList.add('hidden');
+            });
+            
+            // Mostrar contenido del idioma seleccionado
+            const targetElement = document.querySelector(`[data-lang="${lang}"]`);
+            if (targetElement) {
+                targetElement.classList.remove('hidden');
+            }
+            
+            // Actualizar atributo lang del HTML
+            document.documentElement.lang = lang;
+            
+            // Aplicar traducciones
+            applyTranslations(lang);
+            
+            // Guardar preferencia
+            localStorage.setItem('nimo_preferred_language', lang);
+            
+            // Actualizar selector
+            document.getElementById('languageSelect').value = lang;
+        }
+
+        // Aplicar traducciones
+        function applyTranslations(lang) {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+        }
+
+        // Funciones para cargar juegos
+        function populateGamesTable(lang = 'en') {
+            const suffix = lang === 'es' ? 'Es' : '';
+            const loadingMessage = document.getElementById(`loadingMessage${suffix}`);
+            const errorMessage = document.getElementById(`errorMessage${suffix}`);
+            const gamesTableBody = document.getElementById(`gamesTableBody${suffix}`);
+            const gamesTable = document.getElementById(`gamesTable${suffix}`);
             
             try {
-
                 if (typeof juegos === 'undefined') {
                     throw new Error('juegos array not found. Make sure games.js is loaded correctly.');
                 }
@@ -420,31 +644,71 @@
                 
                 // Mostrar mensaje de éxito
                 const successMessage = document.createElement('div');
-                successMessage.textContent = `Loaded ${juegos.length} games successfully`;
+                successMessage.textContent = lang === 'es' 
+                    ? `Se cargaron ${juegos.length} juegos exitosamente`
+                    : `Loaded ${juegos.length} games successfully`;
                 successMessage.className = 'success';
-                document.getElementById('gamesTableContainer').appendChild(successMessage);
+                document.getElementById(`gamesTableContainer${suffix}`).appendChild(successMessage);
                 
             } catch (error) {
                 console.error('Error loading games:', error);
                 loadingMessage.style.display = 'none';
-                errorMessage.textContent = `Error loading games: ${error.message}`;
+                errorMessage.textContent = lang === 'es'
+                    ? `Error cargando juegos: ${error.message}`
+                    : `Error loading games: ${error.message}`;
                 errorMessage.style.display = 'block';
             }
         }
-        
 
-        const toggleBtn = document.getElementById('toggleGames');
-        const gamesTable = document.getElementById('gamesTable');
-        
-        toggleBtn.addEventListener('click', function() {
-            const isExpanded = gamesTable.classList.toggle('show');
-            toggleBtn.classList.toggle('expanded', isExpanded);
+        // Configurar eventos de toggle para ambos idiomas
+        function setupToggleButtons() {
+            const toggleBtnEn = document.getElementById('toggleGames');
+            const toggleBtnEs = document.getElementById('toggleGamesEs');
             
-
-            if (isExpanded && document.getElementById('gamesTableBody').children.length === 0) {
-                populateGamesTable();
+            if (toggleBtnEn) {
+                toggleBtnEn.addEventListener('click', function() {
+                    const gamesTable = document.getElementById('gamesTable');
+                    const isExpanded = gamesTable.classList.toggle('show');
+                    toggleBtnEn.classList.toggle('expanded', isExpanded);
+                    
+                    if (isExpanded && document.getElementById('gamesTableBody').children.length === 0) {
+                        populateGamesTable('en');
+                    }
+                });
             }
-        });
+            
+            if (toggleBtnEs) {
+                toggleBtnEs.addEventListener('click', function() {
+                    const gamesTable = document.getElementById('gamesTableEs');
+                    const isExpanded = gamesTable.classList.toggle('show');
+                    toggleBtnEs.classList.toggle('expanded', isExpanded);
+                    
+                    if (isExpanded && document.getElementById('gamesTableBodyEs').children.length === 0) {
+                        populateGamesTable('es');
+                    }
+                });
+            }
+        }
+
+        // Inicializar
+        function initLanguage() {
+            const savedLang = localStorage.getItem('nimo_preferred_language');
+            const browserLang = detectLanguage();
+            const defaultLang = savedLang || (translations[browserLang] ? browserLang : 'en');
+            
+            changeLanguage(defaultLang);
+            
+            // Event listener para el selector
+            document.getElementById('languageSelect').addEventListener('change', function(e) {
+                changeLanguage(e.target.value);
+            });
+
+            // Configurar botones de toggle
+            setupToggleButtons();
+        }
+
+        // Iniciar cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', initLanguage);
     </script>
 </body>
 </html>
