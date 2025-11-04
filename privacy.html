@@ -12,6 +12,7 @@
             color: #333;
             margin: 0;
             padding: 0;
+            position: relative;
         }
 
         .exit-button {
@@ -32,6 +33,25 @@
             width: auto; 
             height: auto; 
         }
+
+        .language-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+
+        .language-selector select {
+            border: none;
+            background: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
         
         .container {
             max-width: 800px;
@@ -41,25 +61,34 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             border-radius: 10px;
         }
+        
         h1, h2 {
             color: #222;
         }
+        
         a {
             color: #1a73e8;
             text-decoration: none;
         }
+        
         a:hover {
             text-decoration: underline;
         }
+        
         p, li {
             margin-bottom: 15px;
         }
+        
         .warning {
             background-color: #fff3cd;
             border: 1px solid #ffeaa7;
             border-radius: 5px;
             padding: 15px;
             margin: 20px 0;
+        }
+
+        .hidden {
+            display: none;
         }
     </style>
 </head>
@@ -68,49 +97,237 @@
         <img src="assets/exit3.png" alt="Exit to Nimo Games">
     </a>
 
+    <div class="language-selector">
+        <select id="languageSelect">
+            <option value="en">English 🇺🇸</option>
+            <option value="es">Español 🇪🇸</option>
+        </select>
+    </div>
+
     <div class="container">
-        <h1>Privacy Policy</h1>
-        <p>At <strong>Nimo</strong>, your privacy is our priority. Our platform provides online games without ads, downloads, interruptions, or tracking. This Privacy Policy explains how we handle any information while you use our platform at <a href="http://nimogames.pages.dev" target="_blank">nimogames.pages.dev</a>.</p>
-        
-        <div class="warning">
-            <strong>Important Note:</strong> All games on Nimo are served through external links and may have their own privacy practices. We recommend reviewing the privacy policies of individual game providers.
+        <!-- English Version -->
+        <div data-lang="en">
+            <h1 data-i18n="privacyTitle">Privacy Policy</h1>
+            <p data-i18n="introText">At <strong>Nimo</strong>, your privacy is our priority. Our platform provides online games without ads, downloads, interruptions, or tracking. This Privacy Policy explains how we handle any information while you use our platform at <a href="http://nimogames.pages.dev" target="_blank">nimogames.pages.dev</a>.</p>
+            
+            <div class="warning">
+                <strong data-i18n="importantNote">Important Note:</strong> <span data-i18n="warningText">All games on Nimo are served through external links and may have their own privacy practices. We recommend reviewing the privacy policies of individual game providers.</span>
+            </div>
+
+            <h2 data-i18n="infoTitle">1. Information We Collect</h2>
+            <p data-i18n="infoText">Nimo itself does not collect personal data, does not use cookies, and does not display ads. The platform is designed to be private and focused purely on gaming.</p>
+
+            <h2 data-i18n="thirdPartyTitle">2. Third-Party Game Links</h2>
+            <p data-i18n="thirdPartyDesc">All games on Nimo are hosted externally through <a href="https://nimogames.pages.dev/docs" target="_blank">third-party providers</a>. When you play games:</p>
+            <ul>
+                <li data-i18n="thirdParty1">Games are loaded from external sources</li>
+                <li data-i18n="thirdParty2">These external game providers may collect data according to their own privacy policies</li>
+                <li data-i18n="thirdParty3">We have no control over the data collection practices of these third-party game hosts</li>
+                <li data-i18n="thirdParty4">We recommend reviewing the privacy policies of individual game providers</li>
+            </ul>
+
+            <h2 data-i18n="usageTitle">3. How We Use Information</h2>
+            <p data-i18n="usageText">Since we do not collect personal data, there is no tracking, sharing, or advertising targeting. Any minimal technical data (like server logs) is used solely for maintaining and improving the platform's performance.</p>
+
+            <h2 data-i18n="cookiesTitle">4. Cookies and Tracking</h2>
+            <p data-i18n="cookiesText">Nimo does <strong>not</strong> use cookies, third-party trackers, or advertising networks. However, external game providers may use their own cookies and tracking technologies.</p>
+
+            <h2 data-i18n="securityTitle">5. Data Security</h2>
+            <p data-i18n="securityText">We maintain basic security measures to ensure the platform runs smoothly, but since no personal information is collected, privacy risks are minimized. Please note that external game providers have their own security measures.</p>
+
+            <h2 data-i18n="childrenTitle">6. Children's Privacy</h2>
+            <p data-i18n="childrenText">Nimo is not intended for children under 13 years old. Since we do not collect personal data, no information about children is stored. Parents should be aware that external game providers may have different age policies.</p>
+
+            <h2 data-i18n="linksTitle">7. External Links Responsibility</h2>
+            <p data-i18n="linksText">Nimo serves as a gateway to external games. We are not responsible for the privacy practices, content, or data collection of these third-party game providers. Users should exercise caution and review the privacy policies of external game sites.</p>
+
+            <h2 data-i18n="changesTitle">8. Changes to This Policy</h2>
+            <p data-i18n="changesText">We may update this Privacy Policy occasionally. Continued use of Nimo constitutes acceptance of any updates.</p>
+
+            <h2 data-i18n="contactTitle">9. Contact Us</h2>
+            <p data-i18n="contactText">If you have any questions about this Privacy Policy, please contact us at <a href="mailto:soycosmosgg@gmail.com">soycosmosgg@gmail.com</a>.</p>
+
+            <p><em data-i18n="lastUpdated">Last updated: October 26, 2024</em></p>
         </div>
 
-        <h2>1. Information We Collect</h2>
-        <p>Nimo itself does not collect personal data, does not use cookies, and does not display ads. The platform is designed to be private and focused purely on gaming.</p>
+        <!-- Spanish Version (hidden by default) -->
+        <div data-lang="es" class="hidden">
+            <h1 data-i18n="privacyTitle">Política de Privacidad</h1>
+            <p data-i18n="introText">En <strong>Nimo</strong>, tu privacidad es nuestra prioridad. Nuestra plataforma proporciona juegos online sin anuncios, descargas, interrupciones o seguimiento. Esta Política de Privacidad explica cómo manejamos cualquier información mientras usas nuestra plataforma en <a href="http://nimogames.pages.dev" target="_blank">nimogames.pages.dev</a>.</p>
+            
+            <div class="warning">
+                <strong data-i18n="importantNote">Nota Importante:</strong> <span data-i18n="warningText">Todos los juegos en Nimo se sirven a través de enlaces externos y pueden tener sus propias prácticas de privacidad. Recomendamos revisar las políticas de privacidad de los proveedores de juegos individuales.</span>
+            </div>
 
-        <h2>2. Third-Party Game Links</h2>
-        <p>All games on Nimo are hosted externally through <a href="https://nimogames.pages.dev/docs" target="_blank">third-party providers</a>. When you play games:</p>
-        <ul>
-            <li>Games are loaded from external sources</li>
-            <li>These external game providers may collect data according to their own privacy policies</li>
-            <li>We have no control over the data collection practices of these third-party game hosts</li>
-            <li>We recommend reviewing the privacy policies of individual game providers</li>
-        </ul>
+            <h2 data-i18n="infoTitle">1. Información que Recopilamos</h2>
+            <p data-i18n="infoText">Nimo en sí no recopila datos personales, no usa cookies y no muestra anuncios. La plataforma está diseñada para ser privada y centrada únicamente en el juego.</p>
 
-        <h2>3. How We Use Information</h2>
-        <p>Since we do not collect personal data, there is no tracking, sharing, or advertising targeting. Any minimal technical data (like server logs) is used solely for maintaining and improving the platform's performance.</p>
+            <h2 data-i18n="thirdPartyTitle">2. Enlaces a Juegos de Terceros</h2>
+            <p data-i18n="thirdPartyDesc">Todos los juegos en Nimo están alojados externamente a través de <a href="https://nimogames.pages.dev/docs" target="_blank">proveedores externos</a>. Cuando juegas:</p>
+            <ul>
+                <li data-i18n="thirdParty1">Los juegos se cargan desde fuentes externas</li>
+                <li data-i18n="thirdParty2">Estos proveedores de juegos externos pueden recopilar datos según sus propias políticas de privacidad</li>
+                <li data-i18n="thirdParty3">No tenemos control sobre las prácticas de recopilación de datos de estos anfitriones de juegos externos</li>
+                <li data-i18n="thirdParty4">Recomendamos revisar las políticas de privacidad de los proveedores de juegos individuales</li>
+            </ul>
 
-        <h2>4. Cookies and Tracking</h2>
-        <p>Nimo does <strong>not</strong> use cookies, third-party trackers, or advertising networks. However, external game providers may use their own cookies and tracking technologies.</p>
+            <h2 data-i18n="usageTitle">3. Cómo Usamos la Información</h2>
+            <p data-i18n="usageText">Dado que no recopilamos datos personales, no hay seguimiento, intercambio ni orientación publicitaria. Cualquier dato técnico mínimo (como registros del servidor) se utiliza únicamente para mantener y mejorar el rendimiento de la plataforma.</p>
 
-        <h2>5. Data Security</h2>
-        <p>We maintain basic security measures to ensure the platform runs smoothly, but since no personal information is collected, privacy risks are minimized. Please note that external game providers have their own security measures.</p>
+            <h2 data-i18n="cookiesTitle">4. Cookies y Seguimiento</h2>
+            <p data-i18n="cookiesText">Nimo <strong>no</strong> utiliza cookies, rastreadores de terceros ni redes publicitarias. Sin embargo, los proveedores de juegos externos pueden usar sus propias cookies y tecnologías de seguimiento.</p>
 
-        <h2>6. Children's Privacy</h2>
-        <p>Nimo is not intended for children under 13 years old. Since we do not collect personal data, no information about children is stored. Parents should be aware that external game providers may have different age policies.</p>
+            <h2 data-i18n="securityTitle">5. Seguridad de Datos</h2>
+            <p data-i18n="securityText">Mantenemos medidas de seguridad básicas para garantizar que la plataforma funcione sin problemas, pero dado que no se recopila información personal, los riesgos de privacidad se minimizan. Ten en cuenta que los proveedores de juegos externos tienen sus propias medidas de seguridad.</p>
 
-        <h2>7. External Links Responsibility</h2>
-        <p>Nimo serves as a gateway to external games. We are not responsible for the privacy practices, content, or data collection of these third-party game providers. Users should exercise caution and review the privacy policies of external game sites.</p>
+            <h2 data-i18n="childrenTitle">6. Privacidad Infantil</h2>
+            <p data-i18n="childrenText">Nimo no está destinado a niños menores de 13 años. Dado que no recopilamos datos personales, no se almacena información sobre niños. Los padres deben ser conscientes de que los proveedores de juegos externos pueden tener diferentes políticas de edad.</p>
 
-        <h2>8. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy occasionally. Continued use of Nimo constitutes acceptance of any updates.</p>
+            <h2 data-i18n="linksTitle">7. Responsabilidad de Enlaces Externos</h2>
+            <p data-i18n="linksText">Nimo sirve como puerta de entrada a juegos externos. No somos responsables de las prácticas de privacidad, el contenido o la recopilación de datos de estos proveedores de juegos externos. Los usuarios deben ejercer precaución y revisar las políticas de privacidad de los sitios de juegos externos.</p>
 
-        <h2>9. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:soycosmosgg@gmail.com">soycosmosgg@gmail.com</a>.</p>
+            <h2 data-i18n="changesTitle">8. Cambios en esta Política</h2>
+            <p data-i18n="changesText">Podemos actualizar esta Política de Privacidad ocasionalmente. El uso continuado de Nimo constituye la aceptación de cualquier actualización.</p>
 
-        <p><em>Last updated: October 26, 2025</em></p>
+            <h2 data-i18n="contactTitle">9. Contáctanos</h2>
+            <p data-i18n="contactText">Si tienes alguna pregunta sobre esta Política de Privacidad, por favor contáctanos en <a href="mailto:soycosmosgg@gmail.com">soycosmosgg@gmail.com</a>.</p>
+
+            <p><em data-i18n="lastUpdated">Última actualización: 26 de Octubre, 2024</em></p>
+        </div>
     </div>
+
+    <script>
+        // Sistema de traducción para Política de Privacidad
+        const translations = {
+            en: {
+                // Títulos
+                "privacyTitle": "Privacy Policy",
+                "infoTitle": "1. Information We Collect",
+                "thirdPartyTitle": "2. Third-Party Game Links",
+                "usageTitle": "3. How We Use Information",
+                "cookiesTitle": "4. Cookies and Tracking",
+                "securityTitle": "5. Data Security",
+                "childrenTitle": "6. Children's Privacy",
+                "linksTitle": "7. External Links Responsibility",
+                "changesTitle": "8. Changes to This Policy",
+                "contactTitle": "9. Contact Us",
+
+                // Textos
+                "introText": "At <strong>Nimo</strong>, your privacy is our priority. Our platform provides online games without ads, downloads, interruptions, or tracking. This Privacy Policy explains how we handle any information while you use our platform at <a href=\"http://nimogames.pages.dev\" target=\"_blank\">nimogames.pages.dev</a>.",
+                "importantNote": "Important Note:",
+                "warningText": "All games on Nimo are served through external links and may have their own privacy practices. We recommend reviewing the privacy policies of individual game providers.",
+                "infoText": "Nimo itself does not collect personal data, does not use cookies, and does not display ads. The platform is designed to be private and focused purely on gaming.",
+                "thirdPartyDesc": "All games on Nimo are hosted externally through <a href=\"https://nimogames.pages.dev/docs\" target=\"_blank\">third-party providers</a>. When you play games:",
+                "thirdParty1": "Games are loaded from external sources",
+                "thirdParty2": "These external game providers may collect data according to their own privacy policies",
+                "thirdParty3": "We have no control over the data collection practices of these third-party game hosts",
+                "thirdParty4": "We recommend reviewing the privacy policies of individual game providers",
+                "usageText": "Since we do not collect personal data, there is no tracking, sharing, or advertising targeting. Any minimal technical data (like server logs) is used solely for maintaining and improving the platform's performance.",
+                "cookiesText": "Nimo does <strong>not</strong> use cookies, third-party trackers, or advertising networks. However, external game providers may use their own cookies and tracking technologies.",
+                "securityText": "We maintain basic security measures to ensure the platform runs smoothly, but since no personal information is collected, privacy risks are minimized. Please note that external game providers have their own security measures.",
+                "childrenText": "Nimo is not intended for children under 13 years old. Since we do not collect personal data, no information about children is stored. Parents should be aware that external game providers may have different age policies.",
+                "linksText": "Nimo serves as a gateway to external games. We are not responsible for the privacy practices, content, or data collection of these third-party game providers. Users should exercise caution and review the privacy policies of external game sites.",
+                "changesText": "We may update this Privacy Policy occasionally. Continued use of Nimo constitutes acceptance of any updates.",
+                "contactText": "If you have any questions about this Privacy Policy, please contact us at <a href=\"mailto:soycosmosgg@gmail.com\">soycosmosgg@gmail.com</a>.",
+                "lastUpdated": "Last updated: October 26, 2024"
+            },
+            es: {
+                // Títulos
+                "privacyTitle": "Política de Privacidad",
+                "infoTitle": "1. Información que Recopilamos",
+                "thirdPartyTitle": "2. Enlaces a Juegos de Terceros",
+                "usageTitle": "3. Cómo Usamos la Información",
+                "cookiesTitle": "4. Cookies y Seguimiento",
+                "securityTitle": "5. Seguridad de Datos",
+                "childrenTitle": "6. Privacidad Infantil",
+                "linksTitle": "7. Responsabilidad de Enlaces Externos",
+                "changesTitle": "8. Cambios en esta Política",
+                "contactTitle": "9. Contáctanos",
+
+                // Textos
+                "introText": "En <strong>Nimo</strong>, tu privacidad es nuestra prioridad. Nuestra plataforma proporciona juegos online sin anuncios, descargas, interrupciones o seguimiento. Esta Política de Privacidad explica cómo manejamos cualquier información mientras usas nuestra plataforma en <a href=\"http://nimogames.pages.dev\" target=\"_blank\">nimogames.pages.dev</a>.",
+                "importantNote": "Nota Importante:",
+                "warningText": "Todos los juegos en Nimo se sirven a través de enlaces externos y pueden tener sus propias prácticas de privacidad. Recomendamos revisar las políticas de privacidad de los proveedores de juegos individuales.",
+                "infoText": "Nimo en sí no recopila datos personales, no usa cookies y no muestra anuncios. La plataforma está diseñada para ser privada y centrada únicamente en el juego.",
+                "thirdPartyDesc": "Todos los juegos en Nimo están alojados externamente a través de <a href=\"https://nimogames.pages.dev/docs\" target=\"_blank\">proveedores externos</a>. Cuando juegas:",
+                "thirdParty1": "Los juegos se cargan desde fuentes externas",
+                "thirdParty2": "Estos proveedores de juegos externos pueden recopilar datos según sus propias políticas de privacidad",
+                "thirdParty3": "No tenemos control sobre las prácticas de recopilación de datos de estos anfitriones de juegos externos",
+                "thirdParty4": "Recomendamos revisar las políticas de privacidad de los proveedores de juegos individuales",
+                "usageText": "Dado que no recopilamos datos personales, no hay seguimiento, intercambio ni orientación publicitaria. Cualquier dato técnico mínimo (como registros del servidor) se utiliza únicamente para mantener y mejorar el rendimiento de la plataforma.",
+                "cookiesText": "Nimo <strong>no</strong> utiliza cookies, rastreadores de terceros ni redes publicitarias. Sin embargo, los proveedores de juegos externos pueden usar sus propias cookies y tecnologías de seguimiento.",
+                "securityText": "Mantenemos medidas de seguridad básicas para garantizar que la plataforma funcione sin problemas, pero dado que no se recopila información personal, los riesgos de privacidad se minimizan. Ten en cuenta que los proveedores de juegos externos tienen sus propias medidas de seguridad.",
+                "childrenText": "Nimo no está destinado a niños menores de 13 años. Dado que no recopilamos datos personales, no se almacena información sobre niños. Los padres deben ser conscientes de que los proveedores de juegos externos pueden tener diferentes políticas de edad.",
+                "linksText": "Nimo sirve como puerta de entrada a juegos externos. No somos responsables de las prácticas de privacidad, el contenido o la recopilación de datos de estos proveedores de juegos externos. Los usuarios deben ejercer precaución y revisar las políticas de privacidad de los sitios de juegos externos.",
+                "changesText": "Podemos actualizar esta Política de Privacidad ocasionalmente. El uso continuado de Nimo constituye la aceptación de cualquier actualización.",
+                "contactText": "Si tienes alguna pregunta sobre esta Política de Privacidad, por favor contáctanos en <a href=\"mailto:soycosmosgg@gmail.com\">soycosmosgg@gmail.com</a>.",
+                "lastUpdated": "Última actualización: 26 de Octubre, 2024"
+            }
+        };
+
+        // Detectar idioma del navegador
+        function detectLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            return browserLang.split('-')[0];
+        }
+
+        // Cambiar idioma
+        function changeLanguage(lang) {
+            // Ocultar todos los contenidos
+            document.querySelectorAll('[data-lang]').forEach(element => {
+                element.classList.add('hidden');
+            });
+            
+            // Mostrar contenido del idioma seleccionado
+            const targetElement = document.querySelector(`[data-lang="${lang}"]`);
+            if (targetElement) {
+                targetElement.classList.remove('hidden');
+            }
+            
+            // Actualizar atributo lang del HTML
+            document.documentElement.lang = lang;
+            
+            // Aplicar traducciones
+            applyTranslations(lang);
+            
+            // Guardar preferencia
+            localStorage.setItem('nimo_preferred_language', lang);
+            
+            // Actualizar selector
+            document.getElementById('languageSelect').value = lang;
+        }
+
+        // Aplicar traducciones
+        function applyTranslations(lang) {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translations[lang][key];
+                    } else {
+                        element.innerHTML = translations[lang][key];
+                    }
+                }
+            });
+        }
+
+        // Inicializar
+        function initLanguage() {
+            const savedLang = localStorage.getItem('nimo_preferred_language');
+            const browserLang = detectLanguage();
+            const defaultLang = savedLang || (translations[browserLang] ? browserLang : 'en');
+            
+            changeLanguage(defaultLang);
+            
+            // Event listener para el selector
+            document.getElementById('languageSelect').addEventListener('change', function(e) {
+                changeLanguage(e.target.value);
+            });
+        }
+
+        // Iniciar cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', initLanguage);
+    </script>
 </body>
 </html>
-
