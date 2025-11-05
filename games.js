@@ -151,8 +151,9 @@ const juegos = [
   { name: "Pacman", url: "https://www.onlinegames.io/games/2024/more/tapman/index.html", img: "assets/games/pacman.webp", tags: ["arcade"] },
   { name: "Mario party n64", url: "https://gam.onl/n64/mario-party.html", img: "assets/games/mario-party.webp", tags: ["arcade"] },
   { name: "Animal crossing wild world", url: "https://retrogamesonline.io/welcome-to-animal-crossing-wild-world-europe-enfrdeesit.embed", img: "assets/games/animal-crossing-wild-world.webp", tags: ["arcade"] },
-  { name: "Rumble rush", url: "https://rumblerush.io", img: "assets/games/rumble-rush.webp", tags: ["racing"] }
-  
-
+  { name: "Rumble rush", url: "https://rumblerush.io", img: "assets/games/rumble-rush.webp", tags: ["racing"] },
+  { name: "Happy Wheels", url: "https://flash-games.io/happy-wheels.embed", img: "assets/games/happy-wheels.webp", tags: ["racing"] },
+  { name: "Apple worm", url: "https://flash-games.io/apple-worm.embed", img: "assets/games/apple-worm.webp", tags: ["puzzle"] },
+  { name: "Super smash flash 2", url: "https://flash-games.io/super-smash-flash-2.embed", img: "assets/games/super-smash-flash-2.webp", tags: ["action"] },
 
 ];
