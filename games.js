@@ -129,7 +129,7 @@ const juegos = [
   { name: "Cat and Granny", url: "https://cdn.unblocked-games-free.com/games/4494/KQMUcZ73Nuneoj/390441/saesmjjdi8hyt0nhseqatqa5ku1gadbk/index.html", img: "assets/games/cat-and-granny.webp", tags: ["skill"] },
   { name: "Drive Beyond Horizons", url: "https://epicfreegames78.github.io/drive-beyond-horizons/", img: "assets/games/drive-beyond-horizons.webp", tags: ["racing", "skill"] },
   { name: "KoGaMa", url: "https://www.kogama.com/games/lagged/9231110/", img: "assets/games/kogama.webp", tags: ["sandbox"] },
-  { name: "Fruit Ninja", url: "https://mountain658.github.io/g/fruitninja/fruitninja.html", img: "assets/games/fruit-ninja.webp", tags: ["skill", "arcade"] },
+  { name: "Fruit Ninja", url: "./source-games/fruitninja.html", img: "assets/games/fruit-ninja.webp", tags: ["skill", "arcade"] },
   { name: "Kick the buddy", url: "https://st.8games.net/dasha1/igry-novye/igra-kik-ze-badi/", img: "assets/games/kick-the-buddy.webp", tags: ["skill", "action"] },
   { name: "Raft Life", url: "https://freegames78.github.io/raft-life/", img: "assets/games/raft-life.webp", tags: ["sandbox", "skill"] },
   { name: "Stickman crazy box", url: "https://bitlifeonline.github.io/stickman-crazy-box/", img: "assets/games/stickman-crazy-box.webp", tags: ["skill", "action"] },
@@ -168,6 +168,7 @@ const juegos = [
 
 
 ];
+
 
 
 
