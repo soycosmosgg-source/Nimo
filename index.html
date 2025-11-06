@@ -589,7 +589,6 @@
   const errorOverlay = document.getElementById("errorOverlay");
   const retryBtn = document.getElementById("retryBtn");
   
-  
   // Elementos para el panel de información
   const openInfo = document.getElementById("openInfo");
   const infoPanel = document.getElementById("infoPanel");
@@ -629,54 +628,72 @@
     errorOverlay.style.display = "flex";
   }
 
+  let currentGameUrlOriginal = "";
+
   async function abrirJuego(url) {
     if (!url) return;
 
+    currentGameUrlOriginal = url;
     modal.style.display = "flex";
     loadingOverlay.style.display = "flex";
     loadingOverlay.style.opacity = "1";
     errorOverlay.style.display = "none";
     gameFrame.src = "";
 
-    try {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 5000);
-      await fetch(url, { method: "HEAD", mode: "no-cors", signal: controller.signal });
-      clearTimeout(timeout);
+    // Detectar si es un juego local
+    const isLocalGame = !url.startsWith('http') || 
+                       url.includes('source-games') || 
+                       url.endsWith('.html');
 
-      // Cargar el iframe
-      setTimeout(() => {
-        gameFrame.src = url;
-      }, 100);
+    let finalUrl = url;
 
-      gameFrame.onload = () => {
-        setTimeout(() => {
-          loadingOverlay.style.opacity = "0";
-          setTimeout(() => {
-            loadingOverlay.style.display = "none";
-          }, 400);
-        }, 300);
-      };
-    } catch (e) {
-      mostrarError();
+    if (isLocalGame) {
+      if (!url.includes('.html') && !url.startsWith('http')) {
+        finalUrl = `source-games/${url}.html`;
+      }
+      else if (url.includes('source-games') && !url.endsWith('.html')) {
+        finalUrl = url + '.html';
+      }
+      else if (url.startsWith('http') && url.includes('source-games') && !url.endsWith('.html')) {
+        finalUrl = url + '.html';
+      }
     }
 
-    // Fallback
-    const failTimeout = setTimeout(() => {
-      if (loadingOverlay.style.display === "flex") {
-        mostrarError();
-      }
-    }, 8000);
+    console.log('Cargando juego:', finalUrl);
 
-    gameFrame.onload = () => {
-      clearTimeout(failTimeout);
-      setTimeout(() => {
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 8000);
+
+      // Para juegos locales, usa un timeout más corto
+      const loadTimeout = isLocalGame ? 8000 : 12000;
+
+      const errorTimeout = setTimeout(() => {
+        mostrarError();
+      }, loadTimeout);
+
+      gameFrame.src = finalUrl;
+
+      gameFrame.onload = () => {
+        clearTimeout(errorTimeout);
+        clearTimeout(timeout);
         loadingOverlay.style.opacity = "0";
         setTimeout(() => {
           loadingOverlay.style.display = "none";
         }, 400);
-      }, 300);
-    };
+      };
+
+      gameFrame.onerror = () => {
+        clearTimeout(errorTimeout);
+        clearTimeout(timeout);
+        console.error('Error cargando el juego:', finalUrl);
+        mostrarError();
+      };
+
+    } catch (e) {
+      console.error('Excepción:', e);
+      mostrarError();
+    }
   }
 
   // === Sistema de filtros por categoría ===
@@ -806,59 +823,13 @@
     }
   });
 
-  let currentGameUrlOriginal = "";
-
-  async function abrirJuego(url) {
-    if (!url) return;
-
-    currentGameUrlOriginal = url;
-    modal.style.display = "flex";
-    loadingOverlay.style.display = "flex";
-    loadingOverlay.style.opacity = "1";
-    errorOverlay.style.display = "none";
-    gameFrame.src = "";
-
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 8000);
-
-    try {
-      const resp = await fetch(url, { method: "HEAD", mode: "no-cors", signal: controller.signal });
-      clearTimeout(timeout);
-    } catch (e) {
-      clearTimeout(timeout);
-      mostrarError();
-      return;
-    }
-
-    gameFrame.src = url;
-
-    const loadTimeout = setTimeout(() => {
-      mostrarError();
-    }, 10000); 
-
-    gameFrame.onload = () => {
-      clearTimeout(loadTimeout);
-      loadingOverlay.style.opacity = "0";
-      setTimeout(() => (loadingOverlay.style.display = "none"), 400);
-    };
-
-    gameFrame.onerror = () => {
-      clearTimeout(loadTimeout);
-      mostrarError();
-    };
-  }
-
   retryBtn.addEventListener("click", () => {
       errorOverlay.style.display = "none";
-
       modal.style.display = "none";
       gameFrame.src = "";
-
-      sidePanel.classList.add("none");
+      sidePanel.classList.add("active");
       setTimeout(() => searchInput.focus(), 200);
   });
 </script>
 </body>
-
 </html>
-
