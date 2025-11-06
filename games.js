@@ -1,3 +1,4 @@
+
 const juegos = [
   { name: "Level Devil", url: "https://leveldevil2.io/devil-level-2.embed", img: "assets/games/level-devil.webp", tags: ["arcade", "skill", "2players"] },
   { name: "Stick fighter", url: "https://labgstore21.github.io/g2/class-629/", img: "assets/games/stick-fighter.webp", tags: ["action", "skill", "2player"] },
@@ -152,8 +153,13 @@ const juegos = [
   { name: "Mario party n64", url: "https://gam.onl/n64/mario-party.html", img: "assets/games/mario-party.webp", tags: ["arcade"] },
   { name: "Animal crossing wild world", url: "https://retrogamesonline.io/welcome-to-animal-crossing-wild-world-europe-enfrdeesit.embed", img: "assets/games/animal-crossing-wild-world.webp", tags: ["arcade"] },
   { name: "Rumble rush", url: "https://rumblerush.io", img: "assets/games/rumble-rush.webp", tags: ["racing"] },
-  { name: "Happy Wheels", url: "https://flash-games.io/happy-wheels.embed", img: "assets/games/happy-wheels.webp", tags: ["racing"] },
-  { name: "Apple worm", url: "https://flash-games.io/apple-worm.embed", img: "assets/games/apple-worm.webp", tags: ["puzzle"] },
-  { name: "Super smash flash 2", url: "https://flash-games.io/super-smash-flash-2.embed", img: "assets/games/super-smash-flash-2.webp", tags: ["action"] },
+  { name: "Uphill rush 3", url: "https://files.silvergames.com/flash/ruffle/player.php?id=886", img: "assets/games/uphill-rush.webp", tags: ["racing"] },
+  { name: "Uphill rush 6", url: "https://frivez.com/flashgame?load=uphill-rush-6", img: "assets/games/uphill-rush-6.webp", tags: ["racing"] }
+  
+
 
 ];
+
+
+
+
