@@ -79,6 +79,7 @@ const juegos = [
   { name: "Hollow Knight", url: "./source-games/hollowknight.html", img: "assets/games/hollow-knight.webp", tags: ["platform"] },
   { name: "Buckshot Roulette", url: "./source-games/buckshot-roulette.html", img: "assets/games/buckshot-roulette.webp", tags: ["platform"] },
   { name: "Cuphead", url: "https://gnhustgames.github.io/cuphead/", img: "assets/games/cuphead.webp", tags: ["platform", "skill", "action"] },
+  { name: "R.E.P.O", url: "./source-games/R.E.P.O.html", img: "assets/games/repo.webp", tags: ["horror", "action"] },
   { name: "Fears to fathom home alone", url: "https://gnhustgames.github.io/class-69/fearstofathom-homealone/", img: "assets/games/ftp-home-alone.webp", tags: ["horror"] },
   { name: "Gta Chinatown", url: "https://retrogamesonline.io/grand-theft-auto-chinatown-wars-usa-enfrdeesit.embed", img: "assets/games/gta-chinatown.webp", tags: ["action", "skill"] },
   { name: "Rocket soccer derby", url: "https://rocket-soccer-derby.github.io/file/", img: "assets/games/rocket-soccer-derby.webp", tags: ["racing"] },
@@ -163,6 +164,7 @@ const juegos = [
 
 
 ];
+
 
 
 
