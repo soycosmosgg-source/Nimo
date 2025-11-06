@@ -37,7 +37,8 @@ const juegos = [
   { name: "Dino Bros", url: "https://bitlifeonline.github.io/dino-bros/", img: "assets/games/dino-bros.webp", tags: ["arcade"] },
   { name: "Roper", url: "https://hyhygames.com/games/roper-poki-game/", img: "assets/games/roper.webp", tags: ["arcade"] },
   { name: "Recoil", url: "https://freetoplayz.github.io/recoil/", img: "assets/games/recoil.webp", tags: ["arcade", "action"] },
-  { name: "Odd bot", url: "https://play.fancade.com/5D01F70D3373F2DD?key=y8&value=default", img: "assets/games/odd-bot.webp", tags: ["arcade"] },       
+  { name: "Odd bot", url: "https://play.fancade.com/5D01F70D3373F2DD?key=y8&value=default", img: "assets/games/odd-bot.webp", tags: ["arcade"] },
+  { name: "Gobble", url: "./source-games/gobble.html", img: "assets/games/gobble.webp", tags: ["arcade"] },    
   { name: "Stick Man Climb", url: "https://szhong.4399.com/4399swf//upload_swf/ftp37/gamehwq/20211221/15/index.html", img: "assets/games/stickman-climb.webp", tags: ["platform", "skill"] },
   { name: "Stickman Climb 2", url: "https://h5.ant.games/game-assets/17266550232074/index.html", img: "assets/games/stickman-climb-2.webp", tags: ["skill", "plataform"] },
   { name: "Fnaf 1", url: "https://run3.io/popgame/fnaf/fnaf1/", img: "assets/games/fnaf1.webp", tags: ["horror"] },
@@ -165,6 +166,7 @@ const juegos = [
 
 
 ];
+
 
 
 
