@@ -15,7 +15,8 @@ const juegos = [
   { name: "Paper.io 2", url: "https://nb-ga.github.io/games-site/projects/paperio2/index.html", img: "assets/games/paper.io_2.webp", tags: ["io", "skill"] },
   { name: "Police Chase", url: "https://trafficrally.io/blacktop-police-chase.embed", img: "assets/games/police-chase.webp", tags: ["racing", "action"] },
   { name: "Stack", url: "https://ug17.github.io/play/Stack/", img: "assets/games/stack.webp", tags: ["skill", "arcade"] },
-  { name: "Minecraft Launcher", url: "https://yee.pages.dev/", img: "assets/games/minecraft-launcher.webp", tags: ["sandbox"] },
+  { name: "Minecraft Launcher", url: "https://irv77.github.io/AmplerLauncher/", img: "assets/games/minecraft-launcher.webp", tags: ["sandbox"] },
+  { name: "Minecraft Web Client", url: "./source-games/minecraftwebclient.html", img: "assets/games/minecraft-web.webp", tags: ["sandbox"] },
   { name: "Terraria", url: "https://scratch.mit.edu/projects/322341152/embed", img: "assets/games/terraria.webp", tags: ["sandbox", "simulation"] },
   { name: "Flappy Bird", url: "https://nb-ga.github.io/games-site/projects/flappy-bird/index.html", img: "assets/games/flappy_bird.webp", tags: ["arcade", "skill"] },
   { name: "2048", url: "https://nb-ga.github.io/games-site/projects/2048/index.html", img: "assets/games/2048.webp", tags: ["puzzle"] },
@@ -167,6 +168,7 @@ const juegos = [
 
 
 ];
+
 
 
 
