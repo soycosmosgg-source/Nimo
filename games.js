@@ -76,7 +76,7 @@ const juegos = [
   { name: "Harvest Simulator", url: "https://g.igroutka.ru/games/1213/jtFMmdAVoke2w6qL/d8d9f2cc-186e-4695-adce-1ef984e47d59/index.html", img: "assets/games/harvest-simulator.webp", tags: ["simulation", "tycoon"] },
   { name: "That's not my neighbor", url: "https://gnhustgames.github.io/class-73/thats-not-my-neighbor/", img: "assets/games/thats-not-my-neighbor.webp", tags: ["puzzle"] },
   { name: "Raft", url: "https://gnhustgames.github.io/class-73/raft/", img: "assets/games/raft.webp", tags: ["simulation"] },
-  { name: "Hollow Knight", url: "https://2games.io/embed/hollow-knight", img: "assets/games/hollow-knight.webp", tags: ["platform"] },
+  { name: "Hollow Knight", url: "https://nimogames.pages.dev/source-games/hollowknight", img: "assets/games/hollow-knight.webp", tags: ["platform"] },
   { name: "Cuphead", url: "https://gnhustgames.github.io/cuphead/", img: "assets/games/cuphead.webp", tags: ["platform", "skill", "action"] },
   { name: "Fears to fathom home alone", url: "https://gnhustgames.github.io/class-69/fearstofathom-homealone/", img: "assets/games/ftp-home-alone.webp", tags: ["horror"] },
   { name: "Gta Chinatown", url: "https://retrogamesonline.io/grand-theft-auto-chinatown-wars-usa-enfrdeesit.embed", img: "assets/games/gta-chinatown.webp", tags: ["action", "skill"] },
@@ -154,11 +154,16 @@ const juegos = [
   { name: "Animal crossing wild world", url: "https://retrogamesonline.io/welcome-to-animal-crossing-wild-world-europe-enfrdeesit.embed", img: "assets/games/animal-crossing-wild-world.webp", tags: ["arcade"] },
   { name: "Rumble rush", url: "https://rumblerush.io", img: "assets/games/rumble-rush.webp", tags: ["racing"] },
   { name: "Uphill rush 3", url: "https://files.silvergames.com/flash/ruffle/player.php?id=886", img: "assets/games/uphill-rush.webp", tags: ["racing"] },
-  { name: "Uphill rush 6", url: "https://frivez.com/flashgame?load=uphill-rush-6", img: "assets/games/uphill-rush-6.webp", tags: ["racing"] }
+  { name: "Uphill rush 6", url: "https://frivez.com/flashgame?load=uphill-rush-6", img: "assets/games/uphill-rush-6.webp", tags: ["racing"] },
+  { name: "Happy Wheels", url: "https://flash-games.io/happy-wheels.embed", img: "assets/games/happy-wheels.webp", tags: ["racing"] },
+  { name: "Kindergarten", url: "https://2games.io/game/kindergarten/", img: "assets/games/kindergarten.webp", tags: ["horror"] },
+  { name: "Super smash flash 2", url: "https://flash-games.io/super-smash-flash-2.embed", img: "assets/games/super-smash-flash-2.webp", tags: ["action"] }
   
 
 
 ];
+
+
 
 
 
