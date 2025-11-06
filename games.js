@@ -77,6 +77,7 @@ const juegos = [
   { name: "That's not my neighbor", url: "https://gnhustgames.github.io/class-73/thats-not-my-neighbor/", img: "assets/games/thats-not-my-neighbor.webp", tags: ["puzzle"] },
   { name: "Raft", url: "https://gnhustgames.github.io/class-73/raft/", img: "assets/games/raft.webp", tags: ["simulation"] },
   { name: "Hollow Knight", url: "source-games/hollowknight.html", img: "assets/games/hollow-knight.webp", tags: ["platform"] },
+  { name: "Buckshot Roulette", url: "source-games/buckshot-roulette.html", img: "assets/games/buckshot-roulette.webp", tags: ["platform"] },
   { name: "Cuphead", url: "https://gnhustgames.github.io/cuphead/", img: "assets/games/cuphead.webp", tags: ["platform", "skill", "action"] },
   { name: "Fears to fathom home alone", url: "https://gnhustgames.github.io/class-69/fearstofathom-homealone/", img: "assets/games/ftp-home-alone.webp", tags: ["horror"] },
   { name: "Gta Chinatown", url: "https://retrogamesonline.io/grand-theft-auto-chinatown-wars-usa-enfrdeesit.embed", img: "assets/games/gta-chinatown.webp", tags: ["action", "skill"] },
