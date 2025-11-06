@@ -164,10 +164,12 @@ const juegos = [
   { name: "Kindergarten", url: "https://2games.io/game/kindergarten/", img: "assets/games/kindergarten.webp", tags: ["horror"] },
   { name: "Super smash flash 2", url: "https://flash-games.io/super-smash-flash-2.embed", img: "assets/games/super-smash-flash-2.webp", tags: ["action"] },
   { name: "Gun runner", url: "./source-games/gun-runner.html", img: "assets/games/gun-runner.webp", tags: ["action"] }
+  { name: "Guess their answer", url: "./source-games/guess-their-answer.html", img: "assets/games/guess-their-answer.webp", tags: ["arcade"] }
   
 
 
 ];
+
 
 
 
