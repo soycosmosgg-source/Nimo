@@ -76,7 +76,7 @@ const juegos = [
   { name: "Geometry Dash", url: "https://1game-images.io/game/geometry-lite/", img: "assets/game-images/geometry-dash.webp", tags: ["skill", "arcade"] },
   { name: "Geometry Vibes", url: "https://files.twoplayergame-images.org/files/game-images/g1/geometry-vibes-v11/index.html", img: "assets/game-images/geometry-vibes.webp", tags: ["skill", "arcade", "2player"] },
   { name: "Harvest Simulator", url: "https://g.igroutka.ru/game-images/1213/jtFMmdAVoke2w6qL/d8d9f2cc-186e-4695-adce-1ef984e47d59/index.html", img: "assets/game-images/harvest-simulator.webp", tags: ["simulation", "tycoon"] },
-  { name: "That's not my neighbor", url: "https://gnhustgame-images.github.io/class-73/thats-not-my-neighbor/", img: "assets/game-images/thats-not-my-neighbor.webp", tags: ["puzzle"] },
+  { name: "That's not my neighbor", url: "./games/thatsnotmyneighbor.html", img: "assets/game-images/thats-not-my-neighbor.webp", tags: ["puzzle"] },
   { name: "Raft", url: "https://gnhustgame-images.github.io/class-73/raft/", img: "assets/game-images/raft.webp", tags: ["simulation"] },
   { name: "Hollow Knight", url: "https://2game-images.io/embed/hollow-knight", img: "assets/game-images/hollow-knight.webp", tags: ["platform"] },
   { name: "Buckshot Roulette", url: "./games/buckshot-roulette.html", img: "assets/game-images/buckshot-roulette.webp", tags: ["platform"] },
@@ -167,7 +167,7 @@ const juegos = [
   { name: "Candy Crush", url: "./games/candy-crush.html", img: "assets/game-images/candy-crush.webp", tags: ["puzzle"] },
   { name: "Crazy Cars", url: "./games/crazy-cars.html", img: "assets/game-images/crazy-cars.webp", tags: ["racing", "2players"] },
   { name: "Build now.gg", url: "./games/buildnow.gg.html", img: "assets/game-images/buildnow.gg.webp", tags: ["action"] },
-  { name: "Web Fishing", url: "./games/webfishing.html", img: "assets/game-images/webfishing.webp", tags: ["action"] },
+  { name: "Web Fishing", url: "./games/webfishing.html", img: "assets/game-images/webfishing.webp", tags: ["tycoon"] },
   
 
 
