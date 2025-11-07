@@ -116,7 +116,7 @@ const juegos = [
   { name: "Blood Money!", url: "https://bloodmoney.1game-images.io/", img: "assets/game-images/blood-money.webp", tags: ["action", "skill"] },
   { name: "Blood Money! 2", url: "https://1game-images.io/game/bloodmoney-2/", img: "assets/game-images/blood-money-2.webp", tags: ["action", "skill"] },
   { name: "Scary teacher 3D", url: "https://g.igroutka.ru/game-images/1087/NgleEW1zP8YRpXGI/9d2ca9df-7f2c-4685-8907-e330be4ef190/index.html", img: "assets/game-images/scary-teacher-3d.webp", tags: ["horror"] },
-  { name: "SchoolBoy Runaway", url: "https://st.8game-images.net/10/8g/igra-schoolboy-runaway/", img: "assets/game-images/school-boy-runaway.webp", tags: ["action", "skill"] },
+  { name: "SchoolBoy Runaway", url: "./games/schoolboy-runaway.html", img: "assets/game-images/school-boy-runaway.webp", tags: ["action", "skill"] },
   { name: "Escape Road City 2", url: "https://1game-images.io/game/escape-road-city-2/", img: "assets/game-images/escape-road-city-2.webp", tags: ["racing", "skill"] },
   { name: "Ragdoll Archers", url: "https://bitlifeonline.github.io/ragdoll-archers/", img: "assets/game-images/ragdoll-archers.webp", tags: ["skill", "arcade"] },
   { name: "Swipe Ball", url: "https://swipe-ball.1game-images.io/", img: "assets/game-images/swipe-ball.webp", tags: ["skill", "arcade"] },
