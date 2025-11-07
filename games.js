@@ -158,7 +158,6 @@ const juegos = [
   { name: "Animal crossing wild world", url: "https://retrogamesonline.io/welcome-to-animal-crossing-wild-world-europe-enfrdeesit.embed", img: "assets/games/animal-crossing-wild-world.webp", tags: ["arcade"] },
   { name: "Rumble rush", url: "https://rumblerush.io", img: "assets/games/rumble-rush.webp", tags: ["racing"] },
   { name: "Uphill rush 3", url: "https://files.silvergames.com/flash/ruffle/player.php?id=886", img: "assets/games/uphill-rush.webp", tags: ["racing"] },
-  { name: "Uphill rush 6", url: "https://frivez.com/flashgame?load=uphill-rush-6", img: "assets/games/uphill-rush-6.webp", tags: ["racing"] },
   { name: "Happy Wheels", url: "https://flash-games.io/happy-wheels.embed", img: "assets/games/happy-wheels.webp", tags: ["racing"] },
   { name: "Kindergarten", url: "./source-games/kindergarten-1.html", img: "assets/games/kindergarten.webp", tags: ["horror"] },
   { name: "Kindergarten 2", url: "./source-games/kindergarten-2.html", img: "assets/games/kindergarten-2.webp", tags: ["horror"] },
