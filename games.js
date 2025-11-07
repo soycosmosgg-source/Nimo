@@ -120,7 +120,6 @@ const juegos = [
   { name: "Swipe Ball", url: "https://swipe-ball.1games.io/", img: "assets/games/swipe-ball.webp", tags: ["skill", "arcade"] },
   { name: "Flick Goal", url: "https://playgroundfree.github.io/flick-goal/", img: "assets/games/flick-goal.webp", tags: ["skill", "arcade"] },
   { name: "Fury Chase 2", url: "https://1games.io/game/fury-chase-2/", img: "assets/games/fury-chase-2.webp", tags: ["racing", "skill"] },
-  { name: "Repo", url: "https://st.8games.net/10/8g/igra-repo-original/", img: "assets/games/repo.webp", tags: ["action", "skill"] },
   { name: "Golf Hit", url: "https://golf-hit.1games.io/", img: "assets/games/golf-hit.webp", tags: ["skill", "arcade"] },
   { name: "Dunk Dash", url: "https://1games.io/game/dunk-dash/", img: "assets/games/dunk-dash.webp", tags: ["skill", "arcade"] },
   { name: "Icy Dash", url: "https://1games.io/game/icy-dash/", img: "assets/games/icy-dash.webp", tags: ["skill", "arcade"] },
@@ -159,7 +158,9 @@ const juegos = [
   { name: "Uphill rush 3", url: "https://files.silvergames.com/flash/ruffle/player.php?id=886", img: "assets/games/uphill-rush.webp", tags: ["racing"] },
   { name: "Uphill rush 6", url: "https://frivez.com/flashgame?load=uphill-rush-6", img: "assets/games/uphill-rush-6.webp", tags: ["racing"] },
   { name: "Happy Wheels", url: "https://flash-games.io/happy-wheels.embed", img: "assets/games/happy-wheels.webp", tags: ["racing"] },
-  { name: "Kindergarten", url: "https://2games.io/game/kindergarten/", img: "assets/games/kindergarten.webp", tags: ["horror"] },
+  { name: "Kindergarten", url: "./source-games/kindergarten-1.html", img: "assets/games/kindergarten.webp", tags: ["horror"] },
+  { name: "Kindergarten 2", url: "./source-games/kindergarten-2.html", img: "assets/games/kindergarten-2.webp", tags: ["horror"] },
+  { name: "Kindergarten 3", url: "./source-games/kindergarten-3.html", img: "assets/games/kindergarten-2.webp", tags: ["horror"] },
   { name: "Super smash flash 2", url: "https://flash-games.io/super-smash-flash-2.embed", img: "assets/games/super-smash-flash-2.webp", tags: ["action"] }
   
 
