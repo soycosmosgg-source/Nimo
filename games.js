@@ -24,7 +24,7 @@ const juegos = [
   { name: "Breaking the bank", url: "https://rebemanae.github.io/breaking-the-bank/", img: "assets/game-images/breaking-the-bank.webp", tags: ["puzzle", "skill"] },
   { name: "Hero ball adventures", url: "https://slope-game.github.io/heroball-adventures/", img: "assets/game-images/heroball-adventures.webp", tags: ["arcade"] },
   { name: "Tomb of The Mask", url: "https://slope-game.github.io/new5923/tomb/", img: "assets/game-images/tomb-of-the-mask.webp", tags: ["arcade"] },
-  { name: "JetPack JoyRide", url: "https://slope-game.github.io/rungame/jetpack-joyride/", img: "assets/game-images/jetpack-joyride.webp", tags: ["arcade"] },
+  { name: "JetPack JoyRide", url: "./games/jetpack-joyride.html", img: "assets/game-images/jetpack-joyride.webp", tags: ["arcade"] },
   { name: "Block Post", url: "https://bitlifeonline.github.io/class19523/blockpost/", img: "assets/game-images/blockpost.webp", tags: ["skill"] },
   { name: "Parkour Jump", url: "https://bitlifeonline.github.io/parkour-jump/", img: "assets/game-images/parkour-jump.webp", tags: ["skill"] },
   { name: "Motox3m", url: "https://nb-ga.github.io/games-site/projects/moto-x3m/index.html", img: "assets/game-images/moto-x3m.webp", tags: ["racing", "skill"] },
