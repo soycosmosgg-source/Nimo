@@ -166,6 +166,7 @@ const juegos = [
   { name: "Gun runner", url: "./games/gun-runner.html", img: "assets/game-images/gun-runner.webp", tags: ["action"] },
   { name: "Candy Crush", url: "./games/candy-crush.html", img: "assets/game-images/candy-crush.webp", tags: ["puzzle"] },
   { name: "Crazy Cars", url: "./games/crazy-cars.html", img: "assets/game-images/crazy-cars.webp", tags: ["racing"] },
+  { name: "Build now.gg", url: "./games/buildnow.gg.html", img: "assets/game-images/buildnow.gg.webp", tags: ["action"] },
   
 
 
