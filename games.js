@@ -164,7 +164,8 @@ const juegos = [
   { name: "Kindergarten 3", url: "./games/kindergarten-3.html", img: "assets/game-images/kindergarten-2.webp", tags: ["horror"] },
   { name: "Super smash flash 2", url: "https://flash-game-images.io/super-smash-flash-2.embed", img: "assets/game-images/super-smash-flash-2.webp", tags: ["action"] },
   { name: "Gun runner", url: "./games/gun-runner.html", img: "assets/game-images/gun-runner.webp", tags: ["action"] },
-  { name: "Candy Crush", url: "./games/candy-crush.html", img: "assets/game-images/candy-crush.webp", tags: ["action"] },
+  { name: "Candy Crush", url: "./games/candy-crush.html", img: "assets/game-images/candy-crush.webp", tags: ["puzzle"] },
+  { name: "Crazy Cars", url: "./games/crazy-cars.html", img: "assets/game-images/crazy-cars.webp", tags: ["racing"] },
   
 
 
