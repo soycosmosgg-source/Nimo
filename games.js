@@ -170,6 +170,7 @@ const juegos = [
   { name: "Web Fishing", url: "./games/webfishing.html", img: "assets/game-images/webfishing.webp", tags: ["tycoon"] },
   { name: "Attack Hole", url: "./games/attackhole.html", img: "assets/game-images/attackhole.webp", tags: ["action"] },
   { name: "Re Run", url: "./games/re-run.html", img: "assets/game-images/re-run.webp", tags: ["action"] },
+  { name: "Jelly restaurant", url: "./games/jelly-restaurant.html", img: "assets/game-images/jelly-restaurant.webp", tags: ["tycoon"] },
   
 
 
