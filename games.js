@@ -71,7 +71,7 @@ const juegos = [
   { name: "Friday Night Funkin", url: "https://fnf.kdata1.com/2025/fnf/7500/", img: "assets/game-images/fnf.webp", tags: ["music", "skill"] },
   { name: "Power Pamplona", url: "https://www.friv.com/z/game-images/powerpamplona/game.html", img: "assets/game-images/power-pamplona.webp", tags: ["skill", "arcade"] },
   { name: "Boxing Stars", url: "https://www.friv.com/z/game-images/boxingstars/game.html", img: "assets/game-images/boxing-stars.webp", tags: ["action", "skill"] },
-  { name: "Steal a Brainrot", url: "https://st.8game-images.net/9/8g/igra-ukradi-brejnrot-original-3d/", img: "assets/game-images/steal-a-brainrot.webp", tags: ["puzzle", "tycoon"] },
+  { name: "Steal a Brainrot", url: "./games/steal-a-brainrot.html", img: "assets/game-images/steal-a-brainrot.webp", tags: ["puzzle", "tycoon"] },
   { name: "Plants vs Brainrots", url: "https://st.8game-images.net/7/8g/igra-brejnroty-protiv-rastenij/", img: "assets/game-images/plants-vs-brainrots.webp", tags: ["puzzle", "tycoon"] },
   { name: "Geometry Dash", url: "https://1game-images.io/game/geometry-lite/", img: "assets/game-images/geometry-dash.webp", tags: ["skill", "arcade"] },
   { name: "Geometry Vibes", url: "https://files.twoplayergame-images.org/files/game-images/g1/geometry-vibes-v11/index.html", img: "assets/game-images/geometry-vibes.webp", tags: ["skill", "arcade", "2player"] },
