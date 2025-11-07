@@ -77,7 +77,7 @@ const juegos = [
   { name: "Geometry Vibes", url: "https://files.twoplayergame-images.org/files/game-images/g1/geometry-vibes-v11/index.html", img: "assets/game-images/geometry-vibes.webp", tags: ["skill", "arcade", "2player"] },
   { name: "Harvest Simulator", url: "https://g.igroutka.ru/game-images/1213/jtFMmdAVoke2w6qL/d8d9f2cc-186e-4695-adce-1ef984e47d59/index.html", img: "assets/game-images/harvest-simulator.webp", tags: ["simulation", "tycoon"] },
   { name: "That's not my neighbor", url: "./games/thatsnotmyneighbor.html", img: "assets/game-images/thats-not-my-neighbor.webp", tags: ["puzzle"] },
-  { name: "Raft", url: "https://gnhustgame-images.github.io/class-73/raft/", img: "assets/game-images/raft.webp", tags: ["simulation"] },
+  { name: "Raft", url: "./games/raft.html", img: "assets/game-images/raft.webp", tags: ["simulation"] },
   { name: "Hollow Knight", url: "https://2game-images.io/embed/hollow-knight", img: "assets/game-images/hollow-knight.webp", tags: ["platform"] },
   { name: "Buckshot Roulette", url: "./games/buckshot-roulette.html", img: "assets/game-images/buckshot-roulette.webp", tags: ["platform"] },
   { name: "Cuphead", url: "https://gnhustgame-images.github.io/cuphead/", img: "assets/game-images/cuphead.webp", tags: ["platform", "skill", "action"] },
