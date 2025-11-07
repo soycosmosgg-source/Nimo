@@ -168,6 +168,8 @@ const juegos = [
   { name: "Crazy Cars", url: "./games/crazy-cars.html", img: "assets/game-images/crazy-cars.webp", tags: ["racing", "2players"] },
   { name: "Build now.gg", url: "./games/buildnow.gg.html", img: "assets/game-images/buildnow.gg.webp", tags: ["action"] },
   { name: "Web Fishing", url: "./games/webfishing.html", img: "assets/game-images/webfishing.webp", tags: ["tycoon"] },
+  { name: "Attack Hole", url: "./games/attackhole.html", img: "assets/game-images/attackhole.webp", tags: ["action"] },
+  { name: "Re Run", url: "./games/re-run.html", img: "assets/game-images/re-run.webp", tags: ["action"] },
   
 
 
