@@ -160,7 +160,7 @@ const juegos = [
   { name: "Happy Wheels", url: "https://flash-games.io/happy-wheels.embed", img: "assets/game-images/happy-wheels.webp", tags: ["racing"] },
   { name: "Kindergarten", url: "./games/kindergarten-1.html", img: "assets/game-images/kindergarten.webp", tags: ["horror"] },
   { name: "Kindergarten 2", url: "./games/kindergarten-2.html", img: "assets/game-images/kindergarten-2.webp", tags: ["horror"] },
-  { name: "Kindergarten 3", url: "./games/kindergarten-3.html", img: "assets/game-images/kindergarten-2.webp", tags: ["horror"] },
+  { name: "Kindergarten 3", url: "./games/kindergarten-3.html", img: "assets/game-images/kindergarten-3.webp", tags: ["horror"] },
   { name: "Super smash flash 2", url: "https://flash-games.io/super-smash-flash-2.embed", img: "assets/game-images/super-smash-flash-2.webp", tags: ["action"] },
   { name: "Gun runner", url: "./games/gun-runner.html", img: "assets/game-images/gun-runner.webp", tags: ["action"] },
   { name: "Candy Crush", url: "./games/candy-crush.html", img: "assets/game-images/candy-crush.webp", tags: ["puzzle"] },
