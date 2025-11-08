@@ -79,7 +79,7 @@ const juegos = [
   { name: "Raft", url: "./games/raft.html", img: "assets/game-images/raft.webp", tags: ["simulation"] },
   { name: "Hollow Knight", url: "https://2games.io/embed/hollow-knight", img: "assets/game-images/hollow-knight.webp", tags: ["platform"] },
   { name: "Buckshot Roulette", url: "./games/buckshot-roulette.html", img: "assets/game-images/buckshot-roulette.webp", tags: ["platform"] },
-  { name: "Cuphead", url: "https://gnhustgames.github.io/cuphead/", img: "assets/game-images/cuphead.webp", tags: ["platform", "skill", "action"] },
+  { name: "Cuphead", url: "./games/cuphead.html", img: "assets/game-images/cuphead.webp", tags: ["platform", "skill", "action"] },
   { name: "R.E.P.O", url: "./games/R.E.P.O.html", img: "assets/game-images/repo.webp", tags: ["horror", "action"] },
   { name: "Bad Parenting 1", url: "./games/bad-parenting.html", img: "assets/game-images/bad-parenting.webp", tags: ["horror"] },
   { name: "Fears to fathom home alone", url: "https://gnhustgames.github.io/class-69/fearstofathom-homealone/", img: "assets/game-images/ftp-home-alone.webp", tags: ["horror"] },
