@@ -36,7 +36,7 @@ const juegos = [
   { name: "Drive Mad", url: "https://drive-madgame.github.io/file/", img: "assets/game-images/drive-mad.webp", tags: ["racing", "skill"] },
   { name: "Dino Bros", url: "https://bitlifeonline.github.io/dino-bros/", img: "assets/game-images/dino-bros.webp", tags: ["arcade"] },
   { name: "Roper", url: "https://hyhygames.com/games/roper-poki-game/", img: "assets/game-images/roper.webp", tags: ["arcade"] },
-  { name: "Recoil", url: "https://freetoplayz.github.io/recoil/", img: "assets/game-images/recoil.webp", tags: ["arcade", "action"] },
+  { name: "Recoil", url: "./games/recoil", img: "assets/game-images/recoil.webp", tags: ["arcade", "action"] },
   { name: "Odd bot", url: "https://play.fancade.com/5D01F70D3373F2DD?key=y8&value=default", img: "assets/game-images/odd-bot.webp", tags: ["arcade"] },
   { name: "Gobble", url: "./games/gobble.html", img: "assets/game-images/gobble.webp", tags: ["arcade"] },    
   { name: "Stick Man Climb", url: "https://szhong.4399.com/4399swf//upload_swf/ftp37/gamehwq/20211221/15/index.html", img: "assets/game-images/stickman-climb.webp", tags: ["platform", "skill"] },
