@@ -34,7 +34,7 @@ const juegos = [
   { name: "Motox3m Spooky Land", url: "https://games-site.github.io/projects/moto-x3m-spooky-land/index.html", img: "assets/game-images/moto-x3m-spooky-land.webp", tags: ["racing", "skill"] },
   { name: "Motox3m Pool Party", url: "https://games-site.github.io/projects/moto-x3m-pool-party/index.html", img: "assets/game-images/moto-x3m-5-pool-party.webp", tags: ["racing", "skill"] },
   { name: "Longcat", url: "./games/Long-Cat/index.html", img: "assets/game-images/long_cat.webp", tags: ["arcade", "skill"] },
-  { name: "Drive Mad", url: "https://drive-madgame.github.io/file/", img: "assets/game-images/drive-mad.webp", tags: ["racing", "skill"] },
+  { name: "Drive Mad", url: "./games/drive-mad.html", img: "assets/game-images/drive-mad.webp", tags: ["racing", "skill"] },
   { name: "Dino Bros", url: "./games/Dino-Bros/index.html", img: "assets/game-images/dino-bros.webp", tags: ["arcade"] },
   { name: "Roper", url: "https://hyhygames.com/games/roper-poki-game/", img: "assets/game-images/roper.webp", tags: ["arcade"] },
   { name: "Recoil", url: "./games/recoil.html", img: "assets/game-images/recoil.webp", tags: ["arcade", "action"] },
