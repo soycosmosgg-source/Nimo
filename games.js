@@ -1,5 +1,5 @@
 const juegos = [
-  { name: "Level Devil", url: "https://leveldevil2.io/devil-level-2.embed", img: "assets/game-images/level-devil.webp", tags: ["arcade", "skill", "2players"] },
+  { name: "Level Devil", url: "./games/Level-Devil/index.html", img: "assets/game-images/level-devil.webp", tags: ["arcade", "skill", "2players"] },
   { name: "Stick fighter", url: "https://labgstore21.github.io/g2/class-629/", img: "assets/game-images/stick-fighter.webp", tags: ["action", "skill", "2player"] },
   { name: "Suika Game", url: "https://suikagame.io/game/suika-game/", img: "assets/game-images/suika-game.webp", tags: ["puzzle", "skill", "merge"] },
   { name: "Merge Rot", url: "https://game.azgame.io/merge-brainrot/", img: "assets/game-images/merge-rot.webp", tags: ["merge", "puzzle"] },
@@ -33,7 +33,7 @@ const juegos = [
   { name: "Motox3m Winter", url: "https://games-site.github.io/projects/moto-x3m-winter/index.html", img: "assets/game-images/moto-x3m-4-winter.webp", tags: ["racing", "skill"] },
   { name: "Motox3m Spooky Land", url: "https://games-site.github.io/projects/moto-x3m-spooky-land/index.html", img: "assets/game-images/moto-x3m-spooky-land.webp", tags: ["racing", "skill"] },
   { name: "Motox3m Pool Party", url: "https://games-site.github.io/projects/moto-x3m-pool-party/index.html", img: "assets/game-images/moto-x3m-5-pool-party.webp", tags: ["racing", "skill"] },
-  { name: "Longcat", url: "https://play.fancade.com/5BFC1C2A246D67DD?mp_assets=https://s2.minijuegosgratis.com/&mp_embed=0&mp_game&mp_game_id=252905&mp_game_uid=longcat", img: "assets/game-images/long_cat.webp", tags: ["arcade", "skill"] },
+  { name: "Longcat", url: "./games/Long-Cat/index.html", img: "assets/game-images/long_cat.webp", tags: ["arcade", "skill"] },
   { name: "Drive Mad", url: "https://drive-madgame.github.io/file/", img: "assets/game-images/drive-mad.webp", tags: ["racing", "skill"] },
   { name: "Dino Bros", url: "https://bitlifeonline.github.io/dino-bros/", img: "assets/game-images/dino-bros.webp", tags: ["arcade"] },
   { name: "Roper", url: "https://hyhygames.com/games/roper-poki-game/", img: "assets/game-images/roper.webp", tags: ["arcade"] },
