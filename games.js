@@ -15,7 +15,7 @@ const juegos = [
   { name: "Paper.io 2", url: "https://nb-ga.github.io/games-site/projects/paperio2/index.html", img: "assets/game-images/paper.io_2.webp", tags: ["io", "skill"] },
   { name: "Police Chase", url: "https://trafficrally.io/blacktop-police-chase.embed", img: "assets/game-images/police-chase.webp", tags: ["racing", "action"] },
   { name: "Stack", url: "https://ug17.github.io/play/Stack/", img: "assets/game-images/stack.webp", tags: ["skill", "arcade"] },
-  { name: "Minecraft Launcher", url: "https://irv77.github.io/AmplerLauncher/", img: "assets/game-images/minecraft-launcher.webp", tags: ["sandbox"] },
+  { name: "Eagler craft launcher", url: "https://yee.pages.dev/", img: "assets/game-images/eaglercraft.webp", tags: ["sandbox"] },
   { name: "Minecraft Web Client", url: "./games/minecraftwebclient.html", img: "assets/game-images/minecraft-web.webp", tags: ["sandbox"] },
   { name: "Terraria", url: "https://scratch.mit.edu/projects/322341152/embed", img: "assets/game-images/terraria.webp", tags: ["sandbox", "simulation"] },
   { name: "Flappy Bird", url: "https://nb-ga.github.io/games-site/projects/flappy-bird/index.html", img: "assets/game-images/flappy_bird.webp", tags: ["arcade", "skill"] },
