@@ -95,7 +95,7 @@ const juegos = [
   { name: "Cookie Clicker", url: "https://webglmath.github.io/cookie-clicker/", img: "assets/game-images/cookie-clicker.webp", tags: ["clicker"] },
   { name: "Sprunki Clicker", url: "https://game.azgame.io/sprunki-clicker/", img: "assets/game-images/sprunki-clicker.webp", tags: ["clicker"] },
   { name: "Bottle Jump", url: "https://1games.io/game/bottle-jump/", img: "assets/game-images/bottle-jump.webp", tags: ["skill", "arcade"] },
-  { name: "Brain Test", url: "https://23azostore.github.io/s2/brain-test-2-tricky-stories/", img: "assets/game-images/brain-test.webp", tags: ["puzzle"] },
+  { name: "Brain Test", url: "./games/BRain-test/index.html", img: "assets/game-images/brain-test.webp", tags: ["puzzle"] },
   { name: "Cut the Rope", url: "https://games-site.github.io/projects/ctr-time-travel/index.html", img: "assets/game-images/cut-the-rope.webp", tags: ["puzzle"] },
   { name: "Papery Planes", url: "./games/papery-planes.html", img: "assets/game-images/papery-planes.webp", tags: ["skill", "arcade"] },
   { name: "Sprunki", url: "https://azgames.io/game/sprunki/", img: "assets/game-images/sprunki.webp", tags: ["arcade"] },
