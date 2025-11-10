@@ -135,7 +135,7 @@ const juegos = [
   { name: "Kick the buddy", url: "https://st.8games.net/dasha1/igry-novye/igra-kik-ze-badi/", img: "assets/game-images/kick-the-buddy.webp", tags: ["skill", "action"] },
   { name: "Raft Life", url: "https://freegames78.github.io/raft-life/", img: "assets/game-images/raft-life.webp", tags: ["sandbox", "skill"] },
   { name: "Stickman crazy box", url: "https://bitlifeonline.github.io/stickman-crazy-box/", img: "assets/game-images/stickman-crazy-box.webp", tags: ["skill", "action"] },
-  { name: "Ping Pong Go!", url: "https://gnhustgames.github.io/ping-pong-go/", img: "assets/game-images/ping-pong-go.webp", tags: ["skill"] },
+  { name: "Ping Pong Go!", url: "./games/Ping-Pong-Go!/index.html", img: "assets/game-images/ping-pong-go.webp", tags: ["skill"] },
   { name: "Super Mario Bros", url: "https://frivez.com/games/super-mario-bros/index.html", img: "assets/game-images/super-mario-bros.webp", tags: ["platform", "arcade", "action"] },
   { name: "Survival Race", url: "https://st.8games.net/14/igra-bitva-superkarov-3d/", img: "assets/game-images/survival-race.webp", tags: ["racing", "action"] },
   { name: "Traffic rally", url: "https://1games.io/game/traffic-rally/", img: "assets/game-images/traffic-rally.webp", tags: ["racing", "simulation", "skill"] },
