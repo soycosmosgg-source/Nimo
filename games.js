@@ -178,4 +178,5 @@ const juegos = [
   { name: "Rainbow obby", url: "./games/rainbow-obby.html", img: "assets/game-images/rainbow-obby.webp", tags: ["arcade, skill"] },
   { name: "Beach boxing simulator", url: "./games/Beach-Boxing-Simulator/index.html", img: "assets/game-images/beach-boxing.webp", tags: ["tycoon"] },
   { name: "World Guessr", url: "https://www.worldguessr.com/", img: "assets/game-images/world-guessr.webp", tags: ["puzzle"] },
+  { name: "Wordle", url: "./games/Wordle/index.html", img: "assets/game-images/worldle.webp", tags: ["puzzle"] },
 ];
