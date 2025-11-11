@@ -176,4 +176,5 @@ const juegos = [
   { name: "Jelly restaurant", url: "./games/jelly-restaurant.html", img: "assets/game-images/jelly-restaurant.webp", tags: ["tycoon"] },
   { name: "Dadish 3D", url: "./games/dadish-3d.html", img: "assets/game-images/dadish-3d.webp", tags: ["arcade"] },
   { name: "Rainbow obby", url: "./games/rainbow-obby.html", img: "assets/game-images/rainbow-obby.webp", tags: ["arcade, skill"] },
+  { name: "Beach boxing simulator", url: "./games/Beach-Boxing-Simulator/index.html", img: "assets/game-images/beach-boxing.webp", tags: ["tycoon"] },
 ];
