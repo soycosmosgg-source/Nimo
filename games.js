@@ -4,7 +4,7 @@ const juegos = [
   { name: "Suika Game", url: "https://suikagame.io/game/suika-game/", img: "assets/game-images/suika-game.webp", tags: ["puzzle", "skill", "merge"] },
   { name: "Merge Rot", url: "https://game.azgame.io/merge-brainrot/", img: "assets/game-images/merge-rot.webp", tags: ["merge", "puzzle"] },
   { name: "Stickman Hook", url: "https://ug17.github.io/play/Stickman-HookUB/", img: "assets/game-images/stickman-hook.webp", tags: ["skill", "arcade"] },
-  { name: "Monkey Mart", url: "https://monkey-mart.io/iframe/index.html", img: "assets/game-images/monkey-mart.webp", tags: ["tycoon", "simulation"] },
+  { name: "Monkey Mart", url: "./games/monkey-mart.html", img: "assets/game-images/monkey-mart.webp", tags: ["tycoon", "simulation"] },
   { name: "Apple Worm", url: "./games/apple-worm.html", img: "assets/game-images/apple-worm.webp", tags: ["puzzle"] },
   { name: "My perfect hotel", url: "https://1games.io/game/perfect-hotel/", img: "assets/game-images/my-perfect-hotel.webp", tags: ["tycoon", "simulation"] },
   { name: "Bascket random", url: "./games/basket-random.html", img: "assets/game-images/bascket_random.webp", tags: ["arcade", "2player"] },
