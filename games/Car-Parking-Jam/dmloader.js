@@ -1256,7 +1256,11 @@ Module['persistentStorage'] = (typeof window !== 'undefined') && !!(window.index
 Module['INITIAL_MEMORY'] = CUSTOM_PARAMETERS.custom_heap_size;
 
 Module['onRuntimeInitialized'] = function() {
-    Module.runApp("canvas");
+    setTimeout(function() {
+        if (typeof Module.runApp === 'function') {
+            Module.runApp("canvas");
+        }
+    }, 100);
 };
 
 Module["isWASMPthreadSupported"] = false 
