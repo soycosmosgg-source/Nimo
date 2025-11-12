@@ -4,17 +4,58 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui, shrink-to-fit=no, viewport-fit=cover">
-  <meta name="apple-mobile-web-app-capable" content="yes"> <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <title>Car Parking Jam 1.5.3</title>
+  
+  <script>
+(function() {
+    'use strict';
+    
+    window.PokiSDK = {
+        init: function() { 
+            console.log("[POKI BYPASS] SDK inicializado falsamente");
+            return Promise.resolve(); 
+        },
+        commercialBreak: function() { 
+            console.log("[POKI BYPASS] CommercialBreak bloqueado");
+            return Promise.resolve(); 
+        },
+        rewardedBreak: function() { 
+            console.log("[POKI BYPASS] RewardedBreak bloqueado");
+            return Promise.resolve(true); 
+        },
+        gameplayStart: function() { 
+            console.log("[POKI BYPASS] GameplayStart bloqueado");
+        },
+        gameplayStop: function() { 
+            console.log("[POKI BYPASS] GameplayStop bloqueado");
+        },
+        captureError: function() {},
+        getURLParam: function() { return ""; },
+        gameLoadingProgress: function() {},
+        gameLoadingFinished: function() { 
+            console.log("[POKI BYPASS] GameLoadingFinished simulado");
+            return Promise.resolve(); 
+        },
+        isBlocked: function() { 
+            console.log("[POKI BYPASS] isBlocked = false");
+            return false; 
+        },
+        ready: function() { return Promise.resolve(); }
+    };
+
+    Object.defineProperty(window, 'PokiSDK', {
+        writable: false,
+        configurable: false,
+        value: window.PokiSDK
+    });
+
+})();
+  </script>
+
   <style type="text/css">
-	/* Disable user selection to avoid strange bug in Chrome on Windows:
-	* Selecting a text outside the canvas, then clicking+draging would
-	* drag the selected text but block mouse down/up events to the engine.
-	*/
 	body {
-	
-		position: fixed; /* Prevent overscroll */
-	
+		position: fixed;
 		margin:0;
 		padding:0;
 	}
@@ -29,7 +70,6 @@
 	}
 
 	.canvas-app-container:-webkit-full-screen {
-		/* Auto width and height in Safari/Chrome fullscreen. */
 		width: auto;
 		height: auto;
 	}
@@ -62,7 +102,7 @@
 		user-select: none;
 	}
 
-		.canvas-app-progress {
+	.canvas-app-progress {
 		position: absolute;
 		background-color: #d1dbeb;
 		height: 6px;
@@ -128,18 +168,12 @@
         }
 
         .loader {
-            font-size: 2.5vh; /* Loader size */
+            font-size: 2.5vh;
             text-indent: -9999em;
-            
-                border-top: 1.1em solid rgba(26, 114, 235, 0.2);
-                border-right: 1.1em solid rgba(26, 114, 235, 0.2);
-                border-bottom: 1.1em solid rgba(26, 114, 235, 0.2);
-            
-            
-            
-                border-left: 1.1em solid rgba(26, 114, 235, 1);
-            
-            
+            border-top: 1.1em solid rgba(26, 114, 235, 0.2);
+            border-right: 1.1em solid rgba(26, 114, 235, 0.2);
+            border-bottom: 1.1em solid rgba(26, 114, 235, 0.2);
+            border-left: 1.1em solid rgba(26, 114, 235, 1);
             -webkit-transform: translateZ(0);
             -ms-transform: translateZ(0);
             transform: translateZ(0);
@@ -148,45 +182,22 @@
         }
 
         @-webkit-keyframes load8 {
-            0% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
+            0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
         }
 
         @keyframes load8 {
-            0% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
+            0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
         }
 
-        .loader_main {
-            position: absolute;
-            right: 4%;
-        }
+        .loader_main { position: absolute; right: 4%; }
 
         .center_text {
-            
-                color: rgba(26, 114, 235, 1);
-            
-            
+            color: rgba(26, 114, 235, 1);
             min-width: 7em;
             border-radius: 50%;
-            
-                background-color: rgba(255, 255, 255, 1);
-            
-            
+            background-color: rgba(255, 255, 255, 1);
             text-align: center;
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             font-size: 3.5vh;
@@ -206,10 +217,7 @@
         }
 
         .min_text {
-            
-                color: rgba(26, 114, 235, 1);
-            
-            
+            color: rgba(26, 114, 235, 1);
             text-align: center;
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             font-size: 2vh;
@@ -232,32 +240,16 @@
         }
 
         .canvas-app-canvas {
-            
-                background-color: rgba(255,255,255,1);
-            
-            
-		        background-size: auto 50%;;
-            
+            background-color: rgba(255,255,255,1);
+            background-size: auto 50%;
         }
 
-        
-        .canvas-app-progress-bar {
-            background-color: rgba(26, 114, 235, 1);
-	    }
-        
-
-        
-        .canvas-app-progress {
-            background-color: rgba(26, 114, 235, 0.2);
-	    }
-        
+        .canvas-app-progress-bar { background-color: rgba(26, 114, 235, 1); }
+        .canvas-app-progress { background-color: rgba(26, 114, 235, 0.2); }
     </style>
   <script>
         (function (d) {
-
-            if (!window.Loader) {
-                window.Loader = {};
-            }
+            if (!window.Loader) { window.Loader = {}; }
             var Loader = window.Loader
             Loader.percents = 0;
             Loader.progressDiv = null;
@@ -270,9 +262,7 @@
             function create_div(className, parent) {
                 var div = document.createElement('div');
                 div.className = className;
-                if (parent) {
-                    parent.appendChild(div);
-                }
+                if (parent) { parent.appendChild(div); }
                 return div;
             }
 
@@ -286,17 +276,11 @@
                 Progress.addListener(function (percentage, text) {
                     if (!Loader.gameLoaded) {
                         if (!isNaN(percentage) && percentage > Loader.percents) {
-                            if (percentage > 100) {
-                                percentage = 100;
-                            }
+                            if (percentage > 100) { percentage = 100; }
                             Loader.percents = percentage
                         }
-                        if (Progress.bar) {
-                            Progress.bar.style.width = Loader.percents + "%";
-                        }
-                        if (Loader.centerText) {
-                            Loader.centerText.innerHTML = Loader.percents.toFixed(2) + "%";
-                        }
+                        if (Progress.bar) { Progress.bar.style.width = Loader.percents + "%"; }
+                        if (Loader.centerText) { Loader.centerText.innerHTML = Loader.percents.toFixed(2) + "%"; }
                         if (Loader.percents >= 100) {
                             Loader.gameLoaded = true;
                             Loader.progressDiv.remove();
@@ -327,41 +311,18 @@
             }
 
             Loader.setText = function (value) {
-                if (Loader.progressText) {
-                    Loader.progressText.innerHTML = value;
-                }
+                if (Loader.progressText) { Loader.progressText.innerHTML = value; }
             }
 
             Loader.setProgress = function (value) {
-                if (Loader.progressText) {
-                    Loader.progressText.innerHTML = "Loading\n" + value + "%";
-                }
+                if (Loader.progressText) { Loader.progressText.innerHTML = "Loading\n" + value + "%"; }
             }
 
             if (document.readyState == 'loading') {
                 document.addEventListener('DOMContentLoaded', onDomLoaded);
-            } else {
-                onDomLoaded();
-            }
-
+            } else { onDomLoaded(); }
         })(document);
     </script>
-  <!-- REEMPLAZADO: Script original de Poki comentado -->
-  <script>
-// PokiSDK simulado para evitar bloqueos
-window.PokiSDK = {
-    init: () => Promise.resolve(),
-    commercialBreak: () => Promise.resolve(),
-    rewardedBreak: () => Promise.resolve(true),
-    gameplayStart: () => {},
-    gameplayStop: () => {},
-    captureError: () => {},
-    getURLParam: () => "",
-    gameLoadingProgress: () => {},
-    gameLoadingFinished: () => Promise.resolve(),
-    isBlocked: () => false
-};
-  </script>
  </head>
  <body>
   <div id="app-container" class="canvas-app-container">
@@ -377,43 +338,31 @@ window.PokiSDK = {
    <div id="canvas-container" class="canvas-app-canvas-container">
     <canvas id="canvas" class="canvas-app-canvas" tabindex="1" width="1080" height="1920"></canvas>
    </div>
-   <div class="buttons-background">
-   </div>
-  </div> <!-- -->
+   <div class="buttons-background"></div>
+  </div>
+
   <script>
-		// Fallback to make sure globalThis is available when running in an old
-		// browser (available from Chome 71)
-		// https://github.com/defold/defold/issues/10503
-		if (typeof globalThis === 'undefined') {
-			window.globalThis = window;
-		}
-	</script>
+    if (typeof globalThis === 'undefined') { window.globalThis = window; }
+  </script>
   <script id="engine-loader" type="text/javascript" src="dmloader.js"></script>
-  <script id="engine-setup" type="text/javascript">
-		// From here you can configure game startup parameters via the CUSTOM_PARAMETERS object,
-		// override ProgressView to create your own loader. See dmloader.js for more details.
-	</script>
-    <script id="engine-start" type="text/javascript">
-		var runningFromFileWarning = document.getElementById("running-from-file-warning");
-		if (window.location.href.startsWith("file://")) {
-			runningFromFileWarning.style.display = "block";
-		}
-		else {
-			EngineLoader.load("canvas", "CarParkingJam");
-			runningFromFileWarning.parentNode.removeChild(runningFromFileWarning);
-		}
-    </script>
-    <script id="poki-sdk-setup" type="text/javascript">
-        setTimeout(function() {
-            if (typeof Module !== 'undefined' && typeof Module.runApp === 'function') {
-                Module.runApp("canvas");
-            } else if (typeof EngineLoader !== 'undefined' && typeof EngineLoader.load === 'function') {
-                EngineLoader.load("canvas", "CarParkingJam");
-            } else {
-                window.location.reload();
-            }
-        }, 100);
-    </script>
+  <script id="engine-setup" type="text/javascript"></script>
+  <script id="engine-start" type="text/javascript">
+    var runningFromFileWarning = document.getElementById("running-from-file-warning");
+    if (window.location.href.startsWith("file://")) {
+        runningFromFileWarning.style.display = "block";
+    } else {
+        EngineLoader.load("canvas", "CarParkingJam");
+        runningFromFileWarning.parentNode.removeChild(runningFromFileWarning);
+    }
+  </script>
+  <script id="poki-sdk-setup" type="text/javascript">
+    setTimeout(function() {
+        if (typeof Module !== 'undefined' && typeof Module.runApp === 'function') {
+            Module.runApp("canvas");
+        } else {
+            setTimeout(function() { window.location.reload(); }, 1000);
+        }
+    }, 500);
   </script>
  </body>
 </html>
