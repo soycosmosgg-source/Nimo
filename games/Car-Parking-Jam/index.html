@@ -346,7 +346,22 @@
 
         })(document);
     </script>
-  <script src="//game-cdn.poki.com/scripts/v2/poki-sdk.js"></script>
+  <!-- REEMPLAZADO: Script original de Poki comentado -->
+  <script>
+// PokiSDK simulado para evitar bloqueos
+window.PokiSDK = {
+    init: () => Promise.resolve(),
+    commercialBreak: () => Promise.resolve(),
+    rewardedBreak: () => Promise.resolve(true),
+    gameplayStart: () => {},
+    gameplayStop: () => {},
+    captureError: () => {},
+    getURLParam: () => "",
+    gameLoadingProgress: () => {},
+    gameLoadingFinished: () => Promise.resolve(),
+    isBlocked: () => false
+};
+  </script>
  </head>
  <body>
   <div id="app-container" class="canvas-app-container">
@@ -388,17 +403,10 @@
 			runningFromFileWarning.parentNode.removeChild(runningFromFileWarning);
 		}
 	</script>
-    <script id="poki-sdk-setup" type="text/javascript">
-        if(typeof PokiSDK !== 'undefined') {
-            PokiSDK.init = () => Promise.resolve();
-            PokiSDK.gameLoadingProgress = () => {};
-            PokiSDK.gameLoadingFinished = () => Promise.resolve();
-            PokiSDK.isBlocked = () => false;
-        }
-        
-        Module['onRuntimeInitialized'] = function() {
-            Module.runApp("canvas");
-        };
-    </script>
+  <script id="poki-sdk-setup" type="text/javascript">
+    Module['onRuntimeInitialized'] = function() {
+        Module.runApp("canvas");
+    };
+  </script>
  </body>
 </html>
