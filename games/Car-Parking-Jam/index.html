@@ -393,7 +393,7 @@ window.PokiSDK = {
 		// From here you can configure game startup parameters via the CUSTOM_PARAMETERS object,
 		// override ProgressView to create your own loader. See dmloader.js for more details.
 	</script>
-  <script id="engine-start" type="text/javascript">
+    <script id="engine-start" type="text/javascript">
 		var runningFromFileWarning = document.getElementById("running-from-file-warning");
 		if (window.location.href.startsWith("file://")) {
 			runningFromFileWarning.style.display = "block";
@@ -402,11 +402,18 @@ window.PokiSDK = {
 			EngineLoader.load("canvas", "CarParkingJam");
 			runningFromFileWarning.parentNode.removeChild(runningFromFileWarning);
 		}
-	</script>
-  <script id="poki-sdk-setup" type="text/javascript">
-    Module['onRuntimeInitialized'] = function() {
-        Module.runApp("canvas");
-    };
+    </script>
+    <script id="poki-sdk-setup" type="text/javascript">
+        setTimeout(function() {
+            if (typeof Module !== 'undefined' && typeof Module.runApp === 'function') {
+                Module.runApp("canvas");
+            } else if (typeof EngineLoader !== 'undefined' && typeof EngineLoader.load === 'function') {
+                EngineLoader.load("canvas", "CarParkingJam");
+            } else {
+                window.location.reload();
+            }
+        }, 100);
+    </script>
   </script>
  </body>
 </html>

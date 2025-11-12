@@ -1259,8 +1259,12 @@ Module['onRuntimeInitialized'] = function() {
     setTimeout(function() {
         if (typeof Module.runApp === 'function') {
             Module.runApp("canvas");
+        } else {
+            if (window.EngineLoader && window.EngineLoader.load) {
+                EngineLoader.load("canvas", "CarParkingJam");
+            }
         }
-    }, 100);
+    }, 50);
 };
 
 Module["isWASMPthreadSupported"] = false 
