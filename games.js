@@ -180,5 +180,4 @@ const juegos = [
   { name: "World Guessr", url: "https://www.worldguessr.com/", img: "assets/game-images/world-guessr.webp", tags: ["puzzle"] },
   { name: "Wordle", url: "./games/Wordle/index.html", img: "assets/game-images/wordle.webp", tags: ["puzzle"] },
   {name: "Trivia crack", url: "./games/Trivia-Crack/index.html", img: "assets/game-images/trivia-crack.webp", tags: ["puzzle"] },
-  {name: "Car parking jam", url: "./games/Car-Parking-Jam/index.html", img: "assets/game-images/car-parking-jam.webp", tags: ["puzzle"] },
 ];
