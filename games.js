@@ -108,7 +108,7 @@ const juegos = [
   { name: "Bike Xtreme", url: "https://azgames.io/bike-xtreme.embed", img: "assets/game-images/bike-xtreme.webp", tags: ["racing", "skill"] },
   { name: "Stickman Racing", url: "https://azgames.io/stickman-racing.embed", img: "assets/game-images/stickman-racing.webp", tags: ["racing", "skill"] },
   { name: "Plants vs Zombies", url: "./games/pvz-1.html", img: "assets/game-images/plants-vs-zombies.webp", tags: ["skill", "arcade"] },
-  { name: "Uno Online", url: "https://kdata1.com/2017/03/four-colors/", img: "assets/game-images/uno-online.webp", tags: ["skill"] },
+  { name: "Uno Online", url: "./games/Uno-Online/index.html", img: "assets/game-images/uno-online.webp", tags: ["skill"] },
   { name: "Stickman prison escape", url: "https://abinbins.github.io/a7/escaping-the-prison/", img: "assets/game-images/stickman-prison-escape.webp", tags: ["action", "skill"] },
   { name: "Murder", url: "https://h5.ant.games/game-assets/17477130192978/index.html", img: "assets/game-images/murder.webp", tags: ["action", "skill"] },
   { name: "Granny", url: "https://1games.io/game/granny-horror/", img: "assets/game-images/granny.webp", tags: ["horror"] },
