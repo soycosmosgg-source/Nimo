@@ -180,4 +180,5 @@ const juegos = [
   { name: "World Guessr", url: "https://www.worldguessr.com/", img: "assets/game-images/world-guessr.webp", tags: ["puzzle"] },
   { name: "Wordle", url: "./games/Wordle/index.html", img: "assets/game-images/wordle.webp", tags: ["puzzle"] },
   {name: "Trivia crack", url: "./games/Trivia-Crack/index.html", img: "assets/game-images/trivia-crack.webp", tags: ["puzzle"] },
+  {name: "Master chess", url: "./games/Master-Chess/index.html", img: "assets/game-images/master-chess.webp", tags: ["puzzle", "skill"] },
 ];
